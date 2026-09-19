@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Рыболовные снасти с доставкой по Украине | Магазин</title>
-    <meta name="description" content="Качественные снасти, экраны, дорожки и дуги для рыбалки. Быстрая доставка Новой Почтой и Укрпочтой по всей Украине. Заказывайте прямо сейчас!">
+    <title>Риболовні снасті с доставкою по Україні | Магазин</title>
+    <meta name="description" content="Якісні снасті, екрани, доріжки та дуги для риболовлі. Швидка доставка Новою Поштою та Укрпоштою по всій Україні. Замовляйте просто зараз!">
     
     <style>
-        /* Общие настройки и фон сайта (fon.jpg лежит в корне рядом с index.html) */
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             background-image: url('fon.jpg');
             background-attachment: fixed;
@@ -18,6 +21,7 @@
             margin: 0;
             padding: 0;
             color: #333;
+            overflow-x: hidden;
         }
 
         .container {
@@ -30,7 +34,7 @@
         .header {
             background-color: rgba(44, 62, 80, 0.95);
             color: #fff;
-            padding: 15px 0;
+            padding: 12px 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -41,27 +45,63 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
         .nav a {
             color: #fff;
             text-decoration: none;
-            margin-right: 20px;
+            margin-right: 15px;
             font-weight: 500;
+        }
+
+        /* Переключатель языка */
+        .lang-switch {
+            display: inline-flex;
+            background: #1a252f;
+            border-radius: 20px;
+            padding: 3px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: #aaa;
+            padding: 5px 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .lang-btn.active {
+            background-color: #3498db;
+            color: #fff;
         }
 
         .cart-icon {
             background-color: #e74c3c;
-            padding: 8px 15px;
+            padding: 8px 14px;
             border-radius: 20px;
             cursor: pointer;
             font-weight: bold;
             transition: 0.3s;
+            font-size: 14px;
+            white-space: nowrap;
         }
 
         .cart-icon:hover {
@@ -73,17 +113,20 @@
             background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
             text-align: center;
-            padding: 100px 20px;
+            padding: 70px 15px;
             margin-bottom: 4px;
         }
 
         .hero h1 {
             font-size: 42px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            line-height: 1.2;
+            word-wrap: break-word;
+            hyphens: auto;
         }
 
         .hero p {
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 25px;
         }
 
@@ -106,12 +149,12 @@
             background-color: #27ae60;
         }
 
-        /* Сетка товаров */
+        /* Сетка товаров и Поиск */
         .category-section {
-            background-color: rgba(255, 255, 255, 0.92);
-            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 25px;
             border-radius: 8px;
-            margin: 40px 0;
+            margin: 30px 0;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
@@ -119,12 +162,43 @@
             border-bottom: 2px solid #2c3e50;
             padding-bottom: 10px;
             color: #2c3e50;
+            margin-top: 0;
+        }
+
+        /* Панель поиска */
+        .search-container {
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 16px;
+            border: 2px solid #3498db;
+            border-radius: 30px;
+            outline: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .search-input:focus {
+            border-color: #2980b9;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            font-size: 18px;
+            color: #7f8c8d;
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
             margin-top: 20px;
         }
 
@@ -142,7 +216,7 @@
 
         .product-card img {
             max-width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
             border-radius: 4px;
             cursor: pointer;
@@ -154,8 +228,8 @@
         }
 
         .product-card h3 {
-            font-size: 18px;
-            margin: 15px 0 8px 0;
+            font-size: 17px;
+            margin: 12px 0 8px 0;
             color: #333;
         }
 
@@ -169,12 +243,12 @@
             font-size: 20px;
             font-weight: bold;
             color: #e74c3c;
-            margin: 15px 0;
+            margin: 12px 0;
         }
 
         .wholesale-info {
             display: block;
-            font-size: 13px;
+            font-size: 12px;
             color: #7f8c8d;
             font-weight: normal;
             margin-top: 4px;
@@ -186,7 +260,7 @@
         }
 
         .select-mesh {
-            padding: 5px;
+            padding: 6px;
             border-radius: 4px;
             border: 1px solid #ccc;
             width: 100%;
@@ -195,7 +269,7 @@
 
         .card-buttons {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             justify-content: center;
         }
 
@@ -203,7 +277,7 @@
             background-color: #e74c3c;
             color: white;
             border: none;
-            padding: 10px 15px;
+            padding: 10px 12px;
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
@@ -218,7 +292,7 @@
             background-color: #f0f0f0;
             color: #333;
             border: 1px solid #ccc;
-            padding: 10px 15px;
+            padding: 10px 12px;
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
@@ -228,12 +302,12 @@
             background-color: #e0e0e0;
         }
 
-        /* SEO Блок с городами */
+        /* SEO Блок городов */
         .seo-cities-block {
             background-color: rgba(255, 255, 255, 0.95);
             padding: 25px;
             border-radius: 8px;
-            margin: 40px 0;
+            margin: 30px 0;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
@@ -245,14 +319,14 @@
         .city-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
             margin-top: 15px;
         }
 
         .city-links a {
             color: #2980b9;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             background: #f0f4f8;
             padding: 6px 12px;
             border-radius: 4px;
@@ -274,14 +348,15 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0,0,0,0.6);
+            padding: 10px;
         }
 
         .modal-content {
             background-color: #fff;
             margin: 5% auto;
-            padding: 30px;
+            padding: 20px;
             border-radius: 8px;
-            width: 90%;
+            width: 100%;
             max-width: 600px;
             position: relative;
         }
@@ -302,8 +377,8 @@
 
         .close {
             position: absolute;
-            right: 20px;
-            top: 15px;
+            right: 15px;
+            top: 10px;
             font-size: 28px;
             font-weight: bold;
             cursor: pointer;
@@ -320,7 +395,7 @@
             margin: 3% auto;
             padding: 0;
             width: auto;
-            max-width: 90%;
+            max-width: 95%;
             display: flex;
             justify-content: center;
         }
@@ -337,11 +412,7 @@
             color: #fff;
             font-size: 40px;
             top: 10px;
-            right: 25px;
-        }
-
-        .zoom-close:hover {
-            color: #ddd;
+            right: 20px;
         }
 
         .cart-qty-controls {
@@ -364,11 +435,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.2s;
-        }
-
-        .qty-btn:hover {
-            background-color: #2c3e50;
         }
 
         .qty-val {
@@ -381,7 +447,7 @@
         #order-form input {
             width: 100%;
             padding: 10px;
-            margin: 10px 0;
+            margin: 8px 0;
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -392,22 +458,61 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #eee;
-            padding: 15px 0;
+            padding: 12px 0;
         }
 
         .cart-total {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             text-align: right;
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         .footer {
             background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 30px 0;
-            margin-top: 50px;
+            padding: 25px 0;
+            margin-top: 40px;
+        }
+
+        /* Адаптация под мобильные экраны */
+        @media (max-width: 600px) {
+            .header-flex {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .header-right {
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .hero {
+                padding: 40px 10px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .category-section {
+                padding: 15px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                margin: 10% auto;
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -416,43 +521,57 @@
     <!-- Шапка сайта -->
     <header class="header">
         <div class="container header-flex">
-            <div class="logo">Рыболовные Снасти</div>
-            <nav class="nav">
-                <a href="#categories">Каталог</a>
-                <a href="#contacts">Контакты</a>
-            </nav>
-            <div class="cart-icon" onclick="toggleCart()">
-                🛒 Корзина (<span id="cart-count">0</span>)
+            <div class="logo" data-i18n="logo">Риболовні Снасті</div>
+            <div class="header-right">
+                <nav class="nav">
+                    <a href="#categories" data-i18n="nav_catalog">Каталог</a>
+                    <a href="#contacts" data-i18n="nav_contacts">Контакти</a>
+                </nav>
+                <div class="lang-switch">
+                    <button class="lang-btn active" id="btn-uk" onclick="switchLang('uk')">UKR</button>
+                    <button class="lang-btn" id="btn-ru" onclick="switchLang('ru')">РУС</button>
+                </div>
+                <div class="cart-icon" onclick="toggleCart()">
+                    🛒 <span data-i18n="cart">Кошик</span> (<span id="cart-count">0</span>)
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Главный баннер (Hero) -->
+    <!-- Главный баннер -->
     <section class="hero">
         <div class="container">
-            <h1 id="hero-title">Профессиональные снасти для успешной рыбалки</h1>
-            <p>Отправка в день заказа по всей Украине. Выбирайте качество!</p>
-            <a href="#categories" class="btn">Перейти к покупкам</a>
+            <h1 id="hero-title" data-i18n="hero_title">Професійні снасті для успішної риболовлі</h1>
+            <p data-i18n="hero_sub">Відправка в день замовлення по всій Україні. Обирайте якість!</p>
+            <a href="#categories" class="btn" data-i18n="hero_btn">Перейти до покупок</a>
         </div>
     </section>
 
-    <!-- Категории и товары -->
+    <!-- Поиск и товары -->
     <main class="container" id="categories">
         
         <section class="category-section">
-            <h2>Экраны, Сетки-дорожки и Оснастки</h2>
-            <div class="products-grid">
+            <h2 data-i18n="cat_title">Екрани, Сітки-доріжки та Оснастки</h2>
 
-                <!-- Товар 3 (Рыболовный экран) -->
-                <div class="product-card">
-                    <img src="ekran/ekran1.jpg" alt="Экран рыболовный 1х1м" onclick="openImageZoom(this.src)">
-                    <h3>Экран рыболовный (1м х 1м)</h3>
-                    <p class="specs">Леска: 0.18 мм | Ячейки: 14 мм - 50 мм</p>
+            <!-- Фильтр-поиск -->
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-input" placeholder="Пошук снастей (наприклад: екран, сітка, дуги...)" oninput="filterProducts()" data-i18n-placeholder="search_ph">
+            </div>
+
+            <div id="no-results" class="no-results" data-i18n="no_results">Товарів за вашим запитом не знайдено</div>
+
+            <div class="products-grid" id="products-grid">
+
+                <!-- Товар 3 (Экран) -->
+                <div class="product-card" data-title="Екран риболовний (1м х 1м) Экран рыболовный" data-id="3">
+                    <img src="ekran/ekran1.jpg" alt="Екран рыболовний 1х1м" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p3_title">Екран риболовний (1м х 1м)</h3>
+                    <p class="specs" data-i18n="p3_specs">Вільсілка: 0.18 мм | Вічка: 14 мм - 50 мм</p>
                     
                     <div class="size-selector">
-                        <label for="mesh-select-3">Ячейка: </label>
+                        <label for="mesh-select-3" data-i18n="mesh_label">Вічко: </label>
                         <select id="mesh-select-3" class="select-mesh">
-                            <option value="Не выбрана">Выбрать размер...</option>
+                            <option value="Не выбрана" data-i18n="mesh_default">Обрати розмір...</option>
                             <option value="14мм">14 мм</option>
                             <option value="16мм">16 мм</option>
                             <option value="18мм">18 мм</option>
@@ -465,24 +584,24 @@
                         </select>
                     </div>
 
-                    <p class="price">130 грн <span class="wholesale-info">(опт: 90 грн от 20шт)</span></p>
+                    <p class="price">130 грн <span class="wholesale-info" data-i18n="p3_opt">(опт: 90 грн від 20шт)</span></p>
                     
                     <div class="card-buttons">
-                        <button class="btn-more" onclick="openModal('details-modal-3')">Подробнее</button>
-                        <button class="btn-buy" onclick="addToCart(3)">В корзину</button>
+                        <button class="btn-more" onclick="openModal('details-modal-3')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(3)" data-i18n="btn_buy">У кошик</button>
                     </div>
                 </div>
 
                 <!-- Товар 4 (Сеть дорожка 7м) -->
-                <div class="product-card">
-                    <img src="ekran/setidorojka.jpg" alt="Сеть дорожка 7м" onclick="openImageZoom(this.src)">
-                    <h3>Сеть дорожка (7м х 1.6м)</h3>
-                    <p class="specs">Леска: 0.15 мм | Высота: 1.6 м | Длина: 7 м</p>
+                <div class="product-card" data-title="Сітка доріжка (7м х 1.6м) Сеть дорожка" data-id="4">
+                    <img src="ekran/setidorojka.jpg" alt="Сітка доріжка 7м" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p4_title">Сітка доріжка (7м х 1.6м)</h3>
+                    <p class="specs" data-i18n="p4_specs">Вільсілка: 0.15 мм | Висота: 1.6 м | Довжина: 7 м</p>
                     
                     <div class="size-selector">
-                        <label for="mesh-select-4">Ячейка: </label>
+                        <label for="mesh-select-4" data-i18n="mesh_label">Вічко: </label>
                         <select id="mesh-select-4" class="select-mesh">
-                            <option value="Не выбрана">Выбрать размер...</option>
+                            <option value="Не выбрана" data-i18n="mesh_default">Обрати розмір...</option>
                             <option value="18мм">18 мм</option>
                             <option value="20мм">20 мм</option>
                             <option value="25мм">25 мм</option>
@@ -495,24 +614,24 @@
                         </select>
                     </div>
 
-                    <p class="price">80 грн <span class="wholesale-info">(опт: 50 грн от 20шт)</span></p>
+                    <p class="price">80 грн <span class="wholesale-info" data-i18n="p4_opt">(опт: 50 грн від 20шт)</span></p>
                     
                     <div class="card-buttons">
-                        <button class="btn-more" onclick="openModal('details-modal-4')">Подробнее</button>
-                        <button class="btn-buy" onclick="addToCart(4)">В корзину</button>
+                        <button class="btn-more" onclick="openModal('details-modal-4')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(4)" data-i18n="btn_buy">У кошик</button>
                     </div>
                 </div>
 
-                <!-- Товар 5 (Сеть дорожка Профи с резинкой) -->
-                <div class="product-card">
-                    <img src="ekran/setidorojkaKarabinRezinka.jpg" alt="Сеть дорожка Профи" onclick="openImageZoom(this.src)">
-                    <h3>Сеть дорожка «Профи» (7м х 1.6м)</h3>
-                    <p class="specs">Леска 30м | Резинка 5м | 2 карабина с вертлюгом</p>
+                <!-- Товар 5 (Сеть дорожка Профи) -->
+                <div class="product-card" data-title="Сітка доріжка Профі (7м х 1.6м) Сеть дорожка Профи резинка" data-id="5">
+                    <img src="ekran/setidorojkaKarabinRezinka.jpg" alt="Сітка доріжка Профі" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p5_title">Сітка доріжка «Профі» (7м х 1.6м)</h3>
+                    <p class="specs" data-i18n="p5_specs">Вільсілка 30м | Гумка 5м | 2 карабіни з вертлюгом</p>
                     
                     <div class="size-selector">
-                        <label for="mesh-select-5">Ячейка: </label>
+                        <label for="mesh-select-5" data-i18n="mesh_label">Вічко: </label>
                         <select id="mesh-select-5" class="select-mesh">
-                            <option value="Не выбрана">Выбрать размер...</option>
+                            <option value="Не выбрана" data-i18n="mesh_default">Обрати розмір...</option>
                             <option value="18мм">18 мм</option>
                             <option value="20мм">20 мм</option>
                             <option value="25мм">25 мм</option>
@@ -525,172 +644,93 @@
                         </select>
                     </div>
 
-                    <p class="price">140 грн <span class="wholesale-info">(опт: 90 грн от 20шт)</span></p>
+                    <p class="price">140 грн <span class="wholesale-info" data-i18n="p5_opt">(опт: 90 грн від 20шт)</span></p>
                     
                     <div class="card-buttons">
-                        <button class="btn-more" onclick="openModal('details-modal-5')">Подробнее</button>
-                        <button class="btn-buy" onclick="addToCart(5)">В корзину</button>
+                        <button class="btn-more" onclick="openModal('details-modal-5')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(5)" data-i18n="btn_buy">У кошик</button>
                     </div>
                 </div>
 
-                <!-- Товар 6 (Дуги на паук 1.5х1.5м) -->
-                <div class="product-card">
-                    <img src="ekran/dugi1i5.jpg" alt="Дуги на паук рыболовный" onclick="openImageZoom(this.src)">
-                    <h3>Дуги на паук рыболовный (1.5м х 1.5м)</h3>
-                    <p class="specs">Материал: пластик | Толщина: 8 мм</p>
-                    <p class="price" style="margin-top: 53px;">600 грн</p>
+                <!-- Товар 6 (Дуги) -->
+                <div class="product-card" data-title="Дуги на павук риболовний (1.5м х 1.5м) Дуги на паук" data-id="6">
+                    <img src="ekran/dugi1i5.jpg" alt="Дуги на павук" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p6_title">Дуги на павук риболовний (1.5м х 1.5м)</h3>
+                    <p class="specs" data-i18n="p6_specs">Матеріал: пластик | Товщина: 8 мм</p>
+                    <p class="price" style="margin-top: 45px;">600 грн</p>
                     <div class="card-buttons">
-                        <button class="btn-more" onclick="openModal('details-modal-6')">Подробнее</button>
-                        <button class="btn-buy" onclick="addToCart(6)">В корзину</button>
+                        <button class="btn-more" onclick="openModal('details-modal-6')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(6)" data-i18n="btn_buy">У кошик</button>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- SEO Блок перелинковки по городам -->
+        <!-- SEO Блок -->
         <section class="seo-cities-block">
-            <h3>Быстрая доставка по регионам:</h3>
-            <p style="font-size: 14px; color: #666;">Отправляем рыболовные экраны, дорожки, пауки и снасти Новой Почтой и Укрпочтой в города:</p>
+            <h3 data-i18n="seo_title">Швидка доставка по регіонах:</h3>
+            <p style="font-size: 14px; color: #666;" data-i18n="seo_sub">Відправляємо риболовні екрани, доріжки, павуки та снасті Новою Поштою та Укрпоштою в міста:</p>
             <div class="city-links">
-                <a href="?city=mykolaiv">Николаев</a>
-                <a href="?city=odessa">Одесса</a>
-                <a href="?city=kherson">Херсон</a>
-                <a href="?city=dnipro">Днепр</a>
-                <a href="?city=zaporizhzhia">Запорожье</a>
-                <a href="?city=kharkiv">Харьков</a>
-                <a href="?city=kyiv">Киев</a>
-                <a href="?city=vinnitsya">Винница</a>
-                <a href="?city=poltava">Полтава</a>
-                <a href="?city=cherkasy">Черкассы</a>
+                <a href="?city=mykolaiv" data-i18n="c_myk">Миколаїв</a>
+                <a href="?city=odessa" data-i18n="c_ode">Одеса</a>
+                <a href="?city=kherson" data-i18n="c_khe">Херсон</a>
+                <a href="?city=dnipro" data-i18n="c_dni">Дніпро</a>
+                <a href="?city=zaporizhzhia" data-i18n="c_zap">Запоріжжя</a>
+                <a href="?city=kharkiv" data-i18n="c_kha">Харків</a>
+                <a href="?city=kyiv" data-i18n="c_kyi">Київ</a>
             </div>
         </section>
 
     </main>
 
-    <!-- Окно: Подробнее об Экране (ID: 3) -->
+    <!-- Модальные окна подробностей -->
     <div id="details-modal-3" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-3')">&times;</span>
-            <h2>Рыболовный экран (1х1 м) — надежный помощник для успешного лова</h2>
-            <p>Ищете эффективный и простой в использовании инструмент для рыбалки? Наш рыболовный экран размером 1х1 метр — это классика, проверенная временем, которая обеспечивает стабильный результат при ловле различной рыбы. Благодаря качественному исполнению и оптимально подобранным материалам, эта снасть станет незаменимой частью вашего рыболовного арсенала.</p>
-            <h3>Основные характеристики:</h3>
+            <h2 data-i18n="m3_h2">Риболовний екран (1х1 м) — надійний помічник для успішного лову</h2>
+            <p data-i18n="m3_p1">Шукаєте ефективний та простий у використанні інструмент для риболовлі? Наш риболовний екран розміром 1х1 метр — це класика, перевірена часом.</p>
+            <h3 data-i18n="m3_h3_1">Основні характеристики:</h3>
             <ul>
-                <li><strong>Габариты:</strong> 1х1 метр (удобный размер для большинства водоемов).</li>
-                <li><strong>Материал:</strong> качественная леска толщиной 0.18 мм — она практически невидима в воде, но при этом достаточно прочна для уверенного вываживания добычи.</li>
-                <li><strong>Разнообразие ячеек:</strong> в наличии варианты от 14 мм до 50 мм, что позволяет подобрать снасть под нужный размер рыбы (от живца до крупного карася или карпа).</li>
-                <li><strong>Конструкция:</strong> жесткая рамка обеспечивает правильное натяжение полотна, предотвращая запутывание.</li>
+                <li data-i18n="m3_l1"><strong>Габарити:</strong> 1х1 метр (зручний розмір для більшості водойм).</li>
+                <li data-i18n="m3_l2"><strong>Матеріал:</strong> якісна волосінь товщиною 0.18 мм.</li>
+                <li data-i18n="m3_l3"><strong>Різноманітність вічок:</strong> від 14 мм до 50 мм.</li>
             </ul>
-            <h3>Почему выбирают наши экраны:</h3>
-            <ul>
-                <li><strong>Универсальность:</strong> подходит как для любительской рыбалки, так и для добычи живца.</li>
-                <li><strong>Незаметность:</strong> тонкая леска диаметром 0.18 мм не пугает рыбу даже при хорошем освещении.</li>
-                <li><strong>Компактность:</strong> легко транспортируется, быстро приводится в рабочее состояние.</li>
-                <li><strong>Долговечность:</strong> используемые материалы устойчивы к воздействию воды и солнца.</li>
-            </ul>
-            <h3>Цена и условия заказа:</h3>
-            <ul>
-                <li><strong>Розничная цена:</strong> 130 грн.</li>
-                <li><strong>Оптовая цена:</strong> 90 грн (при заказе от 20 штук).</li>
-            </ul>
-            <p>Это отличное предложение для тех, кто хочет обновить свой набор или ищет надежного поставщика снастей. Готовы сделать заказ или остались вопросы по выбору размера ячейки? Пишите в личные сообщения или звоните — помогу подобрать идеальный вариант под ваши условия ловли!</p>
             <div style="text-align: center; margin-top: 20px;">
-                <button class="btn" onclick="closeModal('details-modal-3'); addToCart(3);">Добавить в корзину</button>
+                <button class="btn" onclick="closeModal('details-modal-3'); addToCart(3);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- Окно: Подробнее о Сети дорожке 7м (ID: 4) -->
     <div id="details-modal-4" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-4')">&times;</span>
-            <h2>Рыболовная сеть-дорожка (7 м х 1.6 м) — надежность и результат в каждом забросе</h2>
-            <p>Ищете эффективную снасть для active рыбалки? Представляем вашему вниманию классическую рыболовную сеть-дорожку, которая оптимально сочетает компактность, легкость в эксплуатации и высокую уловистость. Эта модель специально разработана для тех, кто ценит мобильность и результат. Благодаря продуманной конструкции и качественным материалам, она станет надежным инструментом в вашем арсенале.</p>
-            <h3>Технические особенности:</h3>
-            <ul>
-                <li><strong>Габариты:</strong> длина — 7 метров, высота — 1.6 метра. Такой размер позволяет охватить большую площадь водоема, эффективно перекрывая перспективные участки.</li>
-                <li><strong>Материал:</strong> качественная леска толщиной 0.15 мм. Она обладает высокой прочностью, при этом оставаясь практически незаметной в толще воды, что критически важно для осторожной рыбы.</li>
-                <li><strong>Широкий выбор ячеек:</strong> от 18 мм до 70 мм. Вы можете подобрать размер ячеи под конкретный вид и размер добычи — от небольшого живца до солидного трофейного экземпляра.</li>
-            </ul>
-            <h3>Преимущества модели:</h3>
-            <ul>
-                <li><strong>Простота установки:</strong> конструкция «дорожки» позволяет быстро подготовить снасть к работе.</li>
-                <li><strong>Эффективность:</strong> оптимальная высота полотна (1.6 м) делает ее универсальной для разных глубин.</li>
-                <li><strong>Незаметность:</strong> тонкая и прочная леска минимизирует вероятность того, что рыба заметит снасть до момента поимки.</li>
-                <li><strong>Компактность:</strong> в сложенном виде занимает минимум места при транспортировке.</li>
-            </ul>
-            <h3>Ценовое предложение:</h3>
-            <ul>
-                <li><strong>Розничная цена:</strong> 80 грн.</li>
-                <li><strong>Оптовая цена:</strong> 50 грн (при заказе от 20 штук).</li>
-            </ul>
-            <p>Это выгодное решение как для частных рыболовов, так и для тех, кто формирует запас снастей на весь сезон. Заинтересовала модель? Выбирайте нужный размер ячейки и оформляйте заказ прямо сейчас. Если есть вопросы по выбору или доставке — пишите, с удовольствием проконсультирую!</p>
+            <h2 data-i18n="m4_h2">Сітка-доріжка (7 м х 1.6 м) — надійність у кожному закинуті</h2>
+            <p data-i18n="m4_p1">Представляємо вашій увазі класичну сітку-доріжку, яка поєднує компактність та високу уловистість.</p>
             <div style="text-align: center; margin-top: 20px;">
-                <button class="btn" onclick="closeModal('details-modal-4'); addToCart(4);">Добавить в корзину</button>
+                <button class="btn" onclick="closeModal('details-modal-4'); addToCart(4);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- Окно: Подробнее о Сети дорожке Профи (ID: 5) -->
     <div id="details-modal-5" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-5')">&times;</span>
-            <h2>Рыболовная сеть-дорожка «Профи» (7 м х 1.6 м) — готовое решение для успешного улова</h2>
-            <p>Максимальная эффективность при минимальных хлопотах. Эта рыболовная дорожка поставляется в расширенной комплектации: она полностью готова к использованию сразу после покупки. Мы позаботились о том, чтобы вы не тратили время на поиск фурнитуры, а сосредоточились на процессе ловли.</p>
-            <h3>Технические характеристики:</h3>
-            <ul>
-                <li><strong>Размеры сети:</strong> длина 7 метров, высота 1.6 метра.</li>
-                <li><strong>Материал полотна:</strong> качественная леска толщиной 0.15 мм. Она обладает отличной прочностью и остается практически невидимой в воде, что гарантирует высокий результат даже в прозрачных водоемах.</li>
-                <li><strong>Вариативность ячеек:</strong> в наличии полотна с ячейкой от 18 мм до 70 мм. Это позволяет подобрать снасть под любые цели: от ловли живца до добычи крупного карася, карпа или другой рыбы.</li>
-            </ul>
-            <h3>Комплектация «под ключ»:</h3>
-            <ul>
-                <li><strong>Шнур-леска:</strong> 30 метров.</li>
-                <li><strong>Амортизационная резинка:</strong> 5 метров (обеспечивает плавное натяжение).</li>
-                <li><strong>Фурнитура:</strong> 2 надежных карабина с вертлюгом для быстрого монтажа и предотвращения перекручивания снасти.</li>
-            </ul>
-            <h3>Почему это лучший выбор:</h3>
-            <ul>
-                <li><strong>Экономия времени:</strong> снасть уже оснащена вертлюгами и карабинами — достаточно закрепить её на месте лова.</li>
-                <li><strong>Профессиональный подход:</strong> оптимально подобранные компоненты (резина, шнур, качественная леска) обеспечивают долговечность и отличную работу сети.</li>
-                <li><strong>Универсальность:</strong> благодаря широкому выбору размеров ячеек, вы легко подберете идеальный вариант под условия конкретного водоема.</li>
-                <li><strong>Компактность:</strong> в сложенном виде комплект занимает минимум места, что удобно для транспортировки в рюкзаке или лодке.</li>
-            </ul>
-            <h3>Цена и оптовые условия:</h3>
-            <ul>
-                <li><strong>Розничная цена:</strong> 140 грн.</li>
-                <li><strong>Оптовая цена:</strong> 90 грн (при заказе от 20 штук).</li>
-            </ul>
-            <p>Обеспечьте себя качественными снастями на весь сезон уже сейчас! Нужна консультация по выбору ячейки под конкретную рыбу? Пишите, я с радостью отвечу на все вопросы и помогу оформить заказ.</p>
+            <h2 data-i18n="m5_h2">Сітка-доріжка «Профи» (7 м х 1.6 м) з гумкою</h2>
+            <p data-i18n="m5_p1">Максимальна ефективність. Комплект повністю готовий до використання: волосінь 30м, гумка 5м, 2 карабіни.</p>
             <div style="text-align: center; margin-top: 20px;">
-                <button class="btn" onclick="closeModal('details-modal-5'); addToCart(5);">Добавить в корзину</button>
+                <button class="btn" onclick="closeModal('details-modal-5'); addToCart(5);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- Окно: Подробнее о Дугах для паука (ID: 6) -->
     <div id="details-modal-6" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-6')">&times;</span>
-            <h2>Комплект дуг для рыболовного паука (1.5 м x 1.5 м) — основа долговечности вашей снасти</h2>
-            <p>Правильно подобранные дуги — это залог того, что ваш рыболовный паук будет держать форму даже при сильном течении или солидном улове. Представляем вашему вниманию прочные пластиковые дуги, созданные для тех, кто ценит практичность и устойчивость снаряжения.</p>
-            <h3>Технические характеристики:</h3>
-            <ul>
-                <li><strong>Размер:</strong> предназначены для рыболовных пауков размером 1.5 м х 1.5 м.</li>
-                <li><strong>Материал:</strong> высококачественный, износостойкий пластик.</li>
-                <li><strong>Толщина:</strong> 8 мм — оптимальный показатель жесткости, обеспечивающий отличный баланс между гибкостью и прочностью конструкции.</li>
-                <li><strong>Цена:</strong> 600 грн за комплект.</li>
-            </ul>
-            <h3>Преимущества использования пластиковых дуг 8 мм:</h3>
-            <ul>
-                <li><strong>Устойчивость к коррозии:</strong> в отличие от металлических аналогов, пластик не подвержен ржавчине, что делает эти дуги идеальным выбором для длительного использования в пресной воде.</li>
-                <li><strong>Легкость и прочность:</strong> материал обладает достаточной упругостью, чтобы выдерживать нагрузки, при этом он значительно легче металла, что облегчает транспортировку снасти.</li>
-                <li><strong>Безопасность конструкции:</strong> материал не боится деформаций и не склонен к образованию острых заусенцев, что продлевает срок службы самой сетки паука.</li>
-                <li><strong>Стабильность:</strong> толщина 8 мм гарантирует, что дуги не будут чрезмерно прогибаться, обеспечивая надежное натяжение полотна сети.</li>
-            </ul>
-            <p>Это надежное решение для обновления вашего снаряжения, которое позволит пауку служить верой и правдой на протяжении многих рыбалок.</p>
+            <h2 data-i18n="m6_h2">Дуги на павук (1.5м х 1.5м)</h2>
+            <p data-i18n="m6_p1">Міцні пластикові дуги товщиною 8 мм. Не іржавіють, відмінно тримають форму.</p>
             <div style="text-align: center; margin-top: 20px;">
-                <button class="btn" onclick="closeModal('details-modal-6'); addToCart(6);">Добавить в корзину</button>
+                <button class="btn" onclick="closeModal('details-modal-6'); addToCart(6);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
@@ -699,96 +739,207 @@
     <div id="cart-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="toggleCart()">&times;</span>
-            <h2>Ваш заказ</h2>
+            <h2 data-i18n="cart_title">Ваше замовлення</h2>
             <div id="cart-items">
-                <p>Корзина пока пуста</p>
+                <p data-i18n="cart_empty">Кошик поки порожній</p>
             </div>
-            <div class="cart-total">Итого: <span id="cart-total-price">0</span> грн</div>
+            <div class="cart-total"><span data-i18n="cart_total">Разом:</span> <span id="cart-total-price">0</span> грн</div>
             
             <form id="order-form" onsubmit="sendOrder(event)">
-                <input type="text" id="customer-name" placeholder="Ваше Имя" required>
-                <input type="tel" id="customer-phone" placeholder="Номер телефона" required>
-                <input type="text" id="customer-delivery" placeholder="Город и № отделения Почты" required>
-                <button type="submit" class="btn">Оформить заказ</button>
+                <input type="text" id="customer-name" placeholder="Ваше Ім'я" required data-i18n-placeholder="f_name">
+                <input type="tel" id="customer-phone" placeholder="Номер телефону" required data-i18n-placeholder="f_phone">
+                <input type="text" id="customer-delivery" placeholder="Місто та № відділення Пошти" required data-i18n-placeholder="f_delivery">
+                <button type="submit" class="btn" data-i18n="f_btn">Оформити замовлення</button>
             </form>
         </div>
     </div>
 
-    <!-- Модальное окно для ЗУМА КАРТИНКИ -->
+    <!-- Модальное окно ZOOМ ИЗОБРАЖЕНИЯ -->
     <div id="image-zoom-modal" class="modal">
         <span class="close zoom-close" onclick="closeImageZoom()">&times;</span>
         <div class="zoom-modal-content">
-            <img class="zoomed-image" id="zoomed-img" src="" alt="Увеличенное фото">
+            <img class="zoomed-image" id="zoomed-img" src="" alt="Фото">
         </div>
     </div>
 
-    <!-- Контакты и подвал -->
+    <!-- Футер -->
     <footer class="footer" id="contacts">
         <div class="container">
-            <h2>Контакты для связи</h2>
+            <h2 data-i18n="f_contacts">Контакти для зв'язку</h2>
             <p>Телефон / Viber / Telegram: <strong>+38 (0XX) XXX-XX-XX</strong></p>
-            <p>Доставка: Новая Почта, Укрпочта (наложенный платеж или предоплата)</p>
-            <p>&copy; 2026 Магазин рыболовных снастей.</p>
+            <p data-i18n="f_delivery_info">Доставка: Нова Пошта, Укрпошта (післяплата або передплата)</p>
+            <p>&copy; 2026 Магазин риболовних снастей.</p>
         </div>
     </footer>
 
     <script>
-        // Динамическая смена заголовка при наличии параметра ?city=
-        const cityNames = {
-            'mykolaiv': 'в Николаеве и области',
-            'odessa': 'в Одессе и Одесской области',
-            'kherson': 'в Херсоне и области',
-            'dnipro': 'в Днепре и области',
-            'zaporizhzhia': 'в Запорожье',
-            'kharkiv': 'в Харькове',
-            'kyiv': 'в Киеве и области'
+        // Переводы (Словарь UK / RU)
+        const translations = {
+            uk: {
+                logo: "Риболовні Снасті",
+                nav_catalog: "Каталог",
+                nav_contacts: "Контакти",
+                cart: "Кошик",
+                hero_title: "Професійні снасті для успішної риболовлі",
+                hero_sub: "Відправка в день замовлення по всій Україні. Обирайте якість!",
+                hero_btn: "Перейти до покупок",
+                cat_title: "Екрани, Сітки-доріжки та Оснастки",
+                search_ph: "Пошук снастей (наприклад: екран, сітка, дуги...)",
+                no_results: "Товарів за вашим запитом не знайдено",
+                mesh_label: "Вічко: ",
+                mesh_default: "Обрати розмір...",
+                btn_more: "Детальніше",
+                btn_buy: "У кошик",
+                p3_title: "Екран риболовний (1м х 1м)",
+                p3_specs: "Волосінь: 0.18 мм | Вічка: 14 мм - 50 мм",
+                p3_opt: "(опт: 90 грн від 20шт)",
+                p4_title: "Сітка доріжка (7м х 1.6м)",
+                p4_specs: "Волосінь: 0.15 мм | Висота: 1.6 м | Довжина: 7 м",
+                p4_opt: "(опт: 50 грн від 20шт)",
+                p5_title: "Сітка доріжка «Профі» (7м х 1.6м)",
+                p5_specs: "Волосінь 30м | Гумка 5м | 2 карабіни з вертлюгом",
+                p5_opt: "(опт: 90 грн від 20шт)",
+                p6_title: "Дуги на павук риболовний (1.5м х 1.5м)",
+                p6_specs: "Матеріал: пластик | Товщина: 8 мм",
+                seo_title: "Швидка доставка по регіонах:",
+                seo_sub: "Відправляємо риболовні екрани, доріжки, павуки та снасті Новою Поштою та Укрпоштою в міста:",
+                c_myk: "Миколаїв", c_ode: "Одеса", c_khe: "Херсон", c_dni: "Дніпро", c_zap: "Запоріжжя", c_kha: "Харків", c_kyi: "Київ",
+                cart_title: "Ваше замовлення",
+                cart_empty: "Кошик поки порожній",
+                cart_total: "Разом:",
+                f_name: "Ваше Ім'я",
+                f_phone: "Номер телефону",
+                f_delivery: "Місто та № відділення Пошти",
+                f_btn: "Оформити замовлення",
+                f_contacts: "Контакти для зв'язку",
+                f_delivery_info: "Доставка: Нова Пошта, Укрпочта (післяплата або передплата)",
+                m3_h2: "Риболовний екран (1х1 м) — надійний помічник",
+                m3_p1: "Шукаєте ефективний та простий у використанні інструмент для риболовлі? Наш екран розміром 1х1 м — це класика.",
+                m3_h3_1: "Основні характеристики:",
+                m3_l1: "Габарити: 1х1 метр", m3_l2: "Матеріал: волосінь 0.18 мм", m3_l3: "Вічка: від 14 мм до 50 мм",
+                m4_h2: "Сітка-доріжка (7 м х 1.6 м)", m4_p1: "Класична сітка-доріжка з високою уловистістю.",
+                m5_h2: "Сітка-доріжка «Профі» з гумкою", m5_p1: "Повний комплект: волосінь 30м, гумка 5м, 2 карабіни.",
+                m6_h2: "Дуги на павук (1.5м х 1.5м)", m6_p1: "Міцний пластик 8 мм, стійкий до корозії."
+            },
+            ru: {
+                logo: "Рыболовные Снасти",
+                nav_catalog: "Каталог",
+                nav_contacts: "Контакты",
+                cart: "Корзина",
+                hero_title: "Профессиональные снасти для успешной рыбалки",
+                hero_sub: "Отправка в день заказа по всей Украине. Выбирайте качество!",
+                hero_btn: "Перейти к покупкам",
+                cat_title: "Экраны, Сетки-дорожки и Оснастки",
+                search_ph: "Поиск снастей (например: экран, сетка, дуги...)",
+                no_results: "Товары по вашему запросу не найдены",
+                mesh_label: "Ячейка: ",
+                mesh_default: "Выбрать размер...",
+                btn_more: "Подробнее",
+                btn_buy: "В корзину",
+                p3_title: "Экран рыболовный (1м х 1м)",
+                p3_specs: "Леска: 0.18 мм | Ячейки: 14 мм - 50 мм",
+                p3_opt: "(опт: 90 грн от 20шт)",
+                p4_title: "Сеть дорожка (7м х 1.6м)",
+                p4_specs: "Леска: 0.15 мм | Высота: 1.6 м | Длина: 7 м",
+                p4_opt: "(опт: 50 грн от 20шт)",
+                p5_title: "Сеть дорожка «Профи» (7м х 1.6м)",
+                p5_specs: "Леска 30м | Резинка 5м | 2 карабина с вертлюгом",
+                p5_opt: "(опт: 90 грн от 20шт)",
+                p6_title: "Дуги на паук рыболовный (1.5м х 1.5м)",
+                p6_specs: "Материал: пластик | Толщина: 8 мм",
+                seo_title: "Быстрая доставка по регионам:",
+                seo_sub: "Отправляем рыболовные экраны, дорожки, пауки и снасти Новой Почтой и Укрпочтой в города:",
+                c_myk: "Николаев", c_ode: "Одесса", c_khe: "Херсон", c_dni: "Днепр", c_zap: "Запорожье", c_kha: "Харьков", c_kyi: "Киев",
+                cart_title: "Ваш заказ",
+                cart_empty: "Корзина пока пуста",
+                cart_total: "Итого:",
+                f_name: "Ваше Имя",
+                f_phone: "Номер телефона",
+                f_delivery: "Город и № отделения Почты",
+                f_btn: "Оформить заказ",
+                f_contacts: "Контакты для связи",
+                f_delivery_info: "Доставка: Новая Почта, Укрпочта (наложенный платеж или предоплата)",
+                m3_h2: "Рыболовный экран (1х1 м) — надежный помощник",
+                m3_p1: "Ищете эффективный и простой в использовании инструмент для рыбалки? Наш экран 1х1м — классика.",
+                m3_h3_1: "Основные характеристики:",
+                m3_l1: "Габариты: 1х1 метр", m3_l2: "Материал: леска 0.18 мм", m3_l3: "Ячейки: от 14 мм до 50 мм",
+                m4_h2: "Сеть-дорожка (7 м х 1.6 м)", m4_p1: "Классическая сеть-дорожка с высокой уловистостью.",
+                m5_h2: "Сеть-дорожка «Профи» с резинкой", m5_p1: "Полный комплект: леска 30м, резинка 5м, 2 карабина.",
+                m6_h2: "Дуги на паук (1.5м х 1.5м)", m6_p1: "Прочный пластик 8 мм, устойчив к коррозии."
+            }
         };
 
-        const urlParams = new URLSearchParams(window.location.search);
-        const cityParam = urlParams.get('city');
+        let currentLang = 'uk';
 
-        if (cityParam && cityNames[cityParam]) {
-            document.getElementById('hero-title').innerText = `Рыболовные экраны и сетки-дорожки ${cityNames[cityParam]}`;
+        function switchLang(lang) {
+            currentLang = lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${lang}`).classList.add('active');
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
+                }
+            });
         }
 
-        // База данных товаров для корзины
+        // Фильтрация/поиск товаров
+        function filterProducts() {
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.product-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const titleData = card.getAttribute('data-title').toLowerCase();
+                if (titleData.includes(query)) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            const noResults = document.getElementById('no-results');
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+
+        // База товаров
         const productsData = {
-            3: { name: "Экран рыболовный (1м х 1м)", price: 130, wholesalePrice: 90, wholesaleQty: 20, isWholesale: true },
-            4: { name: "Сеть дорожка (7м х 1.6м)", price: 80, wholesalePrice: 50, wholesaleQty: 20, isWholesale: true },
-            5: { name: "Сеть дорожка «Профи» (7м х 1.6м)", price: 140, wholesalePrice: 90, wholesaleQty: 20, isWholesale: true },
-            6: { name: "Дуги на паук рыболовный (1.5м х 1.5м)", price: 600, isWholesale: false }
+            3: { name: "Екран рыболовний (1м х 1м)", price: 130, wholesalePrice: 90, wholesaleQty: 20, isWholesale: true },
+            4: { name: "Сітка доріжка (7м х 1.6м)", price: 80, wholesalePrice: 50, wholesaleQty: 20, isWholesale: true },
+            5: { name: "Сітка доріжка «Профі» (7м х 1.6м)", price: 140, wholesalePrice: 90, wholesaleQty: 20, isWholesale: true },
+            6: { name: "Дуги на павук (1.5м х 1.5м)", price: 600, isWholesale: false }
         };
 
         let cart = [];
 
         function toggleCart() {
             const modal = document.getElementById('cart-modal');
-            if (modal.style.display === 'block') {
-                modal.style.display = 'none';
-            } else {
-                modal.style.display = 'block';
-                updateCartUI();
-            }
+            modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
+            if (modal.style.display === 'block') updateCartUI();
         }
 
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'block';
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-        }
+        function openModal(id) { document.getElementById(id).style.display = 'block'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
 
         function openImageZoom(src) {
-            const modal = document.getElementById('image-zoom-modal');
-            const img = document.getElementById('zoomed-img');
-            modal.style.display = 'block';
-            img.src = src;
+            document.getElementById('image-zoom-modal').style.display = 'block';
+            document.getElementById('zoomed-img').src = src;
         }
 
-        function closeImageZoom() {
-            document.getElementById('image-zoom-modal').style.display = 'none';
-        }
+        function closeImageZoom() { document.getElementById('image-zoom-modal').style.display = 'none'; }
 
         function addToCart(productId) {
             const product = productsData[productId];
@@ -798,38 +949,29 @@
             if (meshSelect) {
                 selectedMesh = meshSelect.value;
                 if (selectedMesh === "Не выбрана") {
-                    alert("Пожалуйста, выберите размер ячейки перед добавлением в корзину!");
+                    alert(currentLang === 'uk' ? "Будь ласка, оберіть розмір вічка!" : "Пожалуйста, выберите размер ячейки!");
                     return;
                 }
             }
 
             const existingItem = cart.find(item => item.id === productId && item.mesh === selectedMesh);
-
             if (existingItem) {
                 existingItem.quantity += 1;
             } else {
-                cart.push({
-                    id: productId,
-                    name: product.name,
-                    price: product.price,
-                    mesh: selectedMesh,
-                    quantity: 1
-                });
+                cart.push({ id: productId, name: product.name, price: product.price, mesh: selectedMesh, quantity: 1 });
             }
 
             updateCartCount();
-            alert(`Товар "${product.name}" добавлен в корзину!`);
+            alert((currentLang === 'uk' ? 'Товар додано в кошик!' : 'Товар добавлен в корзину!'));
         }
 
         function changeQuantity(index, delta) {
             cart[index].quantity += delta;
-            
             if (cart[index].quantity <= 0) {
-                removeFromCart(index);
-            } else {
-                updateCartUI();
-                updateCartCount();
+                cart.splice(index, 1);
             }
+            updateCartUI();
+            updateCartCount();
         }
 
         function removeFromCart(index) {
@@ -844,107 +986,61 @@
         }
 
         function updateCartUI() {
-            const cartItemsContainer = document.getElementById('cart-items');
-            const totalPriceContainer = document.getElementById('cart-total-price');
-            
+            const container = document.getElementById('cart-items');
+            const totalContainer = document.getElementById('cart-total-price');
+
             if (cart.length === 0) {
-                cartItemsContainer.innerHTML = '<p>Корзина пока пуста</p>';
-                totalPriceContainer.innerText = '0';
+                container.innerHTML = `<p>${translations[currentLang].cart_empty}</p>`;
+                totalContainer.innerText = '0';
                 return;
             }
 
-            cartItemsContainer.innerHTML = '';
-            let totalOrderSum = 0;
+            container.innerHTML = '';
+            let totalSum = 0;
 
             cart.forEach((item, index) => {
-                const originalData = productsData[item.id];
-                let currentPrice = originalData.price;
+                const original = productsData[item.id];
+                let currentPrice = (original.isWholesale && item.quantity >= original.wholesaleQty) ? original.wholesalePrice : original.price;
+                const sum = currentPrice * item.quantity;
+                totalSum += sum;
 
-                if (originalData.isWholesale && item.quantity >= originalData.wholesaleQty) {
-                    currentPrice = originalData.wholesalePrice;
-                }
+                const nameText = item.mesh ? `${item.name} (${translations[currentLang].mesh_label}${item.mesh})` : item.name;
 
-                const itemSum = currentPrice * item.quantity;
-                totalOrderSum += itemSum;
-
-                const displayName = item.mesh ? `${item.name} (Ячейка: ${item.mesh})` : item.name;
-
-                cartItemsContainer.innerHTML += `
+                container.innerHTML += `
                     <div class="cart-item-row">
                         <div>
-                            <strong>${displayName}</strong><br>
+                            <strong>${nameText}</strong><br>
                             <div class="cart-qty-controls">
                                 <button type="button" class="qty-btn" onclick="changeQuantity(${index}, -1)">-</button>
                                 <span class="qty-val">${item.quantity}</span>
                                 <button type="button" class="qty-btn" onclick="changeQuantity(${index}, 1)">+</button>
                             </div>
-                            <small>${currentPrice} грн за шт.</small>
+                            <small>${currentPrice} грн</small>
                         </div>
                         <div style="text-align: right;">
-                            <span style="font-weight: bold; display: block; margin-bottom: 5px;">${itemSum} грн</span>
-                            <button type="button" style="color:red; cursor:pointer; background:none; border:none; font-size:18px;" onclick="removeFromCart(${index})">&times; Удалить</button>
+                            <span style="font-weight: bold; display: block;">${sum} грн</span>
+                            <button type="button" style="color:red; background:none; border:none; cursor:pointer;" onclick="removeFromCart(${index})">&times;</button>
                         </div>
                     </div>
                 `;
             });
 
-            totalPriceContainer.innerText = totalOrderSum;
+            totalContainer.innerText = totalSum;
         }
 
         function sendOrder(event) {
             event.preventDefault();
+            if (cart.length === 0) return;
 
-            if (cart.length === 0) {
-                alert("Ваша корзина пуста!");
-                return;
-            }
-
-            const name = document.getElementById('customer-name').value;
-            const phone = document.getElementById('customer-phone').value;
-            const delivery = document.getElementById('customer-delivery').value;
-
-            let productsListText = "";
-            let totalSum = 0;
-
-            cart.forEach(item => {
-                const originalData = productsData[item.id];
-                let currentPrice = originalData.price;
-                if (originalData.isWholesale && item.quantity >= originalData.wholesaleQty) {
-                    currentPrice = originalData.wholesalePrice;
-                }
-                const itemSum = currentPrice * item.quantity;
-                totalSum += itemSum;
-
-                const info = item.mesh ? ` (Ячейка: ${item.mesh})` : "";
-                productsListText += `- ${item.name}${info}: ${item.quantity} шт. на сумму ${itemSum} грн\n`;
-            });
-
-            const emailBody = `
-                Новый заказ на сайте!
-                
-                Клиент: ${name}
-                Телефон: ${phone}
-                Доставка: ${delivery}
-                
-                Список товаров:
-                ${productsListText}
-                
-                Итого к оплате: ${totalSum} грн.
-            `;
-
-            console.log(emailBody);
-            alert(`Спасибо за заказ, ${name}! Лог заказа сформирован. Дальше мы прикрутим обработчик писем на бэкенде.`);
-            
+            alert(currentLang === 'uk' ? "Дякуємо за замовлення!" : "Спасибо за заказ!");
             cart = [];
             updateCartCount();
             toggleCart();
             document.getElementById('order-form').reset();
         }
 
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-            }
+        window.onclick = function(e) {
+            if (e.target.classList.contains('modal')) e.target.style.display = 'none';
         }
     </script>
 </body>
