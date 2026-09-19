@@ -7,9 +7,9 @@
     <meta name="description" content="Качественные снасти, экраны, дорожки и дуги для рыбалки. Быстрая доставка Новой Почтой и Укрпочтой по всей Украине. Заказывайте прямо сейчас!">
     
     <style>
-        /* Общие настройки и фон сайта */
+        /* Общие настройки и фон сайта (fon.jpg лежит в корне рядом с index.html) */
         body {
-            background-image: url('images/fon.jpg');
+            background-image: url('fon.jpg');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -315,7 +315,6 @@
             color: #333;
         }
 
-        /* Специфический стиль для окна зума картинки */
         .zoom-modal-content {
             background: none;
             margin: 3% auto;
@@ -345,7 +344,6 @@
             color: #ddd;
         }
 
-        /* Элементы управления количеством в корзине */
         .cart-qty-controls {
             display: flex;
             align-items: center;
@@ -380,7 +378,6 @@
             text-align: center;
         }
 
-        /* Форма в корзине */
         #order-form input {
             width: 100%;
             padding: 10px;
@@ -405,7 +402,6 @@
             margin: 20px 0;
         }
 
-        /* Подвал */
         .footer {
             background-color: #2c3e50;
             color: white;
@@ -449,7 +445,7 @@
 
                 <!-- Товар 3 (Рыболовный экран) -->
                 <div class="product-card">
-                    <img src="images/ekran1.jpg" alt="Экран рыболовный 1х1м" onclick="openImageZoom(this.src)">
+                    <img src="ekran/ekran1.jpg" alt="Экран рыболовный 1х1м" onclick="openImageZoom(this.src)">
                     <h3>Экран рыболовный (1м х 1м)</h3>
                     <p class="specs">Леска: 0.18 мм | Ячейки: 14 мм - 50 мм</p>
                     
@@ -479,7 +475,7 @@
 
                 <!-- Товар 4 (Сеть дорожка 7м) -->
                 <div class="product-card">
-                    <img src="images/setidorojka.jpg" alt="Сеть дорожка 7м" onclick="openImageZoom(this.src)">
+                    <img src="ekran/setidorojka.jpg" alt="Сеть дорожка 7м" onclick="openImageZoom(this.src)">
                     <h3>Сеть дорожка (7м х 1.6м)</h3>
                     <p class="specs">Леска: 0.15 мм | Высота: 1.6 м | Длина: 7 м</p>
                     
@@ -509,7 +505,7 @@
 
                 <!-- Товар 5 (Сеть дорожка Профи с резинкой) -->
                 <div class="product-card">
-                    <img src="images/setidorojkaKarabinRezinka.jpg" alt="Сеть дорожка Профи" onclick="openImageZoom(this.src)">
+                    <img src="ekran/setidorojkaKarabinRezinka.jpg" alt="Сеть дорожка Профи" onclick="openImageZoom(this.src)">
                     <h3>Сеть дорожка «Профи» (7м х 1.6м)</h3>
                     <p class="specs">Леска 30м | Резинка 5м | 2 карабина с вертлюгом</p>
                     
@@ -539,7 +535,7 @@
 
                 <!-- Товар 6 (Дуги на паук 1.5х1.5м) -->
                 <div class="product-card">
-                    <img src="images/dugi1i5.jpg" alt="Дуги на паук рыболовный" onclick="openImageZoom(this.src)">
+                    <img src="ekran/dugi1i5.jpg" alt="Дуги на паук рыболовный" onclick="openImageZoom(this.src)">
                     <h3>Дуги на паук рыболовный (1.5м х 1.5м)</h3>
                     <p class="specs">Материал: пластик | Толщина: 8 мм</p>
                     <p class="price" style="margin-top: 53px;">600 грн</p>
@@ -718,7 +714,7 @@
         </div>
     </div>
 
-    <!-- Новое модальное окно для ЗУМА КАРТИНКИ -->
+    <!-- Модальное окно для ЗУМА КАРТИНКИ -->
     <div id="image-zoom-modal" class="modal">
         <span class="close zoom-close" onclick="closeImageZoom()">&times;</span>
         <div class="zoom-modal-content">
@@ -765,7 +761,6 @@
 
         let cart = [];
 
-        // Переключение видимости корзины
         function toggleCart() {
             const modal = document.getElementById('cart-modal');
             if (modal.style.display === 'block') {
@@ -776,7 +771,6 @@
             }
         }
 
-        // Управление обычными окнами (описания)
         function openModal(modalId) {
             document.getElementById(modalId).style.display = 'block';
         }
@@ -785,7 +779,6 @@
             document.getElementById(modalId).style.display = 'none';
         }
 
-        // Функции для зума фотографий
         function openImageZoom(src) {
             const modal = document.getElementById('image-zoom-modal');
             const img = document.getElementById('zoomed-img');
@@ -797,7 +790,6 @@
             document.getElementById('image-zoom-modal').style.display = 'none';
         }
 
-        // Добавление товара
         function addToCart(productId) {
             const product = productsData[productId];
             let selectedMesh = "";
@@ -829,11 +821,9 @@
             alert(`Товар "${product.name}" добавлен в корзину!`);
         }
 
-        // Изменение количества прямо внутри корзины через кнопки + и -
         function changeQuantity(index, delta) {
             cart[index].quantity += delta;
             
-            // Если опустили до нуля или меньше, удаляем товар из корзины
             if (cart[index].quantity <= 0) {
                 removeFromCart(index);
             } else {
@@ -870,7 +860,6 @@
                 const originalData = productsData[item.id];
                 let currentPrice = originalData.price;
 
-                // Пересчет на опт, если штук в одной позиции >= 20
                 if (originalData.isWholesale && item.quantity >= originalData.wholesaleQty) {
                     currentPrice = originalData.wholesalePrice;
                 }
@@ -952,7 +941,6 @@
             document.getElementById('order-form').reset();
         }
 
-        // Закрытие абсолютно любого окна по клику на темную область вокруг него
         window.onclick = function(event) {
             if (event.target.classList.contains('modal')) {
                 event.target.style.display = 'none';
