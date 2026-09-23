@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Риболовні снасті від виробника з доставкою по Україні | Магазин</title>
     <meta name="description" content="Якісні снасті від виробника: екрани, косинки, доріжки, павуки, ятері та дуги для риболовлі. Ціни без посередників. Доставка по Україні.">
-<link rel="canonical" href="https://aliksnasti.github.io/snasti-market/">
+    <link rel="canonical" href="https://aliksnasti.github.io/snasti-market/">
     
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <style>
         * {
             box-sizing: border-box;
@@ -1432,6 +1435,11 @@
     </footer>
 
     <script>
+        // Инициализация EmailJS
+        (function() {
+            emailjs.init("kz4P5B-tdzk1IKeJh");
+        })();
+
         const translations = {
             uk: {
                 logo: "Риболовні Снасті",
@@ -1778,39 +1786,51 @@
             event.preventDefault();
             if (cart.length === 0) return;
 
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = currentLang === 'uk' ? 'Надсилання...' : 'Отправка...';
+            submitBtn.disabled = true;
+
             const name = document.getElementById('customer-name').value;
             const phone = document.getElementById('customer-phone').value;
             const delivery = document.getElementById('customer-delivery').value;
 
-            let orderText = `🛒 *Нове замовленняз сайту!*\n\n`;
-            orderText += `👤 *Клієнт:* ${name}\n`;
-            orderText += `📞 *Телефон:* ${phone}\n`;
-            orderText += `📦 *Доставка:* ${delivery}\n\n`;
-            orderText += `📋 *Товари:*\n`;
-
+            let itemsList = '';
             let totalSum = 0;
+
             cart.forEach(item => {
                 const original = productsData[item.id];
                 let currentPrice = (original.isWholesale && item.quantity >= original.wholesaleQty) ? original.wholesalePrice : original.price;
                 const sum = currentPrice * item.quantity;
                 totalSum += sum;
                 const meshInfo = item.mesh ? ` (${item.mesh})` : '';
-                orderText += `• ${item.name}${meshInfo} — ${item.quantity} шт. х ${currentPrice} грн = ${sum} грн\n`;
+                itemsList += `• ${item.name}${meshInfo} — ${item.quantity} шт. х ${currentPrice} грн = ${sum} грн\n`;
             });
 
-            orderText += `\n💰 *Загальна сума:* ${totalSum} грн`;
+            const templateParams = {
+                customer_name: name,
+                customer_phone: phone,
+                customer_delivery: delivery,
+                order_items: itemsList,
+                total_price: totalSum + ' грн'
+            };
 
-            // Відкриття Viber або Telegram для надсилання готового замовлення
-            const encodedText = encodeURIComponent(orderText);
-            const telegramUrl = `https://t.me/share/url?url=&text=${encodedText}`;
-            
-            window.open(telegramUrl, '_blank');
-
-            alert(currentLang === 'uk' ? "Дякуємо за замовлення! Менеджер зв'яжеться з Вами." : "Спасибо за заказ! Менеджер свяжется с Вами.");
-            cart = [];
-            updateCartCount();
-            toggleCart();
-            document.getElementById('order-form').reset();
+            // Отправка письма на aliksnasti@gmail.com
+            emailjs.send('service_4tsjk8e', 'template_fka3fum', templateParams)
+                .then(function(response) {
+                    alert(currentLang === 'uk' ? "Дякуємо за замовлення! Лист успішно відправлено на пошту." : "Спасибо за заказ! Заказ успешно отправлен на почту.");
+                    cart = [];
+                    updateCartCount();
+                    toggleCart();
+                    document.getElementById('order-form').reset();
+                }, function(error) {
+                    alert(currentLang === 'uk' ? "Помилка при відправці замовлення. Спробуйте ще раз або зателефонуйте нам." : "Ошибка при отправке заказа. Попробуйте еще раз или позвоните нам.");
+                    console.error('EmailJS Error:', error);
+                })
+                .finally(function() {
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.disabled = false;
+                });
         }
 
         // Логіка кнопки "Вгору"
