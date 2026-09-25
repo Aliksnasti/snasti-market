@@ -715,9 +715,9 @@
 
         <div id="no-results" class="no-results" data-i18n="no_results">Товарів за вашим запитом не знайдено</div>
 
-        <!-- КАТЕГОРИЯ 1: Экраны, Косынки, Дорожки, Донные снасти -->
+        <!-- КАТЕГОРИЯ 1: Экраны, Косынки, Дорожки, Донные снасти, Сети -->
         <section class="category-section" id="cat-screens">
-            <h2 class="category-title" data-i18n="cat1_title">🎣 Екрани, Косинки, Доріжки та Оснастки</h2>
+            <h2 class="category-title" data-i18n="cat1_title">🎣 Екрани, Косинки, Доріжки та Сітки</h2>
             <div class="products-grid">
 
                 <!-- Экран 1х1м -->
@@ -747,6 +747,35 @@
                     <div class="card-buttons">
                         <button class="btn-more" onclick="openModal('details-modal-3')" data-i18n="btn_more">Детальніше</button>
                         <button class="btn-buy" onclick="addToCart(3)" data-i18n="btn_buy">У кошик</button>
+                    </div>
+                </div>
+
+                <!-- Полотно на экран 1х1м -->
+                <div class="product-card" data-title="Полотно на екран (1м х 1м) Полотно на экран" data-id="17">
+                    <img src="yater/polotno1mNa1m.jpg" alt="Полотно на екран 1х1м" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p17_title">Полотно на екран (1м х 1м)</h3>
+                    <p class="specs" data-i18n="p17_specs">Розмір: 1м х 1м | Вічка: 14 мм - 45 мм</p>
+                    
+                    <div class="size-selector">
+                        <label for="mesh-select-17" data-i18n="mesh_label">Вічко: </label>
+                        <select id="mesh-select-17" class="select-mesh">
+                            <option value="Не выбрана" data-i18n="mesh_default">Обрати розмір...</option>
+                            <option value="14мм">14 мм</option>
+                            <option value="16мм">16 мм</option>
+                            <option value="18мм">18 мм</option>
+                            <option value="20мм">20 мм</option>
+                            <option value="25мм">25 мм</option>
+                            <option value="30мм">30 мм</option>
+                            <option value="35мм">35 мм</option>
+                            <option value="40мм">40 мм</option>
+                            <option value="45мм">45 мм</option>
+                        </select>
+                    </div>
+
+                    <p class="price">50 грн</p>
+                    <div class="card-buttons">
+                        <button class="btn-more" onclick="openModal('details-modal-17')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(17)" data-i18n="btn_buy">У кошик</button>
                     </div>
                 </div>
 
@@ -833,6 +862,66 @@
                     <div class="card-buttons">
                         <button class="btn-more" onclick="openModal('details-modal-5')" data-i18n="btn_more">Детальніше</button>
                         <button class="btn-buy" onclick="addToCart(5)" data-i18n="btn_buy">У кошик</button>
+                    </div>
+                </div>
+
+                <!-- Сеть трехстенка 50м (высота 1.5м) -->
+                <div class="product-card" data-title="Сітка тристінна (50м х 1.5м) Сеть трехстенка" data-id="18">
+                    <img src="yater/setTrehstenkaV1,5mD50m.jpg" alt="Сітка тристінна 50м" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p18_title">Сітка тристінна (50м х 1.5м)</h3>
+                    <p class="specs" data-i18n="p18_specs">Довжина: 50 м | Висота: 1.5 м</p>
+                    <p class="price">360 грн</p>
+                    <div class="card-buttons">
+                        <button class="btn-more" onclick="openModal('details-modal-18')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(18)" data-i18n="btn_buy">У кошик</button>
+                    </div>
+                </div>
+
+                <!-- Сеть трехстенка 100м (высота 1.8м) -->
+                <div class="product-card" data-title="Сітка тристінна (100м х 1.8м) Сеть трехстенка" data-id="19">
+                    <img src="yater/setTrehstenkaV1,8mD100m.jpg" alt="Сітка тристінна 100м" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p19_title">Сітка тристінна (100м х 1.8м)</h3>
+                    <p class="specs" data-i18n="p19_specs">Довжина: 100 м | Висота: 1.8 м</p>
+                    <p class="price">820 грн</p>
+                    <div class="card-buttons">
+                        <button class="btn-more" onclick="openModal('details-modal-19')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(19)" data-i18n="btn_buy">У кошик</button>
+                    </div>
+                </div>
+
+                <!-- Сеть трехстенка 100м (высота 3м) -->
+                <div class="product-card" data-title="Сітка тристінна (100м х 3м) Сеть трехстенка" data-id="20">
+                    <img src="yater/set1stenkaV3m,8D100m.jpg" alt="Сітка тристінна 100м 3м" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p20_title">Сітка тристінна (100м х 3м)</h3>
+                    <p class="specs" data-i18n="p20_specs">Довжина: 100 м | Висота: 3.0 м</p>
+                    <p class="price">1040 грн</p>
+                    <div class="card-buttons">
+                        <button class="btn-more" onclick="openModal('details-modal-20')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(20)" data-i18n="btn_buy">У кошик</button>
+                    </div>
+                </div>
+
+                <!-- Сеть одностека 100м (высота 3м) -->
+                <div class="product-card" data-title="Сітка одностінна (100м х 3м) Сеть одностенка" data-id="21">
+                    <img src="yater/set1stenkaV3m,8D100m.jpg" alt="Сітка одностінна 100м 3м" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p21_title">Сітка одностінна (100м х 3м)</h3>
+                    <p class="specs" data-i18n="p21_specs">Довжина: 100 м | Висота: 3.0 м</p>
+                    <p class="price">620 грн</p>
+                    <div class="card-buttons">
+                        <button class="btn-more" onclick="openModal('details-modal-21')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(21)" data-i18n="btn_buy">У кошик</button>
+                    </div>
+                </div>
+
+                <!-- Сеть финка одностенка 30м (высота 1.8м) -->
+                <div class="product-card" data-title="Сітка фінка одностінна (30м х 1.8м) Сеть финка одностенка" data-id="22">
+                    <img src="yater/setFinka1stenkaV1,8D30m.jpg" alt="Сітка фінка" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p22_title">Сітка «Фінка» одностінна (30м х 1.8м)</h3>
+                    <p class="specs" data-i18n="p22_specs">Довжина: 30 м | Висота: 1.8 м</p>
+                    <p class="price">420 грн</p>
+                    <div class="card-buttons">
+                        <button class="btn-more" onclick="openModal('details-modal-22')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(22)" data-i18n="btn_buy">У кошик</button>
                     </div>
                 </div>
 
@@ -969,7 +1058,7 @@
 
         <!-- КАТЕГОРИЯ 3: Ятери и Раколовки -->
         <section class="category-section" id="cat-yaters">
-            <h2 class="category-title" data-i18n="cat3_title">🦞 Ятері та Раколовки (Капронова нитка)</h2>
+            <h2 class="category-title" data-i18n="cat3_title">🦞 Ятері та Раколовки</h2>
             <div class="products-grid">
 
                 <!-- Ятерь 40х80 -->
@@ -993,6 +1082,42 @@
                     <div class="card-buttons">
                         <button class="btn-more" onclick="openModal('details-modal-2')" data-i18n="btn_more">Детальніше</button>
                         <button class="btn-buy" onclick="addToCart(2)" data-i18n="btn_buy">У кошик</button>
+                    </div>
+                </div>
+
+                <!-- Раколовка зонтик 6 входов -->
+                <div class="product-card" data-title="Раколовка парасолька на 6 входів Раколовка зонтик" data-id="23">
+                    <img src="yater/rakolovkaZont6vhod.jpg" alt="Раколовка зонтик 6 входов" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p23_title">Раколовка-парасолька (6 входів)</h3>
+                    <p class="specs" data-i18n="p23_specs">Тип: зонтик | Входів: 6</p>
+                    <p class="price">220 грн</p>
+                    <div class="card-buttons">
+                        <button class="btn-more" onclick="openModal('details-modal-23')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(23)" data-i18n="btn_buy">У кошик</button>
+                    </div>
+                </div>
+
+                <!-- Раколовка зонтик 8 входов -->
+                <div class="product-card" data-title="Раколовка парасолька на 8 входів Раколовка зонтик" data-id="24">
+                    <img src="yater/rakolovkaZont8vhod.jpg" alt="Раколовка зонтик 8 входов" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p24_title">Раколовка-парасолька (8 входів)</h3>
+                    <p class="specs" data-i18n="p24_specs">Тип: зонтик | Входів: 8</p>
+                    <p class="price">240 грн</p>
+                    <div class="card-buttons">
+                        <button class="btn-more" onclick="openModal('details-modal-24')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(24)" data-i18n="btn_buy">У кошик</button>
+                    </div>
+                </div>
+
+                <!-- Раколовка зонтик 10 входов -->
+                <div class="product-card" data-title="Раколовка парасолька на 10 входів Раколовка зонтик" data-id="25">
+                    <img src="yater/rakolovkaZont10vhod.jpg" alt="Раколовка зонтик 10 входов" onclick="openImageZoom(this.src)">
+                    <h3 data-i18n="p25_title">Раколовка-парасолька (10 входів)</h3>
+                    <p class="specs" data-i18n="p25_specs">Тип: зонтик | Входів: 10</p>
+                    <p class="price">260 грн</p>
+                    <div class="card-buttons">
+                        <button class="btn-more" onclick="openModal('details-modal-25')" data-i18n="btn_more">Детальніше</button>
+                        <button class="btn-buy" onclick="addToCart(25)" data-i18n="btn_buy">У кошик</button>
                     </div>
                 </div>
 
@@ -1053,25 +1178,12 @@
 
     <!-- Модальные окна подробностей -->
 
-    <!-- ID: 1 (Ятерь 40х80) -->
+    <!-- ID: 1 -->
     <div id="details-modal-1" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-1')">&times;</span>
             <h2 data-i18n="m1_h2">Ятерь-раколовка (40 см х 80 см) з капронової нитки — висока міцність та надійність</h2>
-            <p data-i18n="m1_p1">Компактний та високоефективний ятерь (раколовка) розміром 40х80 см призначений для лову раків, живця та прибережної риби. Полотно снасті повністю виготовлено з високоякісної зносостійкої капронової нитки, що робить її стійкою до розривів, клешень раків, зачепів за каміння чи коряги. Конструкція розроблена за принципом пастки: здобич легко заходить всередину через спеціальні конусоподібні входи, але не може вибратися назад. Використання міцного каркаса та якісної сітки гарантує довговічність снасті навіть при активному використанні у водоймах з мулистим дном.</p>
-            <h3 data-i18n="m1_h3_1">Ключові характеристики:</h3>
-            <ul>
-                <li data-i18n="m1_l1"><strong>Діаметр кілець:</strong> 40 см (оптимальний компактний розмір для зручної постановки з берега або човна).</li>
-                <li data-i18n="m1_l2"><strong>Загальна довжина:</strong> 80 см.</li>
-                <li data-i18n="m1_l3"><strong>Матеріал сітки:</strong> мічна капронова нитка (не волосінь!), стійка до механічних пошкоджень, клешень та впливу солоної або прісної води.</li>
-                <li data-i18n="m1_l4"><strong>Каркас:</strong> міцні металеві кільця із захисним покриттям проти корозії.</li>
-            </ul>
-            <h3 data-i18n="m1_h3_2">Переваги капронової нитки:</h3>
-            <ul>
-                <li data-i18n="m1_l5">Нитка не перетирається, не перекушується раками і не рветься об каміння.</li>
-                <li data-i18n="m1_l6">Снасть служить набагато довше за аналоги з монофільної волосіні.</li>
-                <li data-i18n="m1_l7">Дуже зручно і компактно складається для транспортування.</li>
-            </ul>
+            <p data-i18n="m1_p1">Компактний та високоефективний ятерь (раколовка) розміром 40х80 см призначений для лову раків, живця та прибережної риби. Полотно снасті повністю виготовлено з високоякісної зносостійкої капронової нитки, що робить її стійкою до розривів, клешень раків, зачепів за каміння чи коряги. Конструкція розроблена за принципом пастки: здобич легко заходить всередину через спеціальні конусоподібні входи, але не може вибратися назад.</p>
             <p data-i18n="m1_p2"><strong>Ціна:</strong> 280 грн.</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-1'); addToCart(1);" data-i18n="btn_buy">У кошик</button>
@@ -1079,25 +1191,12 @@
         </div>
     </div>
 
-    <!-- ID: 2 (Ятерь 50х100) -->
+    <!-- ID: 2 -->
     <div id="details-modal-2" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-2')">&times;</span>
-            <h2 data-i18n="m2_h2">Ятерь-раколовка великий (50 см х 100 см) з капронової нитки — максимальна місткість</h2>
-            <p data-i18n="m2_p1">Збільшена модель ятеря розміром 50х100 см розрахована на солідні об'єми улову. Завдяки розширеному діаметру 50 см та довжині в 1 метр, цей ятерь здатен вмістити значно більше здобичі. Полотно виконане виключно з посиленої капронової нитки, що гарантує абсолютну терпимість до зачепів, гострого каміння та потужних клешень рака. Посилена конструкція чудово тримає форму під водою і протистоїть річкові течії.</p>
-            <h3 data-i18n="m2_h3_1">Технічні параметри:</h3>
-            <ul>
-                <li data-i18n="m2_l1"><strong>Діаметр кілець:</strong> 50 см.</li>
-                <li data-i18n="m2_l2"><strong>Загальна довжина:</strong> 100 см (1 метр).</li>
-                <li data-i18n="m2_l3"><strong>Матеріал полотна:</strong> капронова нитка підвищеної щільності, стійка до ультрафіолету та зносу.</li>
-                <li data-i18n="m2_l4"><strong>Входи:</strong> широкі конусоподібні заходи для безперешкодного заманювання здобичі всередину.</li>
-            </ul>
-            <h3 data-i18n="m2_h3_2">Основні переваги:</h3>
-            <ul>
-                <li data-i18n="m2_l5">Збільшений робочий об'єм дозволяє залишати пастку на довгий час (наприклад, на ніч).</li>
-                <li data-i18n="m2_l6">Капронова нитка чудово переносить тривале перебування у водоймах з мулом.</li>
-                <li data-i18n="m2_l7">Ідеально підходить як для промислового, так і для аматорського лову раків та риби.</li>
-            </ul>
+            <h2 data-i18n="m2_h2">Ятерь-раколовка великий (50 см х 100 см) з капронової нитки</h2>
+            <p data-i18n="m2_p1">Збільшена модель ятеря розміром 50х100 см розрахована на солідні об'єми улову. Завдяки розширеному діаметру 50 см та довжині в 1 метр, цей ятерь здатен вмістити значно більше здобичі. Полотно виконане виключно з посиленої капронової нитки.</p>
             <p data-i18n="m2_p2"><strong>Ціна:</strong> 420 грн.</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-2'); addToCart(2);" data-i18n="btn_buy">У кошик</button>
@@ -1105,294 +1204,301 @@
         </div>
     </div>
 
-    <!-- ID: 3 (Экран 1х1м) -->
+    <!-- ID: 3 -->
     <div id="details-modal-3" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-3')">&times;</span>
-            <h2 data-i18n="m3_h2">Риболовний екран (1х1 м) — надійний помічник для успішного лову</h2>
-            <p data-i18n="m3_p1">Шукаєте ефективний та простий у використанні інструмент для риболовлі? Наш риболовний екран розміром 1х1 метр — це класика, перевірена часом, яка забезпечує стабільний результат при лові різної риби. Завдяки якісному виконанню та оптимально підібраним матеріалам, ця снасть стане незамінною частиною вашого риболовного арсеналу.</p>
-            <h3 data-i18n="m3_h3_1">Основні характеристики:</h3>
-            <ul>
-                <li data-i18n="m3_l1"><strong>Габарити:</strong> 1х1 метр (зручний розмір для більшості водойм).</li>
-                <li data-i18n="m3_l2"><strong>Матеріал:</strong> якісна волосінь товщиною 0.18 мм — вона практично невидима у воді, але при цьому досить мічна для впевненого виводжування здобичі.</li>
-                <li data-i18n="m3_l3"><strong>Різноманітність вічок:</strong> в наявності варіанти від 14 мм до 50 мм, що дозволяє підібрати снасть під потрібний розмір риби (від живця до великого карася або коропа).</li>
-                <li data-i18n="m3_l4"><strong>Конструкція:</strong> жорстка рамка забезпечує правильне натягнення полотна, запобігаючи заплутуванню.</li>
-            </ul>
-            <h3 data-i18n="m3_h3_2">Чому обирають наші екрани:</h3>
-            <ul>
-                <li data-i18n="m3_l5"><strong>Універсальність:</strong> підходить як для аматорської риболовлі, так і для видобутку живця.</li>
-                <li data-i18n="m3_l6"><strong>Непомітність:</strong> тонка волосінь діаметром 0.18 мм не лякає рибу навіть при хорошу освітленні.</li>
-                <li data-i18n="m3_l7"><strong>Компактність:</strong> легко транспортується, швидко приводиться у робочий стан.</li>
-                <li data-i18n="m3_l8"><strong>Довговічність:</strong> використовувані матеріали стійкі до впливу води та сонця.</li>
-            </ul>
-            <p data-i18n="m3_p2"><strong>Роздрібна ціна:</strong> 130 грн. <br><strong>Оптова ціна:</strong> 90 грн (при замовленні від 20 штук).</p>
+            <h2 data-i18n="m3_h2">Риболовний екран (1х1 м)</h2>
+            <p data-i18n="m3_p1">Наш риболовний екран розміром 1х1 метр — це класика, перевірена часом, яка забезпечує стабільний результат при лові різної риби. Якісна волосінь 0.18 мм.</p>
+            <p data-i18n="m3_p2"><strong>Роздрібна ціна:</strong> 130 грн. <br><strong>Оптова ціна:</strong> 90 грн (від 20 шт).</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-3'); addToCart(3);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 4 (Сеть дорожка 7м) -->
+    <!-- ID: 4 -->
     <div id="details-modal-4" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-4')">&times;</span>
-            <h2 data-i18n="m4_h2">Риболовна сітка-доріжка (7 м х 1.6 м) — надійність та результат у кожному закинуті</h2>
-            <p data-i18n="m4_p1">Шукаєте ефективну снасть для активної риболовлі? Представляємо вашій увазі класичну риболовну сітку-доріжку, яка оптимально поєднує компактність, легкість в експлуатації та високу уловистість. Ця модель спеціально розроблена для тих, хто цінує мобільність та результат. Завдяки продуманій конструкції та якісним матеріалам, вона стане надійним інструментом у вашому арсеналі.</p>
-            <h3 data-i18n="m4_h3_1">Технічні особливості:</h3>
-            <ul>
-                <li data-i18n="m4_l1"><strong>Габарити:</strong> довжина — 7 метрів, висота — 1.6 метра. Такий розмір дозволяє охопити більшу площу водойми, ефективно перекриваючи перспективні ділянки.</li>
-                <li data-i18n="m4_l2"><strong>Матеріал:</strong> якісна волосінь товщиною 0.15 мм. Вона має високу міцність, при цьому залишаючись практично непомітною в товщі води, що критично важливо для обережної риби.</li>
-                <li data-i18n="m4_l3"><strong>Широкий вибір вічок:</strong> від 18 мм до 70 мм. Ви можете підібрати розмір вічка під конкретний вид та розмір здобичі — від невеликого живця до солідного трофейного екземпляра.</li>
-            </ul>
-            <h3 data-i18n="m4_h3_2">Переваги моделі:</h3>
-            <ul>
-                <li data-i18n="m4_l4"><strong>Простота встановлення:</strong> конструкція «доріжки» дозволяє швидко підготувати снасть до роботи.</li>
-                <li data-i18n="m4_l5"><strong>Ефективність:</strong> оптимальна висота полотна (1.6 м) робить її універсальною для різних глибин.</li>
-                <li data-i18n="m4_l6"><strong>Непомітність:</strong> тонка та мічна волосінь мінімізує ймовірність того, що риба помітить снасть до моменту упіймання.</li>
-                <li data-i18n="m4_l7"><strong>Компактність:</strong> у складеному вигляді займає мінімум місця при транспортуванні.</li>
-            </ul>
-            <p data-i18n="m4_p2"><strong>Роздрібна ціна:</strong> 80 грн. <br><strong>Оптова ціна:</strong> 50 грн (при замовленні від 20 штук).</p>
+            <h2 data-i18n="m4_h2">Риболовна сітка-доріжка (7 м х 1.6 м)</h2>
+            <p data-i18n="m4_p1">Класична риболовна сітка-доріжка, яка оптимально поєднує компактність, легкість в експлуатації та високу уловистість.</p>
+            <p data-i18n="m4_p2"><strong>Роздрібна ціна:</strong> 80 грн. <br><strong>Оптова ціна:</strong> 50 грн (від 20 шт).</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-4'); addToCart(4);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 5 (Сеть дорожка Профи) -->
+    <!-- ID: 5 -->
     <div id="details-modal-5" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-5')">&times;</span>
-            <h2 data-i18n="m5_h2">Риболовна сітка-доріжка «Профі» (7 м х 1.6 м) — готове рішення для успішного улову</h2>
-            <p data-i18n="m5_p1">Максимальна ефективність при мінімальних клопотах. Ця риболовна доріжка поставляється в розширеній комплектації: вона повністю готова до використання одразу після покупки. Ми подбали про те, щоб ви не витрачали час на пошук фурнітури, а зосередилися на процесі лову.</p>
-            <h3 data-i18n="m5_h3_1">Технічні характеристики:</h3>
-            <ul>
-                <li data-i18n="m5_l1"><strong>Розміри сітки:</strong> довжина 7 метрів, висота 1.6 метра.</li>
-                <li data-i18n="m5_l2"><strong>Матеріал полотна:</strong> якісна волосінь товщиною 0.15 мм. Вона має відмінну міцність і залишається практично невидимою у воді, що гарантує високий результат навіть у прозорих водоймах.</li>
-                <li data-i18n="m5_l3"><strong>Варіативність вічок:</strong> в наявності полотна з вічком від 18 мм до 70 мм.</li>
-            </ul>
-            <h3 data-i18n="m5_h3_2">Комплектація «під ключ»:</h3>
-            <ul>
-                <li data-i18n="m5_l4"><strong>Шнур-волосінь:</strong> 30 метрів.</li>
-                <li data-i18n="m5_l5"><strong>Амортизаційна гумка:</strong> 5 метрів (забезпечує плавне натягнення).</li>
-                <li data-i18n="m5_l6"><strong>Фурнітура:</strong> 2 надійних карабіни з вертлюгом для швидкого монтажу та запобігання перекручуванню снасті.</li>
-            </ul>
-            <p data-i18n="m5_p2"><strong>Роздрібна ціна:</strong> 140 грн. <br><strong>Оптова ціна:</strong> 90 грн (при замовленні від 20 штук).</p>
+            <h2 data-i18n="m5_h2">Риболовна сітка-доріжка «Профі» (7 м х 1.6 м)</h2>
+            <p data-i18n="m5_p1">Поставляється в розширеній комплектації з гумкою 5м, волосінню 30м та 2 карабінами з вертлюгами. Повністю готова до використання.</p>
+            <p data-i18n="m5_p2"><strong>Роздрібна ціна:</strong> 140 грн. <br><strong>Оптова ціна:</strong> 90 грн (від 20 шт).</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-5'); addToCart(5);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 6 (Дуги 1.5х1.5) -->
+    <!-- ID: 6 -->
     <div id="details-modal-6" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-6')">&times;</span>
-            <h2 data-i18n="m6_h2">Комплект дуг для риболовного павука (1.5 м x 1.5 м) — основа довговечності вашої снасті</h2>
-            <p data-i18n="m6_p1">Правильно підібрані дуги — це запорука того, що ваш риболовний павук триматиме форму навіть при сильній течії або солідному улові. Представляємо вашій увазі міцні пластикові дуги, створені для тих, хто цінує практичність та стійкість спорядження.</p>
-            <h3 data-i18n="m6_h3_1">Технічні характеристики:</h3>
-            <ul>
-                <li data-i18n="m6_l1"><strong>Розмір:</strong> призначені для риболовних павуків розміром 1.5 м х 1.5 м.</li>
-                <li data-i18n="m6_l2"><strong>Матеріал:</strong> високоякісний, зносостійкий пластик.</li>
-                <li data-i18n="m6_l3"><strong>Товщина:</strong> 8 мм — оптимальний показник жорсткості, що забезпечує відмінний баланс між гнучкістю та міцністю конструкції.</li>
-                <li data-i18n="m6_l4"><strong>Ціна:</strong> 600 грн за комплект.</li>
-            </ul>
-            <h3 data-i18n="m6_h3_2">Переваги використання пластикових дуг 8 мм:</h3>
-            <ul>
-                <li data-i18n="m6_l5"><strong>Стійкість до корозії:</strong> пластик не схильний до іржі, що робить ці дуги ідеальним вибором для тривалого використання у прісній воді.</li>
-                <li data-i18n="m6_l6"><strong>Легкість та міцність:</strong> матеріал витримує навантаження, при цьому він значно легший за метал, що полегшує транспортування.</li>
-                <li data-i18n="m6_l7"><strong>Стабільність:</strong> товщина 8 мм гарантує, що дуги не прогинатимуться надмірно під вагою улову.</li>
-            </ul>
+            <h2 data-i18n="m6_h2">Комплект дуг для риболовного павука (1.5 м x 1.5 м)</h2>
+            <p data-i18n="m6_p1">Міцні пластикові дуги 8 мм для павука 1.5х1.5 м. Не іржавіють та чудово тримають форму.</p>
+            <p><strong>Ціна:</strong> 600 грн.</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-6'); addToCart(6);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 7 (Косынка 1х1м) -->
+    <!-- ID: 7 -->
     <div id="details-modal-7" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-7')">&times;</span>
-            <h2 data-i18n="m7_h2">Косинка риболовна (1 м х 1 м) — трикутна уловиста снасть</h2>
-            <p data-i18n="m7_p1">Риболовна косинка розміром 1х1 метр має трикутну форму і призначена для ефективного точкового лову риби у прибережній зоні або на невеликих глибинах. Завдяки особливій геометрії та якісному натягненню волосіні, косинка легко піднімається у воді і захоплює пропливаючу рибу, роблячи риболовлю максимально продуктивною.</p>
-            <h3 data-i18n="m7_h3_1">Характеристики та переваги:</h3>
-            <ul>
-                <li data-i18n="m7_l1"><strong>Розмір:</strong> 1х1 метр.</li>
-                <li data-i18n="m7_l2"><strong>Матеріал:</strong> якісна прозора волосінь високої міцності.</li>
-                <li data-i18n="m7_l3"><strong>Асортимент вічок:</strong> 20, 25, 30, 35, 40, 45 мм (підбирається під необхідний розмір здобичі від живця до великої риби).</li>
-                <li data-i18n="m7_l4"><strong>Застосування:</strong> ідеально підходить для лову риби у заросших місцях, під кущами або біля очерету.</li>
-            </ul>
-            <p data-i18n="m7_p2"><strong>Ціна:</strong> 80 грн.</p>
+            <h2 data-i18n="m7_h2">Косинка риболовна (1 м х 1 м)</h2>
+            <p data-i18n="m7_p1">Трикутна снасть з якісної волосіні для точкового лову біля кущів та очерету.</p>
+            <p><strong>Ціна:</strong> 80 грн.</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-7'); addToCart(7);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 8 (Снасть донная с резинкой) -->
+    <!-- ID: 8 -->
     <div id="details-modal-8" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-8')">&times;</span>
-            <h2 data-i18n="m8_h2">Снасть донна «Гумка» комплект — готова уловиста оснастка</h2>
-            <p data-i18n="m8_p1">Полноцінний комплект донної снасті з амортизаційною гумкою для зручної риболовлі без необхідності щоразу перезакидати грузило. Амортизаційна гума дозволяє виводжувати рибу та повертати гачки з принадою точно в те саме закормлене місце без лишнього шуму і сплесків.</p>
-            <h3 data-i18n="m8_h3_1">Польна комплектація:</h3>
-            <ul>
-                <li data-i18n="m8_l1"><strong>Основна волосінь:</strong> 30 метрів якісної монофільної волосіні.</li>
-                <li data-i18n="m8_l2"><strong>Амортизаційна гумка:</strong> 5 метрів міцної гуми для плавного ходу.</li>
-                <li data-i18n="m8_l3"><strong>Гачки:</strong> 5 міцних та гострих гачків на окремих повідках.</li>
-                <li data-i18n="m8_l4"><strong>Грузило:</strong> вагою 150 грамів для надійного утримання снасті на будь-якому дні.</li>
-            </ul>
-            <p data-i18n="m8_p2"><strong>Роздрібна ціна:</strong> 110 грн. <br><strong>Оптова ціна:</strong> 80 грн (при замовленні від 20 шт).</p>
+            <h2 data-i18n="m8_h2">Снасть донна «Гумка» комплект</h2>
+            <p data-i18n="m8_p1">Повноцінний комплект: волосінь 30м, гума 5м, 5 гачків та грузило 150г.</p>
+            <p><strong>Роздрібна ціна:</strong> 110 грн. <br><strong>Оптова ціна:</strong> 80 грн (від 20 шт).</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-8'); addToCart(8);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 9 (Дуги 2х2м) -->
+    <!-- ID: 9 -->
     <div id="details-modal-9" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-9')">&times;</span>
-            <h2 data-i18n="m9_h2">Дуги на павук (2 м х 2 м) з хрестовиною — 8 мм</h2>
-            <p data-i18n="m9_p1">Надійний комплект пластикових дуг товщиною 8 мм у поєднанні з міцною центральною хрестовиною. Спеціально розрахований під сіткове полотно павука розміром 2х2 метри. Сучасний пластиковий матеріал має високу гнучкість, повністю стійкий до корозії та розрахований на багаторічну експлуатацію.</p>
-            <h3 data-i18n="m9_h3_1">Особливості комплекту:</h3>
-            <ul>
-                <li data-i18n="m9_l1"><strong>Прутки:</strong> 4 зносостійкі прути з пластику 8 мм.</li>
-                <li data-i18n="m9_l2"><strong>Хрестовина:</strong> посилена сталева або пластикова хрестовина для надійного кріплення.</li>
-                <li data-i18n="m9_l3"><strong>Перевага:</strong> не іржавіє, не піддається залишковій деформації.</li>
-            </ul>
-            <p data-i18n="m9_p2"><strong>Ціна:</strong> 650 грн за комплект з хрестовиною.</p>
+            <h2 data-i18n="m9_h2">Дуги на павук (2 м х 2 м) з хрестовиною</h2>
+            <p data-i18n="m9_p1">Комплект пластикових дуг 8 мм з хрестовиною під павук 2х2м.</p>
+            <p><strong>Ціна:</strong> 650 грн.</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-9'); addToCart(9);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 10 (Дуги 2.5х2.5м) -->
+    <!-- ID: 10 -->
     <div id="details-modal-10" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-10')">&times;</span>
-            <h2 data-i18n="m10_h2">Дуги на павук посилені (2.5 м х 2.5 м) з хрестовиною — 10 мм</h2>
-            <p data-i18n="m10_p1">Посилений комплект прутків підвищеної товщини (10 мм) з надійною центральною хрестовиною для павука розміром 2.5х2.5 м. Збільшений діаметр 10 мм забезпечує потрібну жорсткість каркаса, запобігаючи надмірному прогинанню під час підйому снасті з водою та великою рибою.</p>
-            <h3 data-i18n="m10_h3_1">Переваги 10 мм пластику:</h3>
-            <ul>
-                <li data-i18n="m10_l1">Витримує значно більші навантаження на течії.</li>
-                <li data-i18n="m10_l2">Ідеально балансує розмір 2.5х2.5 метри.</li>
-                <li data-i18n="m10_l3">Повністю інертний до солоної та прісної води.</li>
-            </ul>
-            <p data-i18n="m10_p2"><strong>Ціна:</strong> 800 грн за комплект з хрестовиною.</p>
+            <h2 data-i18n="m10_h2">Дуги на павук посилені (2.5 м х 2.5 м) з хрестовиною</h2>
+            <p data-i18n="m10_p1">Посилені дуги завтовшки 10 мм для павуків 2.5х2.5 м.</p>
+            <p><strong>Ціна:</strong> 800 грн.</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-10'); addToCart(10);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 11 (Дуги 3х3м) -->
+    <!-- ID: 11 -->
     <div id="details-modal-11" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-11')">&times;</span>
-            <h2 data-i18n="m11_h2">Дуги на павук максимальні (3 м х 3 м) з хрестовиною — 10 мм</h2>
-            <p data-i18n="m11_p1">Найпотужніший комплект дуг завтовшки 10 мм з посиленою металевою хрестовиною для найбільших павуків розміром 3х3 метри. Конструкція гарантує ідеальне натягнення мережевого полотна, відмінну стійкість на течії та розрахована на максимальні навантаження при підйомі трофеїв.</p>
-            <h3 data-i18n="m11_h3_1">Характеристики:</h3>
-            <ul>
-                <li data-i18n="m11_l1"><strong>Розрахунковий розмір:</strong> 3.0 х 3.0 метри.</li>
-                <li data-i18n="m11_l2"><strong>Діаметр прута:</strong> 10 мм (посилений).</li>
-                <li data-i18n="m11_l3"><strong>Комплектація:</strong> 4 дуги + товстостінна хрестовина.</li>
-            </ul>
-            <p data-i18n="m11_p2"><strong>Ціна:</strong> 850 грн за комплект з хрестовиною.</p>
+            <h2 data-i18n="m11_h2">Дуги на павук максимальні (3 м х 3 м) з хрестовиною</h2>
+            <p data-i18n="m11_p1">Потужний комплект дуг 10 мм з металевою хрестовиною під павук 3х3м.</p>
+            <p><strong>Ціна:</strong> 850 грн.</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-11'); addToCart(11);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 12 (Паук 2х2 леска) -->
+    <!-- ID: 12 -->
     <div id="details-modal-12" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-12')">&times;</span>
-            <h2 data-i18n="m12_h2">Павук риболовний (2 м х 2 м) — Волосінь</h2>
-            <p data-i18n="m12_p1">Якісне сіткове полотно для павука розміром 2х2м з міцної монофільної волосіні. Головна перевага волосіні — абсолютна незапобіжність у воді та мінімальний опір річкові течії, що дозволяє швидко та легко піднімати снасть на поверхню.</p>
-            <h3 data-i18n="m12_h3_1">Переваги полотна з волосіні:</h3>
-            <ul>
-                <li data-i18n="m12_l1">Не вбирає воду і миттєво висихає.</li>
-                <li data-i18n="m12_l2">Не лякає рибу прозорим матеріалом.</li>
-                <li data-i18n="m12_l3">Легко відчищається від водоростей.</li>
-            </ul>
-            <p data-i18n="m12_p2"><strong>Ціна:</strong> 180 грн.</p>
+            <h2>Павук риболовний (2 м х 2 м) — Волосінь</h2>
+            <p>Сіткове полотно з якісної прозорої волосіні.</p>
+            <p><strong>Ціна:</strong> 180 грн.</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-12'); addToCart(12);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 13 (Паук 2.5х2.5 леска) -->
+    <!-- ID: 13 -->
     <div id="details-modal-13" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-13')">&times;</span>
-            <h2 data-i18n="m13_h2">Павук риболовний (2.5 м х 2.5 м) — Волосінь</h2>
-            <p data-i18n="m13_p1">Мережеве полотно для павука розширеного розміру 2.5х2.5 м з якісної прозорої волосіні. Дозволяє надійно охоплювати велику площу дна, залишаючись непоміченим для обережної риби.</p>
-            <h3 data-i18n="m13_h3_1">Особливості:</h3>
-            <ul>
-                <li data-i18n="m13_l1">Оптимальний розмір для середніх та великих річок.</li>
-                <li data-i18n="m13_l2">Мічна монофілка, стійка до ультрафіолету.</li>
-            </ul>
-            <p data-i18n="m13_p2"><strong>Ціна:</strong> 320 грн.</p>
+            <h2>Павук риболовний (2.5 м х 2.5 м) — Волосінь</h2>
+            <p>Сіткове полотно розширеного розміру з прозорої волосіні.</p>
+            <p><strong>Ціна:</strong> 320 грн.</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-13'); addToCart(13);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 14 (Паук 3х3 леска) -->
+    <!-- ID: 14 -->
     <div id="details-modal-14" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-14')">&times;</span>
-            <h2 data-i18n="m14_h2">Павук риболовний (3 м х 3 м) — Волосінь</h2>
-            <p data-i18n="m14_p1">Максимальний розмір мережевого полотна 3х3 метри з волосіні. Чудовий вибір для риболовлі з мостів, обривів чи човнів на глибоких водоймах, де важлива максимальна площа накриття.</p>
-            <h3 data-i18n="m14_h3_1">Переваги:</h3>
-            <ul>
-                <li data-i18n="m14_l1">Величезна площа робочої поверхні.</li>
-                <li data-i18n="m14_l2">Низький опір воді при ривку вгору.</li>
-            </ul>
-            <p data-i18n="m14_p2"><strong>Ціна:</strong> 360 грн.</p>
+            <h2>Павук риболовний (3 м х 3 м) — Волосінь</h2>
+            <p>Максимальне полотно з волосіні для обривів та мостів.</p>
+            <p><strong>Ціна:</strong> 360 грн.</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-14'); addToCart(14);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 15 (Паук 2х2 нитка) -->
+    <!-- ID: 15 -->
     <div id="details-modal-15" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-15')">&times;</span>
-            <h2 data-i18n="m15_h2">Павук риболовний (2 м х 2 м) — Капронова нитка</h2>
-            <p data-i18n="m15_p1">Високоміцне полотно з капронової нитки під павук 2х2м. Капронова нитка має колосальний запас міцності, не боїться зачепів за корчі, ракушняк або каміння, гарантуючи довговічність у складних умовах.</p>
-            <h3 data-i18n="m15_h3_1">Плюси капронового полотна:</h3>
-            <ul>
-                <li data-i18n="m15_l1">Максимальне розривне навантаження.</li>
-                <li data-i18n="m15_l2">Не рветься при зачепах за дно та коряги.</li>
-                <li data-i18n="m15_l3">Служить багатьма сезонами без втрати якості.</li>
-            </ul>
-            <p data-i18n="m15_p2"><strong>Ціна:</strong> 180 грн.</p>
+            <h2>Павук риболовний (2 м х 2 м) — Капронова нитка</h2>
+            <p>Надійне капронове полотно, не боїться зачепів за корчі.</p>
+            <p><strong>Ціна:</strong> 180 грн.</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-15'); addToCart(15);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
 
-    <!-- ID: 16 (Паук 3х3 нитка) -->
+    <!-- ID: 16 -->
     <div id="details-modal-16" class="modal">
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-16')">&times;</span>
-            <h2 data-i18n="m16_h2">Павук риболовний (3 м х 3 м) — Капронова нитка</h2>
-            <p data-i18n="m16_p1">Найбільше та найміцніше капронове полотно розміром 3х3 метри. Призначене для виловлювання солідної трофейної риби, витримує величезні навантаження при підйомі.</p>
-            <h3 data-i18n="m16_h3_1">Ключові риси:</h3>
-            <ul>
-                <li data-i18n="m16_l1">Найвищий показник надійності в лінійці.</li>
-                <li data-i18n="m16_l2">Ідеальне плетіння та посилені кути.</li>
-            </ul>
-            <p data-i18n="m16_p2"><strong>Ціна:</strong> 360 грн.</p>
+            <h2>Павук риболовний (3 м х 3 м) — Капронова нитка</h2>
+            <p>Міцне полотно з капронової нитки під великі навантаження.</p>
+            <p><strong>Ціна:</strong> 360 грн.</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-16'); addToCart(16);" data-i18n="btn_buy">У кошик</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ID: 17 -->
+    <div id="details-modal-17" class="modal">
+        <div class="modal-content text-left">
+            <span class="close" onclick="closeModal('details-modal-17')">&times;</span>
+            <h2>Полотно на екран (1м х 1м)</h2>
+            <p>Якісне сіткове полотно для самостійного оснащення або ремонту екранчиків. Прозора мічна волосінь.</p>
+            <p><strong>Ціна:</strong> 50 грн.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="closeModal('details-modal-17'); addToCart(17);" data-i18n="btn_buy">У кошик</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ID: 18 -->
+    <div id="details-modal-18" class="modal">
+        <div class="modal-content text-left">
+            <span class="close" onclick="closeModal('details-modal-18')">&times;</span>
+            <h2>Сітка тристінна (50м х 1.5м)</h2>
+            <p>Тристінна снасть з ряжою для надійного заплутування та утримання великої риби.</p>
+            <p><strong>Ціна:</strong> 360 грн.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="closeModal('details-modal-18'); addToCart(18);" data-i18n="btn_buy">У кошик</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ID: 19 -->
+    <div id="details-modal-19" class="modal">
+        <div class="modal-content text-left">
+            <span class="close" onclick="closeModal('details-modal-19')">&times;</span>
+            <h2>Сітка тристінна (100м х 1.8м)</h2>
+            <p>Довга тристінна сітка висотою 1.8 м для охоплення великих ділянок водойми.</p>
+            <p><strong>Ціна:</strong> 820 грн.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="closeModal('details-modal-19'); addToCart(19);" data-i18n="btn_buy">У кошик</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ID: 20 -->
+    <div id="details-modal-20" class="modal">
+        <div class="modal-content text-left">
+            <span class="close" onclick="closeModal('details-modal-20')">&times;</span>
+            <h2>Сітка тристінна (100м х 3.0м)</h2>
+            <p>Висока тристінна сітка 3 метри для глибоких водойм та річок з великою рибою.</p>
+            <p><strong>Ціна:</strong> 1040 грн.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="closeModal('details-modal-20'); addToCart(20);" data-i18n="btn_buy">У кошик</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ID: 21 -->
+    <div id="details-modal-21" class="modal">
+        <div class="modal-content text-left">
+            <span class="close" onclick="closeModal('details-modal-21')">&times;</span>
+            <h2>Сітка одностінна (100м х 3.0м)</h2>
+            <p>Класична одностінна сітка висотою 3 метри для перекриття глибоких ділянок.</p>
+            <p><strong>Ціна:</strong> 620 грн.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="closeModal('details-modal-21'); addToCart(21);" data-i18n="btn_buy">У кошик</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ID: 22 -->
+    <div id="details-modal-22" class="modal">
+        <div class="modal-content text-left">
+            <span class="close" onclick="closeModal('details-modal-22')">&times;</span>
+            <h2>Сітка «Фінка» одностінна (30м х 1.8м)</h2>
+            <p>Зручна та уловиста сітка фінського типу на вшитому грузильному шнурі.</p>
+            <p><strong>Ціна:</strong> 420 грн.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="closeModal('details-modal-22'); addToCart(22);" data-i18n="btn_buy">У кошик</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ID: 23 -->
+    <div id="details-modal-23" class="modal">
+        <div class="modal-content text-left">
+            <span class="close" onclick="closeModal('details-modal-23')">&times;</span>
+            <h2>Раколовка-парасолька (6 входів)</h2>
+            <p>Складана автоматична раколовка зонтик. Легко розкривається і складається за секунди.</p>
+            <p><strong>Ціна:</strong> 220 грн.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="closeModal('details-modal-23'); addToCart(23);" data-i18n="btn_buy">У кошик</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ID: 24 -->
+    <div id="details-modal-24" class="modal">
+        <div class="modal-content text-left">
+            <span class="close" onclick="closeModal('details-modal-24')">&times;</span>
+            <h2>Раколовка-парасолька (8 входів)</h2>
+            <p>Автоматична раколовка зонтик з 8 заходами для ефективного заманювання раків.</p>
+            <p><strong>Ціна:</strong> 240 грн.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="closeModal('details-modal-24'); addToCart(24);" data-i18n="btn_buy">У кошик</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ID: 25 -->
+    <div id="details-modal-25" class="modal">
+        <div class="modal-content text-left">
+            <span class="close" onclick="closeModal('details-modal-25')">&times;</span>
+            <h2>Раколовка-парасолька (10 входів)</h2>
+            <p>Найбільша раколовка зонтик на 10 входів для максимального улову.</p>
+            <p><strong>Ціна:</strong> 260 грн.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="closeModal('details-modal-25'); addToCart(25);" data-i18n="btn_buy">У кошик</button>
             </div>
         </div>
     </div>
@@ -1453,9 +1559,9 @@
                 hero_sub: "Відправка в день замовлення по всій Україні. Обирайте якість від майстра!",
                 hero_btn: "Перейти до покупок",
                 
-                cat1_title: "🎣 Екрани, Косинки, Доріжки та Оснастки",
+                cat1_title: "🎣 Екрани, Косинки, Доріжки та Сітки",
                 cat2_title: "🕸️ Риболовні Павуки та Дуги",
-                cat3_title: "🦞 Ятері та Раколовки (Капронова нитка)",
+                cat3_title: "🦞 Ятері та Раколовки",
 
                 why_title: "Чому обирають наші снасті?",
                 why_1_h3: "🏷️ Ціни від виробника",
@@ -1466,10 +1572,10 @@
                 why_3_p: "Оскільки ми самі виготовляємо снасті, ви можете замовити виготовлення під ваші нестандартні розміри та параметри.",
 
                 about_title: "Про наше виробництво",
-                about_p1: "Ласкаво просимо до нашого спеціалізованого магазину риболовних снастей! Ми займаємося ручним виготовленням та складанням високоефективних снастей для риболовлі вже багато років. Усі наші екрани, косинки, сітки-доріжки, павуки та ятері створюються з урахуванням реального досвіду рибалок на водоймах України.",
-                about_p2: "Ми використовуємо лише перевірену волосінь високої міцності та зносостійку капронову нитку. Купуючи снасті у нас, ви отримуєте надійний інструмент для улову за найвигіднішою ціною напряму від майстра Альберта.",
+                about_p1: "Ласкаво просимо до нашого спеціалізованого магазину риболовних снастей! Ми займаємося ручним виготовленням та складанням високоефективних снастей для риболовлі вже багато років.",
+                about_p2: "Купуючи снасті у нас, ви отримуєте надійний інструмент для улову за найвигіднішою ціною напряму від майстра Альберта.",
 
-                search_ph: "Пошук снастей (наприклад: екран, косинка, ятерь, павук, дуги...)",
+                search_ph: "Пошук снастей (наприклад: екран, косинка, ятерь, павук, дуги, сітка...)",
                 no_results: "Товарів за вашим запитом не знайдено",
                 mesh_label: "Вічко: ",
                 mesh_default: "Обрати розмір...",
@@ -1512,6 +1618,24 @@
                 p15_specs: "Матеріал: капронова нитка | Підвищена міцність",
                 p16_title: "Павук риболовний (3м х 3м) Нитка",
                 p16_specs: "Матеріал: капронова нитка | Для великої риби",
+                p17_title: "Полотно на екран (1м х 1м)",
+                p17_specs: "Розмір: 1м х 1м | Вічка: 14 мм - 45 мм",
+                p18_title: "Сітка тристінна (50м х 1.5м)",
+                p18_specs: "Довжина: 50 м | Висота: 1.5 м",
+                p19_title: "Сітка тристінна (100м х 1.8м)",
+                p19_specs: "Довжина: 100 м | Висота: 1.8 м",
+                p20_title: "Сітка тристінна (100м х 3м)",
+                p20_specs: "Довжина: 100 м | Висота: 3.0 м",
+                p21_title: "Сітка одностінна (100м х 3м)",
+                p21_specs: "Довжина: 100 м | Висота: 3.0 м",
+                p22_title: "Сітка «Фінка» одностінна (30м х 1.8м)",
+                p22_specs: "Довжина: 30 м | Висота: 1.8 м",
+                p23_title: "Раколовка-парасолька (6 входів)",
+                p23_specs: "Тип: зонтик | Входів: 6",
+                p24_title: "Раколовка-парасолька (8 входів)",
+                p24_specs: "Тип: зонтик | Входів: 8",
+                p25_title: "Раколовка-парасолька (10 входів)",
+                p25_specs: "Тип: зонтик | Входів: 10",
 
                 seo_title: "Швидка доставка по регіонах:",
                 seo_sub: "Відправляємо риболовні екрани, косинки, доріжки, павуки, ятері та снасті Новою Поштою та Укрпоштою в міста:",
@@ -1538,9 +1662,9 @@
                 hero_sub: "Отправка в день заказа по всей Украине. Выбирайте качество от мастера!",
                 hero_btn: "Перейти к покупкам",
                 
-                cat1_title: "🎣 Экраны, Косынки, Дорожки и Оснастки",
+                cat1_title: "🎣 Экраны, Косынки, Дорожки и Сети",
                 cat2_title: "🕸️ Рыболовные Пауки и Дуги",
-                cat3_title: "🦞 Ятери и Раколовы (Капроновая нить)",
+                cat3_title: "🦞 Ятери и Раколовы",
 
                 why_title: "Почему выбирают наши снасти?",
                 why_1_h3: "🏷️ Цены от производителя",
@@ -1551,10 +1675,10 @@
                 why_3_p: "Поскольку мы сами производим снасти, вы можете заказать изготовление под ваши нестандартные размеры и параметры.",
 
                 about_title: "О нашем производстве",
-                about_p1: "Добро пожаловать в наш специализированный магазин рыболовных снастей! Мы занимаемся ручным изготовлением и сборкой высокоэффективных снастей для рыбалки уже много лет. Все наши экраны, косынки, сети-дорожки, пауки и ятери создаются с учетом реального опыта рыбаков на водоемах Украины.",
-                about_p2: "Мы используем только проверенную леску высокой прочности и износостойкую капроновую нить. Покупая снасти у нас, вы получаете надежный инструмент для улова по самой выгодной цене напрямую от мастера Альберта.",
+                about_p1: "Добро пожаловать в наш специализированный магазин рыболовных снастей! Мы занимаемся ручным изготовлением и сборкой высокоэффективных снастей для рыбалки уже много лет.",
+                about_p2: "Покупая снасти у нас, вы получаете надежный инструмент для улова по самой выгодной цене напрямую от мастера Альберта.",
 
-                search_ph: "Поиск снастей (например: экран, косынка, ятерь, паук, дуги...)",
+                search_ph: "Поиск снастей (например: экран, косынка, ятерь, паук, дуги, сеть...)",
                 no_results: "Товары по вашему запросу не найдены",
                 mesh_label: "Ячейка: ",
                 mesh_default: "Выбрать размер...",
@@ -1597,6 +1721,24 @@
                 p15_specs: "Материал: капроновая нить | Повышенная прочность",
                 p16_title: "Паук рыболовный (3м х 3м) Нитка",
                 p16_specs: "Материал: капроновая нить | Для крупной рыбы",
+                p17_title: "Полотно на экран (1м х 1м)",
+                p17_specs: "Размер: 1м х 1м | Ячейки: 14 мм - 45 мм",
+                p18_title: "Сеть трехстенка (50м х 1.5м)",
+                p18_specs: "Длина: 50 м | Высота: 1.5 м",
+                p19_title: "Сеть трехстенка (100м х 1.8м)",
+                p19_specs: "Длина: 100 м | Высота: 1.8 м",
+                p20_title: "Сеть трехстенка (100м х 3м)",
+                p20_specs: "Длина: 100 м | Высота: 3.0 м",
+                p21_title: "Сеть одностенка (100м х 3м)",
+                p21_specs: "Длина: 100 м | Высота: 3.0 м",
+                p22_title: "Сеть «Финка» одностенка (30м х 1.8м)",
+                p22_specs: "Длина: 30 м | Высота: 1.8 м",
+                p23_title: "Раколовка-зонтик (6 входов)",
+                p23_specs: "Тип: зонтик | Входов: 6",
+                p24_title: "Раколовка-зонтик (8 входов)",
+                p24_specs: "Тип: зонтик | Входов: 8",
+                p25_title: "Раколовка-зонтик (10 входов)",
+                p25_specs: "Тип: зонтик | Входов: 10",
 
                 seo_title: "Быстрая доставка по регионам:",
                 seo_sub: "Отправляем рыболовные экраны, косынки, дорожки, пауки, ятери и снасти Новой Почтой и Укрпочтой в города:",
@@ -1674,7 +1816,16 @@
             13: { name: "Павук риболовний (2.5м х 2.5м) Волосінь", price: 320, isWholesale: false },
             14: { name: "Павук риболовний (3м х 3м) Волосінь", price: 360, isWholesale: false },
             15: { name: "Павук риболовний (2м х 2м) Нитка", price: 180, isWholesale: false },
-            16: { name: "Павук риболовний (3м х 3м) Нитка", price: 360, isWholesale: false }
+            16: { name: "Павук риболовний (3м х 3м) Нитка", price: 360, isWholesale: false },
+            17: { name: "Полотно на екран (1м х 1м)", price: 50, isWholesale: false },
+            18: { name: "Сітка тристінна (50м х 1.5м)", price: 360, isWholesale: false },
+            19: { name: "Сітка тристінна (100м х 1.8м)", price: 820, isWholesale: false },
+            20: { name: "Сітка тристінна (100м х 3м)", price: 1040, isWholesale: false },
+            21: { name: "Сітка одностінна (100м х 3м)", price: 620, isWholesale: false },
+            22: { name: "Сітка «Фінка» одностінна (30м х 1.8м)", price: 420, isWholesale: false },
+            23: { name: "Раколовка-парасолька (6 входів)", price: 220, isWholesale: false },
+            24: { name: "Раколовка-парасолька (8 входів)", price: 240, isWholesale: false },
+            25: { name: "Раколовка-парасолька (10 входів)", price: 260, isWholesale: false }
         };
 
         let cart = [];
