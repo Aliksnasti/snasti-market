@@ -9,6 +9,12 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="canonical" href="https://snasti-market.com.ua/">
     
+    <!-- Favicon (Иконка рака для поисковиков Google / Яндекс и браузеров) -->
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <!-- SVG-запасной вариант иконки рака без сторонних файлов -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232c3e50'/><text y='.9em' font-size='75' x='8'>🦞</text></svg>">
+
     <!-- Open Graph (для соцсетей и мессенджеров) -->
     <meta property="og:title" content="SNASTI-MARKET — Риболовні снасті від виробника Альберта">
     <meta property="og:description" content="Якісні снасті без посередників: екрани, косинки, сітки, павуки, ятері. Мінімальне замовлення від 500 грн.">
@@ -88,6 +94,18 @@
             cursor: pointer;
             user-select: none;
             transition: opacity 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .logo-icon {
+            height: 28px;
+            width: 28px;
+            object-fit: contain;
+            vertical-align: middle;
+            border-radius: 6px;
         }
 
         .logo:hover {
@@ -669,6 +687,15 @@
                 text-align: center;
             }
 
+            .logo {
+                font-size: 18px;
+            }
+
+            .logo-icon {
+                height: 24px;
+                width: 24px;
+            }
+
             .nav {
                 flex-direction: column;
                 gap: 5px;
@@ -715,7 +742,10 @@
     <!-- Шапка сайта -->
     <header class="header">
         <div class="container header-flex">
-            <div class="logo" onclick="location.reload();" data-i18n="logo">SNASTI-MARKET (Риболовні Снасті)</div>
+            <div class="logo" onclick="location.reload();">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a252f'/><text y='.9em' font-size='75' x='8'>🦞</text></svg>" alt="SNASTI-MARKET" class="logo-icon">
+                <span data-i18n="logo">SNASTI-MARKET (Риболовні Снасті)</span>
+            </div>
             <div class="header-contacts">
                 📞 <a href="tel:+380500430596">+38 (050) 043-05-96</a> (Альберт)
                 <a href="tel:+380500430596" class="btn-call-mobile" data-i18n="btn_call">📞 Зв'язатися</a>
