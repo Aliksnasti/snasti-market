@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Риболовні снасті від виробника з доставкою по Україні | Магазин</title>
-    <meta name="description" content="Якісні снасті від виробника: екрани, косинки, доріжки, павуки, ятері та дуги для риболовлі. Ціни без посередників. Доставка по Україні.">
+    <title>SNASTI-MARKET | Купити риболовні снасті від виробника Альберта</title>
+    <meta name="description" content="Купити риболовні снасті від виробника Альберта у магазині SNASTI-MARKET. Екрани, косинки, сітки-доріжки, павуки, ятері, раколовки. Доставка по Україні. Тел: 0500430596.">
+    <meta name="keywords" content="купить снасти рыболовные, купить рыболовные снасти, купить снасти для рыбалки, снасти рыболовные Альберт, SNASTI-MARKET, снасти маркет, купить экран рыболовный, купить косынку для рыбалки, купить паук рыболовный, купить ятерь раколовку, 0500430596, +380500430596, 050-043-05-96, снасти Николаев, снасти Украина">
+    <meta name="format-detection" content="telephone=no">
     <link rel="canonical" href="https://snasti-market.com.ua/">
+    
+    <!-- Open Graph (для соцсетей и мессенджеров) -->
+    <meta property="og:title" content="SNASTI-MARKET — Риболовні снасті від виробника Альберта">
+    <meta property="og:description" content="Якісні снасті без посередників: екрани, косинки, сітки, павуки, ятері. Мінімальне замовлення від 500 грн.">
+    <meta property="og:url" content="https://snasti-market.com.ua/">
+    <meta property="og:type" content="website">
+
+    <!-- Schema.org Микроразметка для Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportingGoodsStore",
+      "name": "SNASTI-MARKET",
+      "url": "https://snasti-market.com.ua/",
+      "telephone": "+380500430596",
+      "priceRange": "50UAH - 1040UAH",
+      "description": "Виробництво та продаж риболовних снастей від майстра Альберта: екрани, косинки, сітки, павуки, ятері.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "UA"
+      }
+    }
+    </script>
     
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -60,6 +85,13 @@
         .logo {
             font-size: 22px;
             font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            transition: opacity 0.2s;
+        }
+
+        .logo:hover {
+            opacity: 0.85;
         }
 
         .header-contacts {
@@ -176,7 +208,6 @@
             margin-bottom: 20px;
         }
 
-        /* Плашка производителя на баннере */
         .manufacturer-badge {
             display: inline-block;
             background-color: #f1c40f;
@@ -207,7 +238,6 @@
             background-color: #27ae60;
         }
 
-        /* Информационные блоки (Про нас / Почему мы) */
         .info-block {
             background-color: rgba(255, 255, 255, 0.95);
             padding: 25px;
@@ -255,7 +285,6 @@
             line-height: 1.5;
         }
 
-        /* Секции категорий */
         .category-section {
             background-color: rgba(255, 255, 255, 0.95);
             padding: 25px;
@@ -414,7 +443,6 @@
             background-color: #e0e0e0;
         }
 
-        /* SEO Блок городов */
         .seo-cities-block {
             background-color: rgba(255, 255, 255, 0.95);
             padding: 25px;
@@ -450,7 +478,6 @@
             color: #fff;
         }
 
-        /* Кнопка Прокрутки Наверх */
         .scroll-top-btn {
             position: fixed;
             bottom: 25px;
@@ -607,6 +634,18 @@
             margin: 15px 0;
         }
 
+        .min-order-notice {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
         .footer {
             background-color: #2c3e50;
             color: white;
@@ -620,7 +659,6 @@
             text-decoration: none;
         }
 
-        /* Адаптив для мобильных устройств */
         @media (max-width: 600px) {
             .header-flex {
                 flex-direction: column;
@@ -673,7 +711,7 @@
     <!-- Шапка сайта -->
     <header class="header">
         <div class="container header-flex">
-            <div class="logo" data-i18n="logo">Риболовні Снасті</div>
+            <div class="logo" onclick="location.reload();" data-i18n="logo">SNASTI-MARKET (Риболовні Снасті)</div>
             <div class="header-contacts">
                 📞 <a href="tel:+380500430596">+38 (050) 043-05-96</a> (Альберт)
                 <a href="tel:+380500430596" class="btn-call-mobile" data-i18n="btn_call">📞 Зв'язатися</a>
@@ -700,7 +738,7 @@
         <div class="container">
             <div class="manufacturer-badge" data-i18n="hero_badge">Власне виробництво риболовних снастей — ціни без посередників</div>
             <h1 id="hero-title" data-i18n="hero_title">Професійні снасті для <span class="word-no-break">успішної</span> риболовлі</h1>
-            <p data-i18n="hero_sub">Відправка в день замовлення по всій Україні. Обирайте якість від майстра!</p>
+            <p data-i18n="hero_sub">Відправка в день замовлення по всій Україні. Обирайте якість від майстра Альберта!</p>
             <a href="#cat-screens" class="btn" data-i18n="hero_btn">Перейти до покупок</a>
         </div>
     </section>
@@ -1143,14 +1181,14 @@
             </div>
         </section>
 
-        <!-- РАЗДЕЛ "ПРО НАС" -->
+        <!-- РАЗДЕЛ "ПРО НАС" (С SEO-текстом) -->
         <section class="info-block" id="about-us">
-            <h2 data-i18n="about_title">Про наше виробництво</h2>
+            <h2 data-i18n="about_title">Про наше виробництво | SNASTI-MARKET</h2>
             <p data-i18n="about_p1" style="line-height: 1.6; color: #444; font-size: 15px;">
-                Ласкаво просимо до нашого спеціалізованого магазину риболовних снастей! Ми займаємося ручним виготовленням та складанням високоефективних снастей для риболовлі вже багато років. Усі наші екрани, косинки, сітки-доріжки, павуки та ятері створюються з урахуванням реального досвіду рибалок на водоймах України.
+                Ласкаво просимо до нашого інтернет-магазину **SNASTI-MARKET**! Якщо ви шукаєте де купити риболовні снасті високої якості від виробника за вигідною ціною — ви потрапили за адресою. Ми займаємося виготовленням та ручним складанням якісних снастей для риболовлі вже багато років. Усі товари створюються з урахуванням багаторічного досвіду рибалок.
             </p>
             <p data-i18n="about_p2" style="line-height: 1.6; color: #444; font-size: 15px;">
-                Ми використовуємо лише перевірену волосінь високої міцності та зносостійку капронову нитку. Купуючи снасті у нас, ви отримуєте надійний інструмент для улову за найвигіднішою ціною напряму від майстра Альберта.
+                У нашому каталозі ви можете купити риболовні екрани, косинки, сітки-доріжки, одностінні та тристінні сітки, павуки (волосінь та нитка), дуги з хрестовинами, ятері та раколовки-парасольки. Купуючи снасті у нас, ви отримуєте надійний інструмент від майстра **Альберта** (телефон: **0500430596** / **+380500430596**). Мінімальне замовлення на сайті складовує 500 грн.
             </p>
         </section>
 
@@ -1274,7 +1312,7 @@
         <div class="modal-content text-left">
             <span class="close" onclick="closeModal('details-modal-8')">&times;</span>
             <h2 data-i18n="m8_h2">Снасть донна «Гумка» комплект</h2>
-            <p data-i18n="m8_p1">Повноцінний комплект: волосінь 30м, гума 5м, 5 гачків та грузило 150г.</p>
+            <p data-i18n="m8_p1">Полноцінний комплект: волосінь 30м, гума 5м, 5 гачків та грузило 150г.</p>
             <p><strong>Роздрібна ціна:</strong> 110 грн. <br><strong>Оптова ціна:</strong> 80 грн (від 20 шт).</p>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="btn" onclick="closeModal('details-modal-8'); addToCart(8);" data-i18n="btn_buy">У кошик</button>
@@ -1508,6 +1546,11 @@
         <div class="modal-content">
             <span class="close" onclick="toggleCart()">&times;</span>
             <h2 data-i18n="cart_title">Ваше замовлення</h2>
+            
+            <div class="min-order-notice" data-i18n="min_order_notice">
+                ℹ️ Мінімальна сума замовлення — 500 грн
+            </div>
+
             <div id="cart-items">
                 <p data-i18n="cart_empty">Кошик поки порожній</p>
             </div>
@@ -1517,7 +1560,7 @@
                 <input type="text" id="customer-name" placeholder="Ваше Ім'я" required data-i18n-placeholder="f_name">
                 <input type="tel" id="customer-phone" placeholder="Номер телефону" required data-i18n-placeholder="f_phone">
                 <input type="text" id="customer-delivery" placeholder="Місто та № відділення Пошти" required data-i18n-placeholder="f_delivery">
-                <button type="submit" class="btn" data-i18n="f_btn">Оформити замовлення</button>
+                <button type="submit" id="submit-order-btn" class="btn" data-i18n="f_btn">Оформити замовлення</button>
             </form>
         </div>
     </div>
@@ -1534,21 +1577,21 @@
     <footer class="footer" id="contacts">
         <div class="container">
             <h2 data-i18n="f_contacts">Контакти для зв'язку</h2>
+            <p>Магазин: <strong>SNASTI-MARKET</strong></p>
             <p>Телефон / Viber / Telegram: <strong><a href="tel:+380500430596">+38 (050) 043-05-96</a> (Альберт)</strong></p>
             <p data-i18n="f_delivery_info">Доставка: Нова Пошта, Укрпошта (післяплата або передплата)</p>
-            <p>&copy; 2026 Магазин риболовних снастей від виробника.</p>
+            <p>&copy; 2026 SNASTI-MARKET. Магазин риболовних снастей від виробника.</p>
         </div>
     </footer>
 
     <script>
-        // Инициализация EmailJS
         (function() {
             emailjs.init("kz4P5B-tdzk1IKeJh");
         })();
 
         const translations = {
             uk: {
-                logo: "Риболовні Снасті",
+                logo: "SNASTI-MARKET (Риболовні Снасті)",
                 nav_catalog: "Каталог",
                 nav_about: "Про нас",
                 nav_contacts: "Контакти",
@@ -1556,7 +1599,7 @@
                 btn_call: "📞 Зв'язатися",
                 hero_badge: "Власне виробництво риболовних снастей — ціни без посередників",
                 hero_title: "Професійні снасті для <span class=\"word-no-break\">успішної</span> риболовлі",
-                hero_sub: "Відправка в день замовлення по всій Україні. Обирайте якість від майстра!",
+                hero_sub: "Відправка в день замовлення по всій Україні. Обирайте якість від майстра Альберта!",
                 hero_btn: "Перейти до покупок",
                 
                 cat1_title: "🎣 Екрани, Косинки, Доріжки та Сітки",
@@ -1571,9 +1614,9 @@
                 why_3_h3: "📐 Індивідуальне замовлення",
                 why_3_p: "Оскільки ми самі виготовляємо снасті, ви можете замовити виготовлення під ваші нестандартні розміри та параметри.",
 
-                about_title: "Про наше виробництво",
-                about_p1: "Ласкаво просимо до нашого спеціалізованого магазину риболовних снастей! Ми займаємося ручним виготовленням та складанням високоефективних снастей для риболовлі вже багато років.",
-                about_p2: "Купуючи снасті у нас, ви отримуєте надійний інструмент для улову за найвигіднішою ціною напряму від майстра Альберта.",
+                about_title: "Про наше виробництво | SNASTI-MARKET",
+                about_p1: "Ласкаво просимо до нашого інтернет-магазину SNASTI-MARKET! Якщо ви шукаєте де купити риболовні снасті високої якості від виробника за вигідною ціною — ви потрапили за адресою. Ми займаємося виготовленням та ручним складанням якісних снастей для риболовлі вже багато років.",
+                about_p2: "У нашому каталозі ви можете купити риболовні екрани, косинки, сітки-доріжки, одностінні та тристінні сітки, павуки, дуги з хрестовинами, ятері та раколовки-парасольки. Купуючи снасті у нас, ви отримуєте надійний інструмент від майстра Альберта (+380500430596). Мінімальне замовлення — 500 грн.",
 
                 search_ph: "Пошук снастей (наприклад: екран, косинка, ятерь, павук, дуги, сітка...)",
                 no_results: "Товарів за вашим запитом не знайдено",
@@ -1641,6 +1684,7 @@
                 seo_sub: "Відправляємо риболовні екрани, косинки, доріжки, павуки, ятері та снасті Новою Поштою та Укрпоштою в міста:",
                 c_myk: "Миколаїв", c_ode: "Одеса", c_khe: "Херсон", c_dni: "Дніпро", c_zap: "Запоріжжя", c_kha: "Харків", c_kyi: "Київ", c_khm: "Хмельницький", c_pol: "Полтава",
                 cart_title: "Ваше замовлення",
+                min_order_notice: "ℹ️ Мінімальна сума замовлення — 500 грн",
                 cart_empty: "Кошик поки порожній",
                 cart_total: "Разом:",
                 f_name: "Ваше Ім'я",
@@ -1651,7 +1695,7 @@
                 f_delivery_info: "Доставка: Нова Пошта, Укрпошта (післяплата або передплата)"
             },
             ru: {
-                logo: "Рыболовные Снасти",
+                logo: "SNASTI-MARKET (Рыболовные Снасти)",
                 nav_catalog: "Каталог",
                 nav_about: "О нас",
                 nav_contacts: "Контакты",
@@ -1659,7 +1703,7 @@
                 btn_call: "📞 Связаться",
                 hero_badge: "Собственное производство рыболовных снастей — цены без посредников",
                 hero_title: "Профессиональные снасти для <span class=\"word-no-break\">успешной</span> рыбалки",
-                hero_sub: "Отправка в день заказа по всей Украине. Выбирайте качество от мастера!",
+                hero_sub: "Отправка в день заказа по всей Украине. Выбирайте качество от мастера Альберта!",
                 hero_btn: "Перейти к покупкам",
                 
                 cat1_title: "🎣 Экраны, Косынки, Дорожки и Сети",
@@ -1674,9 +1718,9 @@
                 why_3_h3: "📐 Индивидуальный заказ",
                 why_3_p: "Поскольку мы сами производим снасти, вы можете заказать изготовление под ваши нестандартные размеры и параметры.",
 
-                about_title: "О нашем производстве",
-                about_p1: "Добро пожаловать в наш специализированный магазин рыболовных снастей! Мы занимаемся ручным изготовлением и сборкой высокоэффективных снастей для рыбалки уже много лет.",
-                about_p2: "Покупая снасти у нас, вы получаете надежный инструмент для улова по самой выгодной цене напрямую от мастера Альберта.",
+                about_title: "О нашем производстве | SNASTI-MARKET",
+                about_p1: "Добро пожаловать в наш интернет-магазин SNASTI-MARKET! Если вы ищете где купить рыболовные снасти высокого качества от производителя по выгодной цене — вы попали по адресу. Мы занимаемся изготовлением и ручной сборкой качественных снастей для рыбалки уже много лет.",
+                about_p2: "В нашем каталоге вы можете купить рыболовные экраны, косынки, сети-дорожки, одностенные и трехстенные сети, пауки, дуги с крестовинами, ятери и раколовки-зонтики. Покупая снасти у нас, вы получаете надежный инструмент от мастера Альберта (+380500430596). Минимальный заказ — 500 грн.",
 
                 search_ph: "Поиск снастей (например: экран, косынка, ятерь, паук, дуги, сеть...)",
                 no_results: "Товары по вашему запросу не найдены",
@@ -1744,6 +1788,7 @@
                 seo_sub: "Отправляем рыболовные экраны, косынки, дорожки, пауки, ятери и снасти Новой Почтой и Укрпочтой в города:",
                 c_myk: "Николаев", c_ode: "Одесса", c_khe: "Херсон", c_dni: "Днепр", c_zap: "Запорожье", c_kha: "Харьков", c_kyi: "Киев", c_khm: "Хмельницкий", c_pol: "Полтава",
                 cart_title: "Ваш заказ",
+                min_order_notice: "ℹ️ Минимальная сумма заказа — 500 грн",
                 cart_empty: "Корзина пока пуста",
                 cart_total: "Итого:",
                 f_name: "Ваше Имя",
@@ -1890,6 +1935,16 @@
             document.getElementById('cart-count').innerText = count;
         }
 
+        function getCartTotal() {
+            let totalSum = 0;
+            cart.forEach(item => {
+                const original = productsData[item.id];
+                let currentPrice = (original.isWholesale && item.quantity >= original.wholesaleQty) ? original.wholesalePrice : original.price;
+                totalSum += currentPrice * item.quantity;
+            });
+            return totalSum;
+        }
+
         function updateCartUI() {
             const container = document.getElementById('cart-items');
             const totalContainer = document.getElementById('cart-total-price');
@@ -1935,9 +1990,19 @@
 
         function sendOrder(event) {
             event.preventDefault();
+            
             if (cart.length === 0) return;
 
-            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const totalSumVal = getCartTotal();
+            if (totalSumVal < 500) {
+                const diff = 500 - totalSumVal;
+                alert(currentLang === 'uk' 
+                    ? `Мінімальна сума замовлення складає 500 грн. Додайте товарів ще на ${diff} грн.` 
+                    : `Минимальная сумма заказа составляет 500 грн. Добавьте товаров еще на ${diff} грн.`);
+                return;
+            }
+
+            const submitBtn = document.getElementById('submit-order-btn');
             const originalBtnText = submitBtn.innerText;
             submitBtn.innerText = currentLang === 'uk' ? 'Надсилання...' : 'Отправка...';
             submitBtn.disabled = true;
@@ -1966,7 +2031,6 @@
                 total_price: totalSum + ' грн'
             };
 
-            // Отправка письма на aliksnasti@gmail.com
             emailjs.send('service_4tsjk8e', 'template_fka3fum', templateParams)
                 .then(function(response) {
                     alert(currentLang === 'uk' ? "Дякуємо за замовлення! Лист успішно відправлено на пошту." : "Спасибо за заказ! Заказ успешно отправлен на почту.");
@@ -1984,7 +2048,6 @@
                 });
         }
 
-        // Логіка кнопки "Вгору"
         const scrollTopBtn = document.getElementById("scrollTopBtn");
 
         window.onscroll = function() {
