@@ -1,11 +1,11 @@
 <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="192x192" href="yater/favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="yater/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
 
 <!-- Open Graph & Social Media -->
 <meta property="og:title" content="SNASTI-MARKET — Риболовні снасті від виробника Альберта">
 <meta property="og:description" content="Якісні снасті без посередників: екрани, косинки, сітки, одностенки, тристінки, павуки, ятері, раколовки, парашути, торпеди. Мінімальне замовлення від 500 грн.">
-<meta property="og:image" content="https://snasti-market.com.ua/yater/favicon.png">
+<meta property="og:image" content="https://snasti-market.com.ua/favicon.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SNASTI-MARKET — Риболовні снасті від виробника Альберта">
 <meta name="twitter:description" content="Якісні снасті без посередників: екрани, косинки, сітки, одностенки, тристінки, павуки, ятері, раколовки, парашути, торпеди.">
-<meta name="twitter:image" content="https://snasti-market.com.ua/yater/favicon.png">
+<meta name="twitter:image" content="https://snasti-market.com.ua/favicon.png">
 
 <!-- Schema.org Микроразметка -->
 <script type="application/ld+json">
@@ -25,7 +25,7 @@
   "@type": "SportingGoodsStore",
   "name": "SNASTI-MARKET",
   "url": "https://snasti-market.com.ua/",
-  "image": "https://snasti-market.com.ua/yater/favicon.png",
+  "image": "https://snasti-market.com.ua/favicon.png",
   "telephone": "+380500430596",
   "priceRange": "3UAH - 1600UAH",
   "description": "Виробництво та продаж риболовних снастей від майстра Альберта: екрани, косинки, сітки одностенки, тристінки, павуки, ятері, раколовки, торпеди, парашути.",
@@ -406,7 +406,7 @@
 
     .products-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
         gap: 18px;
     }
 
@@ -414,7 +414,7 @@
         background: #fff;
         border: 1px solid #e0e0e0;
         border-radius: 8px;
-        padding: 14px;
+        padding: 16px;
         text-align: center;
         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         display: flex;
@@ -423,10 +423,10 @@
     }
 
     .product-card img {
-        max-width: 100%;
-        height: 175px;
+        width: 100%;
+        height: 200px;
         object-fit: cover;
-        border-radius: 4px;
+        border-radius: 6px;
         cursor: pointer;
         transition: transform 0.2s ease;
         background-color: #f7f9fa;
@@ -437,7 +437,7 @@
     }
 
     .product-card h3 {
-        font-size: 16px;
+        font-size: 17px;
         margin: 12px 0 8px 0;
         color: #333;
     }
@@ -445,7 +445,7 @@
     .specs {
         font-size: 13px;
         color: #7f8c8d;
-        margin: 0;
+        margin: 0 0 8px 0;
         min-height: 35px;
         display: flex;
         align-items: center;
@@ -453,7 +453,7 @@
     }
 
     .price {
-        font-size: 19px;
+        font-size: 20px;
         font-weight: bold;
         color: #e74c3c;
         margin: 10px 0;
@@ -461,7 +461,7 @@
 
     .wholesale-info {
         display: block;
-        font-size: 11px;
+        font-size: 12px;
         color: #7f8c8d;
         font-weight: normal;
         margin-top: 3px;
@@ -473,31 +473,33 @@
     }
 
     .select-mesh {
-        padding: 6px;
-        border-radius: 4px;
+        padding: 8px;
+        border-radius: 6px;
         border: 1px solid #ccc;
         width: 100%;
         box-sizing: border-box;
         background: #fff;
+        font-size: 14px;
     }
 
     .card-buttons {
         display: flex;
         gap: 8px;
         justify-content: center;
-        margin-top: 8px;
+        margin-top: 10px;
     }
 
     .btn-buy {
         background-color: #e74c3c;
         color: white;
         border: none;
-        padding: 9px 12px;
-        border-radius: 5px;
+        padding: 10px 14px;
+        border-radius: 6px;
         cursor: pointer;
         font-weight: bold;
         flex: 1;
         transition: background 0.2s;
+        font-size: 14px;
     }
 
     .btn-buy:hover {
@@ -508,11 +510,12 @@
         background-color: #f0f0f0;
         color: #333;
         border: 1px solid #ccc;
-        padding: 9px 12px;
-        border-radius: 5px;
+        padding: 10px 14px;
+        border-radius: 6px;
         cursor: pointer;
         font-weight: bold;
         transition: background 0.2s;
+        font-size: 14px;
     }
 
     .btn-more:hover {
@@ -826,7 +829,56 @@
         text-decoration: none;
     }
 
-    @media (max-width: 600px) {
+    /* МОБИЛЬНАЯ АДАПТАЦИЯ: сетка 2х2 товара */
+    @media (max-width: 650px) {
+        .products-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 10px;
+        }
+
+        .product-card {
+            padding: 10px;
+        }
+
+        .product-card img {
+            height: 120px;
+        }
+
+        .product-card h3 {
+            font-size: 13px;
+            margin: 8px 0 4px 0;
+        }
+
+        .specs {
+            font-size: 11px;
+            min-height: 25px;
+        }
+
+        .price {
+            font-size: 15px;
+            margin: 6px 0;
+        }
+
+        .wholesale-info {
+            font-size: 9px;
+        }
+
+        .select-mesh {
+            padding: 5px;
+            font-size: 11px;
+        }
+
+        .card-buttons {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .btn-buy, .btn-more {
+            padding: 6px 8px;
+            font-size: 12px;
+            width: 100%;
+        }
+
         .header-flex {
             flex-direction: column;
             align-items: center;
@@ -874,10 +926,6 @@
             padding: 15px;
         }
 
-        .products-grid {
-            grid-template-columns: 1fr;
-        }
-
         .modal-content {
             margin: 5% auto;
             padding: 15px;
@@ -900,7 +948,7 @@
 <header class="header">
     <div class="container header-flex">
         <div class="logo" onclick="location.reload();">
-            <img src="yater/favicon.png" alt="SNASTI-MARKET" class="logo-icon">
+            <img src="favicon.png" alt="SNASTI-MARKET" class="logo-icon">
             <span data-i18n="logo">SNASTI-MARKET (Риболовні Снасті)</span>
         </div>
         <div class="header-contacts">
@@ -1097,7 +1145,7 @@
 
             <!-- Сеть трехстенка 50м (высота 1.5м) -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="360" data-title="Сітка тристінна (50м х 1.5м) Сеть трехстенка" data-id="18">
-                <img src="yater/setTrehstenkaV1,5md50m.jpg" alt="Сітка тристінна 50м" onclick="openImageZoom(this.src)">
+                <img src="yater/setTrehstenkaV1,5mD50m.jpg" alt="Сітка тристінна 50м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p18_title">Сітка тристінна (50м х 1.5м)</h3>
                 <p class="specs" data-i18n="p18_specs">Довжина: 50 м | Висота: 1.5 м</p>
                 <p class="price">360 грн</p>
@@ -1109,7 +1157,7 @@
 
             <!-- Сеть трехстенка 100м (высота 1.8м) -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="820" data-title="Сітка тристінна (100м х 1.8м) Сеть трехстенка" data-id="19">
-                <img src="yater/setTrehstenkaV1,8md100m.jpg" alt="Сітка тристінна 100м" onclick="openImageZoom(this.src)">
+                <img src="yater/setTrehstenkaV1,8mD100m.jpg" alt="Сітка тристінна 100м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p19_title">Сітка тристінна (100м х 1.8м)</h3>
                 <p class="specs" data-i18n="p19_specs">Довжина: 100 м | Висота: 1.8 м</p>
                 <p class="price">820 грн</p>
@@ -1121,7 +1169,7 @@
 
             <!-- Сеть трехстенка 100м (высота 3м) -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="1040" data-title="Сітка тристінна (100м х 3м) Сеть трехстенка" data-id="20">
-                <img src="yater/setTrehstenkaV3md100.jpg" alt="Сітка тристінна 100м 3м" onclick="openImageZoom(this.src)">
+                <img src="yater/setTrehstenkaV3mD100.jpg" alt="Сітка тристінна 100м 3м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p20_title">Сітка тристінна (100м х 3м)</h3>
                 <p class="specs" data-i18n="p20_specs">Довжина: 100 м | Висота: 3.0 м</p>
                 <p class="price">1040 грн</p>
@@ -1133,7 +1181,7 @@
 
             <!-- Сеть одностенка 100м (высота 3м) -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="620" data-title="Сітка одностінна (100м х 3м) Сеть одностенка" data-id="21">
-                <img src="yater/set1stenka3md100m.jpg" alt="Сітка одностінна 100м 3м" onclick="openImageZoom(this.src)">
+                <img src="yater/set1stenka3mD100m.jpg" alt="Сітка одностінна 100м 3м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p21_title">Сітка одностінна (100м х 3м)</h3>
                 <p class="specs" data-i18n="p21_specs">Довжина: 100 м | Висота: 3.0 м</p>
                 <p class="price">620 грн</p>
@@ -1145,7 +1193,7 @@
 
             <!-- Сеть одностенка 100м на 1,8м -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="510" data-title="Сітка одностінна (100м х 1.8м) Сеть одностенка купить сеть одностенку" data-id="32">
-                <img src="yater/set1stenkav1,8md100m.jpg" alt="Сітка одностінна 100м 1.8м" onclick="openImageZoom(this.src)">
+                <img src="yater/set1stenkaV1,8mD100m.jpg" alt="Сітка одностінна 100м 1.8м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p32_title">Сітка одностінна (100м х 1.8м)</h3>
                 <p class="specs" data-i18n="p32_specs">Довжина: 100 м | Висота: 1.8 м | Волосінь</p>
                 <p class="price">510 грн</p>
@@ -1157,7 +1205,7 @@
 
             <!-- Сеть финка одностенка 30м (высота 1.8м) -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="420" data-title="Сітка фінка одностінна (30м х 1.8м) Сеть финка одностенка" data-id="22">
-                <img src="yater/setfinka1stenkav1,8d30m.jpg" alt="Сітка фінка" onclick="openImageZoom(this.src)">
+                <img src="yater/setFinka1stenkaV1,8D30m.jpg" alt="Сітка фінка" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p22_title">Сітка «Фінка» одностінна (30м х 1.8м)</h3>
                 <p class="specs" data-i18n="p22_specs">Довжина: 30 м | Висота: 1.8 м</p>
                 <p class="price">420 грн</p>
@@ -1169,7 +1217,7 @@
 
             <!-- Снасть донная с резинкой 30м -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="110" data-title="Снасть донна комплект гумка 5м леска 30м Снасть донная" data-id="8">
-                <img src="yater/snastdon30mleska.jpg" alt="Снасть донна" onclick="openImageZoom(this.src)">
+                <img src="yater/snastDon30mLeska.jpg" alt="Снасть донна" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p8_title">Снасть донна «Гумка» комплект</h3>
                 <p class="specs" data-i18n="p8_specs">Волосінь 30м | Гумка 5м | 5 гачків | Груз 150г</p>
                 <p class="price">110 грн <span class="wholesale-info" data-i18n="p8_opt">(опт: 80 грн від 20шт)</span></p>
@@ -1181,7 +1229,7 @@
 
             <!-- Резинка 100м -->
             <div class="product-card" data-category="accessories" data-material="thread" data-price="180" data-title="Резинка риболовна амортизатор 100м Резина для рыбалки" data-id="33">
-                <img src="yater/rezinka20mt2,5mm.jpg" alt="Резинка 100м" onclick="openImageZoom(this.src)">
+                <img src="yater/rezinka20mT2,5mm.jpg" alt="Резинка 100м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p33_title">Резинка риболовна (амортизатор 100м)</h3>
                 <p class="specs" data-i18n="p33_specs">Довжина: 100 м | Висока еластичність</p>
                 <p class="price">180 грн</p>
@@ -1193,7 +1241,7 @@
 
             <!-- Сеть парашют D=3.6m -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="1200" data-title="Сітка парашут накидка кастингова (Діаметр 3.6м) Сеть парашют накидка кастинговая леска 0.35мм" data-id="29">
-                <img src="yater/setparashutd3,6m.jpg" alt="Сітка парашут 3.6м" onclick="openImageZoom(this.src)">
+                <img src="yater/setParashutD3,6m.jpg" alt="Сітка парашут 3.6м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p29_title">Сітка-парашут (Діаметр 3.6м)</h3>
                 <p class="specs" data-i18n="p29_specs">Діаметр: 3.6 м | Волосінь: 0.35 мм | Вічко: 15 мм</p>
                 <p class="price">1200 грн</p>
@@ -1205,7 +1253,7 @@
 
             <!-- Сеть парашют D=4.2m -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="1400" data-title="Сітка парашут накидка кастингова (Діаметр 4.2м) Сеть парашют накидка кастинговая леска 0.35мм" data-id="30">
-                <img src="yater/setparashutd4,2m.jpg" alt="Сітка парашут 4.2м" onclick="openImageZoom(this.src)">
+                <img src="yater/setParashutD4,2m.jpg" alt="Сітка парашут 4.2м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p30_title">Сітка-парашут (Діаметр 4.2м)</h3>
                 <p class="specs" data-i18n="p30_specs">Діаметр: 4.2 м | Волосінь: 0.35 мм | Вічко: 15 мм</p>
                 <p class="price">1400 грн</p>
@@ -1217,7 +1265,7 @@
 
             <!-- Сеть парашют D=5m -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="1600" data-title="Сітка парашут накидка кастингова (Діаметр 5.0м) Сеть парашют накидка кастинговая леска 0.35мм" data-id="31">
-                <img src="yater/setparashutd5m.jpg" alt="Сітка парашут 5м" onclick="openImageZoom(this.src)">
+                <img src="yater/setParashutD5m.jpg" alt="Сітка парашут 5м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p31_title">Сітка-парашут (Діаметр 5.0м)</h3>
                 <p class="specs" data-i18n="p31_specs">Діаметр: 5.0 м | Волосінь: 0.35 мм | Вічко: 15 мм</p>
                 <p class="price">1600 грн</p>
@@ -1249,7 +1297,7 @@
 
             <!-- Дуги 2х2м -->
             <div class="product-card" data-category="spiders" data-material="plastic" data-price="650" data-title="Дуги на павук (2м х 2м) з хрестовиною Дуги на паук 2х2" data-id="9">
-                <img src="yater/dugiskrest2x2.jpg" alt="Дуги 2х2м" onclick="openImageZoom(this.src)">
+                <img src="yater/dugiSkrest2x2.jpg" alt="Дуги 2х2м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p9_title">Дуги на павук (2м х 2м) з хрестовиною</h3>
                 <p class="specs" data-i18n="p9_specs">Матеріал: пластик | Товщина: 8 мм | З хрестовиною</p>
                 <p class="price">650 грн</p>
@@ -1261,7 +1309,7 @@
 
             <!-- Дуги 2.5х2.5м -->
             <div class="product-card" data-category="spiders" data-material="plastic" data-price="800" data-title="Дуги на павук (2.5м х 2.5м) з хрестовиною Дуги на паук 2.5х2.5" data-id="10">
-                <img src="yater/dugiskrest1,5m.jpg" alt="Дуги 2.5х2.5м" onclick="openImageZoom(this.src)">
+                <img src="yater/dugiSkrest1,5m.jpg" alt="Дуги 2.5х2.5м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p10_title">Дуги на павук (2.5м х 2.5м) з хрестовиною</h3>
                 <p class="specs" data-i18n="p10_specs">Матеріал: пластик | Товщина: 10 мм | Посилені</p>
                 <p class="price">800 грн</p>
@@ -1273,7 +1321,7 @@
 
             <!-- Дуги 3х3м -->
             <div class="product-card" data-category="spiders" data-material="plastic" data-price="850" data-title="Дуги на павук (3м х 3м) з хрестовиною Дуги на паук 3х3" data-id="11">
-                <img src="yater/dugiskrest3x3.jpg" alt="Дуги 3х3м" onclick="openImageZoom(this.src)">
+                <img src="yater/dugiSkrest3x3.jpg" alt="Дуги 3х3м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p11_title">Дуги на павук (3м х 3м) з хрестовиною</h3>
                 <p class="specs" data-i18n="p11_specs">Матеріал: пластик | Товщина: 10 мм | Макс. міцність</p>
                 <p class="price">850 грн</p>
@@ -1377,7 +1425,7 @@
 
             <!-- Раколовка гармошка -->
             <div class="product-card" data-category="yaters" data-material="thread" data-price="420" data-title="Раколовка гармошка прямокутна (25см х 30см, довжина 3.5м) Раколовка гармошка книжка" data-id="27">
-                <img src="yater/rakolovkagarm25x30d3,5m.jpg" alt="Раколовка гармошка 3.5m" onclick="openImageZoom(this.src)">
+                <img src="yater/rakolovkaGarm25x30d3,5m.jpg" alt="Раколовка гармошка 3.5m" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p27_title">Раколовка-гармошка (25х30см, 3.5м)</h3>
                 <p class="specs" data-i18n="p27_specs">Розмір каркаса: 25х30 см | Довжина: 3.5 м</p>
                 <p class="price">420 грн</p>
@@ -1389,7 +1437,7 @@
 
             <!-- Раколовка зонтик 6 входов -->
             <div class="product-card" data-category="yaters" data-material="thread" data-price="220" data-title="Раколовка парасолька на 6 входів Раколовка зонтик" data-id="23">
-                <img src="yater/rakolovkazont6vhod.jpg" alt="Раколовка зонтик 6 входов" onclick="openImageZoom(this.src)">
+                <img src="yater/rakolovkaZont6vhod.jpg" alt="Раколовка зонтик 6 входов" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p23_title">Раколовка-парасолька (6 входів)</h3>
                 <p class="specs" data-i18n="p23_specs">Тип: зонтик | Входів: 6</p>
                 <p class="price">220 грн</p>
@@ -1401,7 +1449,7 @@
 
             <!-- Раколовка зонтик 8 входов -->
             <div class="product-card" data-category="yaters" data-material="thread" data-price="240" data-title="Раколовка парасолька на 8 входів Раколовка зонтик" data-id="24">
-                <img src="yater/rakolovkazont8vhod.jpg" alt="Раколовка зонтик 8 входов" onclick="openImageZoom(this.src)">
+                <img src="yater/rakolovkaZont8vhod.jpg" alt="Раколовка зонтик 8 входов" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p24_title">Раколовка-парасолька (8 входів)</h3>
                 <p class="specs" data-i18n="p24_specs">Тип: зонтик | Входів: 8</p>
                 <p class="price">240 грн</p>
@@ -1413,7 +1461,7 @@
 
             <!-- Раколовка зонтик 10 входов -->
             <div class="product-card" data-category="yaters" data-material="thread" data-price="260" data-title="Раколовка парасолька на 10 входів Раколовка зонтик" data-id="25">
-                <img src="yater/rakolovkazont10vhod.jpg" alt="Раколовка зонтик 10 входов" onclick="openImageZoom(this.src)">
+                <img src="yater/rakolovkaZont10vhod.jpg" alt="Раколовка зонтик 10 входов" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p25_title">Раколовка-парасолька (10 входів)</h3>
                 <p class="specs" data-i18n="p25_specs">Тип: зонтик | Входів: 10</p>
                 <p class="price">260 грн</p>
@@ -1433,7 +1481,7 @@
 
             <!-- Груз сетевой зажимной 16g -->
             <div class="product-card" data-category="accessories" data-material="metal" data-price="3" data-title="Груз сетевой зажимной свинец 16г Грузило для сеток свинцовое зажимное" data-id="26">
-                <img src="yater/gruzsetevzajim16g.jpg" alt="Груз сетевой зажимной 16г" onclick="openImageZoom(this.src)">
+                <img src="yater/GruzSetevZajim16g.jpg" alt="Груз сетевой зажимной 16г" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p26_title">Груз мережевий затискний (16г)</h3>
                 <p class="specs" data-i18n="p26_specs">Матеріал: свинець | Вага: 16 г | Тип: затискний</p>
                 <p class="price">3 грн</p>
@@ -1584,7 +1632,7 @@
     </div>
 </div>
 
-<!-- МОДАЛЬНЫЕ ОКНА ПОДРОБНОСТЕЙ О ТОВАРАХ (С ПОЛНЫМ ПЕРЕВОДОМ) -->
+<!-- МОДАЛЬНЫЕ ОКНА ПОДРОБНОСТЕЙ О ТОВАРАХ (С ПОЛНЫМ ДВУЯЗЫЧНЫМ ПЕРЕВОДОМ) -->
 
 <div id="details-modal-1" class="modal">
     <div class="modal-content text-left">
@@ -2647,7 +2695,7 @@
         const meshSelect = document.getElementById(`mesh-select-${productId}`);
         if (meshSelect) {
             selectedMesh = meshSelect.value;
-            if (selectedMesh === "Не выбрана") {
+            if (selectedMesh === "Не выбрана" || selectedMesh === "Обрати розмір..." || selectedMesh === "Выбрать размер...") {
                 alert(currentLang === 'uk' ? "Будь ласка, оберіть розмір вічка!" : "Пожалуйста, выберите размер ячейки!");
                 return;
             }
