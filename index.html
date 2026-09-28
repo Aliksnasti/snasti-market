@@ -1,932 +1,775 @@
-<!-- Favicon -->
-<link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>SNASTI-MARKET — Риболовні снасті від виробника Альберта</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
 
-<!-- Open Graph & Social Media -->
-<meta property="og:title" content="SNASTI-MARKET — Риболовні снасті від виробника Альберта">
-<meta property="og:description" content="Якісні снасті без посередників: екрани, косинки, сітки, одностенки, тристінки, павуки, ятері, раколовки, парашути, торпеди. Мінімальне замовлення від 500 грн.">
-<meta property="og:image" content="https://snasti-market.com.ua/favicon.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="512">
-<meta property="og:image:height" content="512">
-<meta property="og:url" content="https://snasti-market.com.ua/">
-<meta property="og:type" content="website">
+    <!-- Open Graph & Social Media SEO -->
+    <meta name="description" content="Якісні та недорогі риболовні снасті від виробника майстра Альберта без посередників: екрани, косинки, сітки одностенки, тристінки, павуки, дуги, ятері, раколовки, парашути, торпеди, резинка 100м. Доставка по Україні.">
+    <meta name="keywords" content="купити риболовні снасті, снасті від виробника, екрани для риболовлі, косинка риболовна, сітка одностенка 100м 1.8м, сітка тристінка, павук риболовний, дуги на павук, ятерь раколовка, раколовка зонтик, раколовка гармошка, кастингова сітка парашут, підлідна торпеда, резинка риболовна 100м, груз свинцевий затискний">
+    
+    <meta property="og:title" content="SNASTI-MARKET — Риболовні снасті від виробника Альберта">
+    <meta property="og:description" content="Якісні снасті без посередників: екрани, косинки, сітки, одностенки, тристінки, павуки, ятері, раколовки, парашути, торпеди, резинка 100м. Мінімальне замовлення від 500 грн.">
+    <meta property="og:image" content="https://snasti-market.com.ua/favicon.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:url" content="https://snasti-market.com.ua/">
+    <meta property="og:type" content="website">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SNASTI-MARKET — Риболовні снасті від виробника Альберта">
-<meta name="twitter:description" content="Якісні снасті без посередників: екрани, косинки, сітки, одностенки, тристінки, павуки, ятері, раколовки, парашути, торпеди.">
-<meta name="twitter:image" content="https://snasti-market.com.ua/favicon.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SNASTI-MARKET — Риболовні снасті від виробника Альберта">
+    <meta name="twitter:description" content="Якісні снасті без посередників: екрани, косинки, сітки, одностенки, тристінки, павуки, ятері, раколовки, парашути, торпеди.">
+    <meta name="twitter:image" content="https://snasti-market.com.ua/favicon.png">
 
-<!-- Schema.org Микроразметка -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SportingGoodsStore",
-  "name": "SNASTI-MARKET",
-  "url": "https://snasti-market.com.ua/",
-  "image": "https://snasti-market.com.ua/favicon.png",
-  "telephone": "+380500430596",
-  "priceRange": "3UAH - 1600UAH",
-  "description": "Виробництво та продаж риболовних снастей від майстра Альберта: екрани, косинки, сітки одностенки, тристінки, павуки, ятері, раколовки, торпеди, парашути.",
-  "address": {
-    "@type": "PostalAddress",
-    "@addressCountry": "UA"
-  }
-}
-</script>
-
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<style>
-    * {
-        box-sizing: border-box;
+    <!-- Schema.org Микроразметка -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportingGoodsStore",
+      "name": "SNASTI-MARKET",
+      "url": "https://snasti-market.com.ua/",
+      "image": "https://snasti-market.com.ua/favicon.png",
+      "telephone": "+380500430596",
+      "priceRange": "3UAH - 1600UAH",
+      "description": "Виробництво та продаж риболовних снастей від майстра Альберта: екрани, косинки, сітки одностенки, тристінки, павуки, ятері, раколовки, торпеди, парашути, резинки.",
+      "address": {
+        "@type": "PostalAddress",
+        "@addressCountry": "UA"
+      }
     }
+    </script>
 
-    html {
-        scroll-behavior: smooth;
-    }
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    body {
-        background-image: url('yater/fon.jpg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #333;
-        overflow-x: hidden;
-        -webkit-text-size-adjust: 100%;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 8px;
-    }
-
-    /* Шапка */
-    .header {
-        background-color: rgba(44, 62, 80, 0.98);
-        color: #fff;
-        padding: 14px 0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    }
-
-    .header-flex {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .logo {
-        font-size: 20px;
-        font-weight: bold;
-        cursor: pointer;
-        user-select: none;
-        transition: opacity 0.2s;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        white-space: nowrap;
-    }
-
-    .logo-icon {
-        height: 36px;
-        width: 36px;
-        object-fit: contain;
-        vertical-align: middle;
-        border-radius: 6px;
-    }
-
-    .logo:hover {
-        opacity: 0.85;
-    }
-
-    .header-contacts {
-        font-size: 16px;
-        color: #2ecc71;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-
-    .header-contacts a {
-        color: #2ecc71;
-        text-decoration: none;
-    }
-
-    @keyframes pulsate-glow {
-        0% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7), 0 0 10px rgba(46, 204, 113, 0.5);
+    <style>
+        * {
+            box-sizing: border-box;
         }
-        50% {
-            transform: scale(1.06);
-            box-shadow: 0 0 0 12px rgba(46, 204, 113, 0), 0 0 20px rgba(46, 204, 113, 0.9);
+
+        html {
+            scroll-behavior: smooth;
         }
-        100% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(46, 204, 113, 0), 0 0 10px rgba(46, 204, 113, 0.5);
+
+        body {
+            background-image: url('yater/fon.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
         }
-    }
 
-    .btn-call-mobile {
-        background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-        color: #fff !important;
-        padding: 10px 18px;
-        border-radius: 24px;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: bold;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        cursor: pointer;
-        border: none;
-        animation: pulsate-glow 2s infinite ease-in-out;
-        transition: background 0.3s;
-    }
-
-    .btn-call-mobile:hover {
-        background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
-        animation: none;
-        transform: scale(1.05);
-        box-shadow: 0 0 15px rgba(46, 204, 113, 0.9);
-    }
-
-    .header-right {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        flex-wrap: wrap;
-    }
-
-    .nav {
-        display: flex;
-        gap: 14px;
-    }
-
-    .nav a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 16px;
-        white-space: nowrap;
-        transition: color 0.2s;
-    }
-
-    .nav a:hover {
-        color: #2ecc71;
-    }
-
-    .lang-switch {
-        display: inline-flex;
-        background: #1a252f;
-        border-radius: 20px;
-        padding: 3px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .lang-btn {
-        background: none;
-        border: none;
-        color: #aaa;
-        padding: 6px 14px;
-        border-radius: 15px;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 14px;
-        transition: 0.3s;
-    }
-
-    .lang-btn.active {
-        background-color: #3498db;
-        color: #fff;
-    }
-
-    .cart-icon {
-        background-color: #e74c3c;
-        padding: 9px 16px;
-        border-radius: 20px;
-        cursor: pointer;
-        font-weight: bold;
-        transition: 0.3s;
-        font-size: 15px;
-        white-space: nowrap;
-        color: #fff;
-    }
-
-    .cart-icon:hover {
-        background-color: #c0392b;
-    }
-
-    .hero {
-        background-color: rgba(0, 0, 0, 0.65);
-        color: #fff;
-        text-align: center;
-        padding: 50px 15px;
-        margin-bottom: 4px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-        margin-bottom: 12px;
-        line-height: 1.25;
-    }
-
-    .word-no-break {
-        white-space: nowrap;
-    }
-
-    .hero p {
-        font-size: 17px;
-        margin-bottom: 20px;
-    }
-
-    .manufacturer-badge {
-        display: inline-block;
-        background-color: #f1c40f;
-        color: #2c3e50;
-        padding: 8px 18px;
-        border-radius: 25px;
-        font-size: 15px;
-        font-weight: bold;
-        margin-bottom: 18px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    .btn {
-        background-color: #2ecc71;
-        color: white;
-        padding: 13px 26px;
-        border: none;
-        border-radius: 6px;
-        font-size: 16px;
-        cursor: pointer;
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-        transition: 0.3s;
-    }
-
-    .btn:hover {
-        background-color: #27ae60;
-    }
-
-    .btn-filter-trigger {
-        background-color: #3498db;
-        color: white;
-        padding: 14px 22px;
-        border: none;
-        border-radius: 25px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        transition: 0.3s;
-        white-space: nowrap;
-        justify-content: center;
-    }
-
-    .btn-filter-trigger:hover {
-        background-color: #2980b9;
-    }
-
-    .info-block {
-        background-color: rgba(255, 255, 255, 0.96);
-        padding: 25px 15px;
-        border-radius: 8px;
-        margin: 20px 0;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .info-block h2 {
-        color: #2c3e50;
-        margin-top: 0;
-        border-bottom: 3px solid #3498db;
-        padding-bottom: 8px;
-        font-size: 22px;
-    }
-
-    .why-us-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 15px;
-        margin-top: 15px;
-    }
-
-    .why-us-card {
-        background: #f8f9fa;
-        border: 1px solid #e9ecef;
-        border-radius: 8px;
-        padding: 16px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-    }
-
-    .why-us-card h3 {
-        margin-top: 0;
-        color: #2980b9;
-        font-size: 17px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .why-us-card p {
-        margin-bottom: 0;
-        color: #555;
-        font-size: 15px;
-        line-height: 1.5;
-    }
-
-    .category-section {
-        background-color: rgba(255, 255, 255, 0.96);
-        padding: 25px 10px;
-        border-radius: 8px;
-        margin: 20px 0;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .category-title {
-        font-size: 22px;
-        border-bottom: 3px solid #3498db;
-        padding-bottom: 10px;
-        color: #2c3e50;
-        margin-top: 0;
-        margin-bottom: 18px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .search-container {
-        margin: 20px 0;
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .search-input {
-        flex: 1;
-        min-width: 250px;
-        padding: 14px 20px;
-        font-size: 16px;
-        border: 2px solid #3498db;
-        border-radius: 30px;
-        outline: none;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        transition: 0.3s;
-        background: #fff;
-    }
-
-    .search-input:focus {
-        border-color: #2980b9;
-        box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
-    }
-
-    .no-results {
-        display: none;
-        text-align: center;
-        padding: 30px;
-        font-size: 18px;
-        color: #7f8c8d;
-        background: #fff;
-        border-radius: 8px;
-    }
-
-    /* ГАРАНТИРОВАННАЯ СЕТКА 2 на 2 ДЛЯ МОБИЛЬНЫХ И ИХ РАСШИРЕНИЕ ДЛЯ ПК */
-    .products-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    @media (min-width: 900px) {
-        .products-grid {
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 20px;
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 10px;
         }
-    }
 
-    .product-card {
-        background: #fff;
-        border: 1px solid #dcdcdc;
-        border-radius: 8px;
-        padding: 10px;
-        text-align: center;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .product-card img {
-        width: 100%;
-        height: 140px;
-        object-fit: cover;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: transform 0.2s ease;
-        background-color: #f7f9fa;
-    }
-
-    @media (min-width: 900px) {
-        .product-card {
-            padding: 18px;
+        /* Шапка */
+        .header {
+            background-color: rgba(44, 62, 80, 0.98);
+            color: #fff;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
-        .product-card img {
-            height: 200px;
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-    }
 
-    .product-card img:hover {
-        transform: scale(1.03);
-    }
-
-    .product-card h3 {
-        font-size: 15px;
-        margin: 10px 0 6px 0;
-        color: #333;
-        line-height: 1.35;
-        font-weight: bold;
-    }
-
-    @media (min-width: 900px) {
-        .product-card h3 {
-            font-size: 18px;
-            margin: 12px 0 8px 0;
+        .logo {
+            font-size: 19px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
         }
-    }
 
-    .specs {
-        font-size: 13px;
-        color: #666;
-        margin: 0 0 10px 0;
-        min-height: 42px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 1.3;
-    }
+        .logo-icon {
+            height: 36px;
+            width: 36px;
+            object-fit: contain;
+            border-radius: 6px;
+        }
 
-    @media (min-width: 900px) {
-        .specs {
+        .header-contacts {
+            font-size: 15px;
+            color: #2ecc71;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .header-contacts a {
+            color: #2ecc71;
+            text-decoration: none;
+        }
+
+        @keyframes pulsate-glow {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+            }
+        }
+
+        .btn-call-mobile {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: #fff !important;
+            padding: 8px 14px;
+            border-radius: 20px;
+            text-decoration: none;
             font-size: 14px;
-            min-height: 40px;
-            color: #7f8c8d;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            border: none;
+            animation: pulsate-glow 2s infinite ease-in-out;
         }
-    }
 
-    .price {
-        font-size: 19px;
-        font-weight: bold;
-        color: #e74c3c;
-        margin: 8px 0;
-    }
-
-    @media (min-width: 900px) {
-        .price {
-            font-size: 21px;
-            margin: 10px 0;
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
         }
-    }
 
-    .wholesale-info {
-        display: block;
-        font-size: 11px;
-        color: #7f8c8d;
-        font-weight: normal;
-        margin-top: 3px;
-    }
+        .nav {
+            display: flex;
+            gap: 10px;
+        }
 
-    @media (min-width: 900px) {
-        .wholesale-info {
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            white-space: nowrap;
+        }
+
+        .nav a:hover {
+            color: #2ecc71;
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            background: #1a252f;
+            border-radius: 20px;
+            padding: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: #aaa;
+            padding: 5px 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
             font-size: 13px;
         }
-    }
 
-    .size-selector {
-        margin: 8px 0;
-        font-size: 13px;
-    }
+        .lang-btn.active {
+            background-color: #3498db;
+            color: #fff;
+        }
 
-    @media (min-width: 900px) {
-        .size-selector {
-            margin: 10px 0;
+        .cart-icon {
+            background-color: #e74c3c;
+            padding: 8px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
             font-size: 14px;
+            white-space: nowrap;
+            color: #fff;
         }
-    }
 
-    .select-mesh {
-        padding: 8px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-        width: 100%;
-        box-sizing: border-box;
-        background: #fff;
-        font-size: 14px;
-    }
+        .hero {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 35px 15px;
+            margin-bottom: 5px;
+        }
 
-    @media (min-width: 900px) {
-        .select-mesh {
-            padding: 9px;
+        .hero h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .word-no-break {
+            white-space: nowrap;
+        }
+
+        .hero p {
             font-size: 15px;
+            margin-bottom: 15px;
         }
-    }
 
-    .card-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        justify-content: center;
-        margin-top: 10px;
-    }
+        .manufacturer-badge {
+            display: inline-block;
+            background-color: #f1c40f;
+            color: #2c3e50;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
 
-    @media (min-width: 900px) {
-        .card-buttons {
-            flex-direction: row;
-            gap: 8px;
+        .btn {
+            background-color: #2ecc71;
+            color: white;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn-filter-trigger {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .info-block {
+            background-color: rgba(255, 255, 255, 0.96);
+            padding: 20px 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .info-block h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 6px;
+            font-size: 20px;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
             margin-top: 12px;
         }
-    }
 
-    .btn-buy {
-        background-color: #e74c3c;
-        color: white;
-        border: none;
-        padding: 10px 8px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-weight: bold;
-        width: 100%;
-        transition: background 0.2s;
-        font-size: 14px;
-    }
+        .why-us-card {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 14px;
+        }
 
-    @media (min-width: 900px) {
+        .why-us-card h3 {
+            margin-top: 0;
+            color: #2980b9;
+            font-size: 16px;
+        }
+
+        .why-us-card p {
+            margin-bottom: 0;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .category-section {
+            background-color: rgba(255, 255, 255, 0.96);
+            padding: 18px 8px;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .category-title {
+            font-size: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 8px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .search-container {
+            margin: 15px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px 16px;
+            font-size: 15px;
+            border: 2px solid #3498db;
+            border-radius: 25px;
+            outline: none;
+            background: #fff;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            color: #7f8c8d;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        /* ⚠️ СТРОГАЯ МОБИЛЬНАЯ СЕТКА 2 НА 2 ДЛЯ ВСЕХ ТЕЛЕФОНОВ И ПЛАНШЕТОВ */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 8px;
+        }
+
+        /* Для ПК экранов (ширина более 850px) делаем 4 колонки */
+        @media (min-width: 850px) {
+            .products-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 18px;
+            }
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 18px; }
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 125px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            background-color: #f7f9fa;
+        }
+
+        @media (min-width: 850px) {
+            .product-card {
+                padding: 15px;
+            }
+            .product-card img {
+                height: 180px;
+            }
+        }
+
+        .product-card h3 {
+            font-size: 14px;
+            margin: 8px 0 4px 0;
+            color: #222;
+            line-height: 1.25;
+            font-weight: bold;
+        }
+
+        .specs {
+            font-size: 12px;
+            color: #555;
+            margin: 0 0 6px 0;
+            min-height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.2;
+        }
+
+        .price {
+            font-size: 17px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 6px 0;
+        }
+
+        .wholesale-info {
+            display: block;
+            font-size: 11px;
+            color: #7f8c8d;
+            font-weight: normal;
+            margin-top: 2px;
+        }
+
+        .size-selector {
+            margin: 6px 0;
+            font-size: 12px;
+        }
+
+        .select-mesh {
+            padding: 6px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            background: #fff;
+            font-size: 13px;
+        }
+
+        .card-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 8px;
+        }
+
+        @media (min-width: 850px) {
+            .card-buttons {
+                flex-direction: row;
+                gap: 8px;
+            }
+            .product-card h3 { font-size: 17px; }
+            .specs { font-size: 13.5px; }
+            .price { font-size: 20px; }
+        }
+
         .btn-buy {
-            flex: 1;
-            padding: 11px 14px;
-            font-size: 15px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 9px 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            font-size: 13.5px;
         }
-    }
 
-    .btn-buy:hover {
-        background-color: #c0392b;
-    }
-
-    .btn-more {
-        background-color: #f0f0f0;
-        color: #333;
-        border: 1px solid #ccc;
-        padding: 10px 8px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-weight: bold;
-        width: 100%;
-        transition: background 0.2s;
-        font-size: 14px;
-    }
-
-    @media (min-width: 900px) {
         .btn-more {
-            flex: 1;
-            padding: 11px 14px;
-            font-size: 15px;
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 9px 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            font-size: 13.5px;
         }
-    }
 
-    .btn-more:hover {
-        background-color: #e0e0e0;
-    }
+        .seo-cities-block {
+            background-color: rgba(255, 255, 255, 0.96);
+            padding: 20px 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
 
-    .seo-cities-block {
-        background-color: rgba(255, 255, 255, 0.96);
-        padding: 25px 15px;
-        border-radius: 8px;
-        margin: 20px 0;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
+        .seo-cities-block h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
 
-    .seo-cities-block h3 {
-        color: #2c3e50;
-        margin-top: 0;
-    }
+        .city-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+        }
 
-    .city-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 15px;
-    }
+        .city-links a {
+            color: #2980b9;
+            text-decoration: none;
+            font-size: 13px;
+            background: #f0f4f8;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
 
-    .city-links a {
-        color: #2980b9;
-        text-decoration: none;
-        font-size: 14px;
-        background: #f0f4f8;
-        padding: 6px 12px;
-        border-radius: 4px;
-        transition: 0.2s;
-    }
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 150;
+        }
 
-    .city-links a:hover {
-        background: #3498db;
-        color: #fff;
-    }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 200;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.65);
+            padding: 10px;
+            overflow-y: auto;
+        }
 
-    .scroll-top-btn {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        width: 48px;
-        height: 48px;
-        background-color: #3498db;
-        color: #fff;
-        border: none;
-        border-radius: 50%;
-        font-size: 24px;
-        font-weight: bold;
-        cursor: pointer;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        z-index: 150;
-        transition: opacity 0.3s, transform 0.3s;
-    }
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 18px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
 
-    .scroll-top-btn:hover {
-        background-color: #2980b9;
-        transform: translateY(-3px);
-    }
+        .text-left {
+            text-align: left;
+        }
 
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 200;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.65);
-        padding: 10px;
-        overflow-y: auto;
-    }
+        .close {
+            position: absolute;
+            right: 12px;
+            top: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #aaa;
+        }
 
-    .modal-content {
-        background-color: #fff;
-        margin: 5% auto;
-        padding: 20px;
-        border-radius: 8px;
-        width: 100%;
-        max-width: 650px;
-        position: relative;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
+        .zoom-modal-content {
+            background: none;
+            margin: 3% auto;
+            padding: 0;
+            width: auto;
+            max-width: 95%;
+            display: flex;
+            justify-content: center;
+        }
 
-    .text-left {
-        text-align: left;
-        max-height: 80vh;
-        overflow-y: auto;
-    }
+        .zoomed-image {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
 
-    .text-left h2, .text-left h3 {
-        color: #2c3e50;
-    }
+        .cart-qty-controls {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 6px 0;
+        }
 
-    .text-left ul {
-        padding-left: 20px;
-    }
+        .qty-btn {
+            background-color: #34495e;
+            color: white;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+        }
 
-    .close {
-        position: absolute;
-        right: 15px;
-        top: 12px;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-        color: #aaa;
-        z-index: 10;
-    }
+        .qty-val {
+            font-size: 15px;
+            font-weight: bold;
+            min-width: 20px;
+            text-align: center;
+        }
 
-    .close:hover {
-        color: #333;
-    }
+        #order-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
 
-    .zoom-modal-content {
-        background: none;
-        margin: 3% auto;
-        padding: 0;
-        width: auto;
-        max-width: 95%;
-        display: flex;
-        justify-content: center;
-    }
+        .cart-item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
 
-    .zoomed-image {
-        max-width: 100%;
-        max-height: 85vh;
-        object-fit: contain;
-        border-radius: 4px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-    }
+        .cart-total {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+            margin: 12px 0;
+        }
 
-    .zoom-close {
-        color: #fff;
-        font-size: 40px;
-        top: 10px;
-        right: 20px;
-    }
+        .min-order-notice {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
 
-    .cart-qty-controls {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin: 8px 0;
-    }
+        .filter-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
 
-    .qty-btn {
-        background-color: #34495e;
-        color: white;
-        border: none;
-        width: 32px;
-        height: 32px;
-        border-radius: 4px;
-        font-weight: bold;
-        font-size: 16px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .filter-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            font-size: 14px;
+        }
 
-    .qty-val {
-        font-size: 16px;
-        font-weight: bold;
-        min-width: 25px;
-        text-align: center;
-    }
+        .filter-group select, .filter-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
 
-    #order-form input {
-        width: 100%;
-        padding: 12px;
-        margin: 10px 0;
-        box-sizing: border-box;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 15px;
-    }
+        .filter-row {
+            display: flex;
+            gap: 10px;
+        }
 
-    .cart-item-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #eee;
-        padding: 12px 0;
-    }
+        .filter-row input {
+            width: 50%;
+        }
 
-    .cart-total {
-        font-size: 19px;
-        font-weight: bold;
-        text-align: right;
-        margin: 15px 0;
-    }
+        .filter-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
 
-    .min-order-notice {
-        background-color: #fff3cd;
-        color: #856404;
-        border: 1px solid #ffeeba;
-        padding: 12px;
-        border-radius: 5px;
-        font-size: 15px;
-        margin-bottom: 15px;
-        text-align: center;
-        font-weight: bold;
-    }
+        .btn-reset-filter {
+            background-color: #7f8c8d;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            flex: 1;
+        }
 
-    .filter-group {
-        margin-bottom: 18px;
-        text-align: left;
-    }
+        .btn-apply-filter {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            flex: 2;
+        }
 
-    .filter-group label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 6px;
-        color: #2c3e50;
-        font-size: 15px;
-    }
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
 
-    .filter-group select, .filter-group input {
-        width: 100%;
-        padding: 11px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-        font-size: 15px;
-    }
+        .contact-btn-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            color: #fff;
+        }
 
-    .filter-row {
-        display: flex;
-        gap: 10px;
-    }
+        .contact-btn-phone { background-color: #2ecc71; }
+        .contact-btn-viber { background-color: #7360f2; }
+        .contact-btn-telegram { background-color: #0088cc; }
 
-    .filter-row input {
-        width: 50%;
-    }
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 30px;
+        }
 
-    .filter-actions {
-        display: flex;
-        gap: 10px;
-        margin-top: 20px;
-    }
-
-    .btn-reset-filter {
-        background-color: #7f8c8d;
-        color: white;
-        border: none;
-        padding: 11px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        flex: 1;
-        font-size: 15px;
-    }
-
-    .btn-apply-filter {
-        background-color: #2ecc71;
-        color: white;
-        border: none;
-        padding: 11px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        flex: 2;
-        font-size: 15px;
-    }
-
-    .contact-options {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 20px;
-    }
-
-    .contact-btn-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 14px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
-        color: #fff;
-        transition: 0.2s;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    }
-
-    .contact-btn-phone { background-color: #2ecc71; }
-    .contact-btn-phone:hover { background-color: #27ae60; }
-    
-    .contact-btn-viber { background-color: #7360f2; }
-    .contact-btn-viber:hover { background-color: #5b4acb; }
-
-    .contact-btn-telegram { background-color: #0088cc; }
-    .contact-btn-telegram:hover { background-color: #0077b3; }
-
-    .footer {
-        background-color: #2c3e50;
-        color: white;
-        text-align: center;
-        padding: 30px 0;
-        margin-top: 40px;
-    }
-
-    .footer a {
-        color: #2ecc71;
-        text-decoration: none;
-    }
-</style>
-
+        .footer a {
+            color: #2ecc71;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
 
 <!-- Шапка сайта -->
 <header class="header">
@@ -1129,7 +972,7 @@
 
             <!-- Сеть трехстенка 50м (высота 1.5м) -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="360" data-title="Сітка тристінна (50м х 1.5м) Сеть трехстенка" data-id="18">
-                <img src="yater/setTrehstenkaV1,5md50m.jpg" alt="Сітка тристінна 50м" onclick="openImageZoom(this.src)">
+                <img src="yater/setTrehstenkaV1,5mD50m.jpg" alt="Сітка тристінна 50м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p18_title">Сітка тристінна (50м х 1.5м)</h3>
                 <p class="specs" data-i18n="p18_specs">Довжина: 50 м | Висота: 1.5 м</p>
                 <p class="price">360 грн</p>
@@ -1141,7 +984,7 @@
 
             <!-- Сеть трехстенка 100м (высота 1.8м) -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="820" data-title="Сітка тристінна (100м х 1.8м) Сеть трехстенка" data-id="19">
-                <img src="yater/setTrehstenkaV1,8md100m.jpg" alt="Сітка тристінна 100м" onclick="openImageZoom(this.src)">
+                <img src="yater/setTrehstenkaV1,8mD100m.jpg" alt="Сітка тристінна 100м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p19_title">Сітка тристінна (100м х 1.8м)</h3>
                 <p class="specs" data-i18n="p19_specs">Довжина: 100 м | Висота: 1.8 м</p>
                 <p class="price">820 грн</p>
@@ -1153,7 +996,7 @@
 
             <!-- Сеть трехстенка 100м (высота 3м) -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="1040" data-title="Сітка тристінна (100м х 3м) Сеть трехстенка" data-id="20">
-                <img src="yater/setTrehstenkaV3md100.jpg" alt="Сітка тристінна 100м 3м" onclick="openImageZoom(this.src)">
+                <img src="yater/setTrehstenkaV3mD100.jpg" alt="Сітка тристінна 100м 3м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p20_title">Сітка тристінна (100м х 3м)</h3>
                 <p class="specs" data-i18n="p20_specs">Довжина: 100 м | Висота: 3.0 м</p>
                 <p class="price">1040 грн</p>
@@ -1165,7 +1008,7 @@
 
             <!-- Сеть одностенка 100м (высота 3м) -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="620" data-title="Сітка одностінна (100м х 3м) Сеть одностенка" data-id="21">
-                <img src="yater/set1stenka3md100m.jpg" alt="Сітка одностінна 100м 3м" onclick="openImageZoom(this.src)">
+                <img src="yater/set1stenka3mD100m.jpg" alt="Сітка одностінна 100м 3м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p21_title">Сітка одностінна (100м х 3м)</h3>
                 <p class="specs" data-i18n="p21_specs">Довжина: 100 м | Висота: 3.0 м</p>
                 <p class="price">620 грн</p>
@@ -1177,7 +1020,7 @@
 
             <!-- Сеть одностенка 100м на 1,8м -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="510" data-title="Сітка одностінна (100м х 1.8м) Сеть одностенка купить сеть одностенку" data-id="32">
-                <img src="yater/set1stenkav1,8md100m.jpg" alt="Сітка одностінна 100м 1.8м" onclick="openImageZoom(this.src)">
+                <img src="yater/set1stenkaV1,8mD100m.jpg" alt="Сітка одностінна 100м 1.8м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p32_title">Сітка одностінна (100м х 1.8м)</h3>
                 <p class="specs" data-i18n="p32_specs">Довжина: 100 м | Висота: 1.8 м | Волосінь</p>
                 <p class="price">510 грн</p>
@@ -1189,7 +1032,7 @@
 
             <!-- Сеть финка одностенка 30м (высота 1.8м) -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="420" data-title="Сітка фінка одностінна (30м х 1.8м) Сеть финка одностенка" data-id="22">
-                <img src="yater/setfinka1stenkav1,8d30m.jpg" alt="Сітка фінка" onclick="openImageZoom(this.src)">
+                <img src="yater/setFinka1stenkaV1,8D30m.jpg" alt="Сітка фінка" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p22_title">Сітка «Фінка» одностінна (30м х 1.8м)</h3>
                 <p class="specs" data-i18n="p22_specs">Довжина: 30 м | Висота: 1.8 м</p>
                 <p class="price">420 грн</p>
@@ -1201,7 +1044,7 @@
 
             <!-- Снасть донная с резинкой 30м -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="110" data-title="Снасть донна комплект гумка 5м леска 30м Снасть донная" data-id="8">
-                <img src="yater/snastdon30mleska.jpg" alt="Снасть донна" onclick="openImageZoom(this.src)">
+                <img src="yater/snastDon30mLeska.jpg" alt="Снасть донна" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p8_title">Снасть донна «Гумка» комплект</h3>
                 <p class="specs" data-i18n="p8_specs">Волосінь 30м | Гумка 5м | 5 гачків | Груз 150г</p>
                 <p class="price">110 грн <span class="wholesale-info" data-i18n="p8_opt">(опт: 80 грн від 20шт)</span></p>
@@ -1213,7 +1056,7 @@
 
             <!-- Резинка 100м -->
             <div class="product-card" data-category="accessories" data-material="thread" data-price="180" data-title="Резинка риболовна амортизатор 100м Резина для рыбалки" data-id="33">
-                <img src="yater/rezinka20mt2,5mm.jpg" alt="Резинка 100м" onclick="openImageZoom(this.src)">
+                <img src="yater/rezinka20mT2,5mm.jpg" alt="Резинка 100м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p33_title">Резинка риболовна (амортизатор 100м)</h3>
                 <p class="specs" data-i18n="p33_specs">Довжина: 100 м | Висока еластичність</p>
                 <p class="price">180 грн</p>
@@ -1225,7 +1068,7 @@
 
             <!-- Сеть парашют D=3.6m -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="1200" data-title="Сітка парашут накидка кастингова (Діаметр 3.6м) Сеть парашют накидка кастинговая леска 0.35мм" data-id="29">
-                <img src="yater/setparashutd3,6m.jpg" alt="Сітка парашут 3.6м" onclick="openImageZoom(this.src)">
+                <img src="yater/setParashutD3,6m.jpg" alt="Сітка парашут 3.6м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p29_title">Сітка-парашут (Діаметр 3.6м)</h3>
                 <p class="specs" data-i18n="p29_specs">Діаметр: 3.6 м | Волосінь: 0.35 мм | Вічко: 15 мм</p>
                 <p class="price">1200 грн</p>
@@ -1237,7 +1080,7 @@
 
             <!-- Сеть парашют D=4.2m -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="1400" data-title="Сітка парашут накидка кастингова (Діаметр 4.2м) Сеть парашют накидка кастинговая леска 0.35мм" data-id="30">
-                <img src="yater/setparashutd4,2m.jpg" alt="Сітка парашут 4.2м" onclick="openImageZoom(this.src)">
+                <img src="yater/setParashutD4,2m.jpg" alt="Сітка парашут 4.2м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p30_title">Сітка-парашут (Діаметр 4.2м)</h3>
                 <p class="specs" data-i18n="p30_specs">Діаметр: 4.2 м | Волосінь: 0.35 мм | Вічко: 15 мм</p>
                 <p class="price">1400 грн</p>
@@ -1249,7 +1092,7 @@
 
             <!-- Сеть парашют D=5m -->
             <div class="product-card" data-category="screens" data-material="leska" data-price="1600" data-title="Сітка парашут накидка кастингова (Діаметр 5.0м) Сеть парашют накидка кастинговая леска 0.35мм" data-id="31">
-                <img src="yater/setparashutd5m.jpg" alt="Сітка парашут 5м" onclick="openImageZoom(this.src)">
+                <img src="yater/setParashutD5m.jpg" alt="Сітка парашут 5м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p31_title">Сітка-парашут (Діаметр 5.0м)</h3>
                 <p class="specs" data-i18n="p31_specs">Діаметр: 5.0 м | Волосінь: 0.35 мм | Вічко: 15 мм</p>
                 <p class="price">1600 грн</p>
@@ -1281,7 +1124,7 @@
 
             <!-- Дуги 2х2м -->
             <div class="product-card" data-category="spiders" data-material="plastic" data-price="650" data-title="Дуги на павук (2м х 2м) з хрестовиною Дуги на паук 2х2" data-id="9">
-                <img src="yater/dugiskrest2x2.jpg" alt="Дуги 2х2м" onclick="openImageZoom(this.src)">
+                <img src="yater/dugiSkrest2x2.jpg" alt="Дуги 2х2м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p9_title">Дуги на павук (2м х 2м) з хрестовиною</h3>
                 <p class="specs" data-i18n="p9_specs">Матеріал: пластик | Товщина: 8 мм | З хрестовиною</p>
                 <p class="price">650 грн</p>
@@ -1293,7 +1136,7 @@
 
             <!-- Дуги 2.5х2.5м -->
             <div class="product-card" data-category="spiders" data-material="plastic" data-price="800" data-title="Дуги на павук (2.5м х 2.5м) з хрестовиною Дуги на паук 2.5х2.5" data-id="10">
-                <img src="yater/dugiskrest1,5m.jpg" alt="Дуги 2.5х2.5м" onclick="openImageZoom(this.src)">
+                <img src="yater/dugiSkrest1,5m.jpg" alt="Дуги 2.5х2.5м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p10_title">Дуги на павук (2.5м х 2.5м) з хрестовиною</h3>
                 <p class="specs" data-i18n="p10_specs">Матеріал: пластик | Товщина: 10 мм | Посилені</p>
                 <p class="price">800 грн</p>
@@ -1305,7 +1148,7 @@
 
             <!-- Дуги 3х3м -->
             <div class="product-card" data-category="spiders" data-material="plastic" data-price="850" data-title="Дуги на павук (3м х 3м) з хрестовиною Дуги на паук 3х3" data-id="11">
-                <img src="yater/dugiskrest3x3.jpg" alt="Дуги 3х3м" onclick="openImageZoom(this.src)">
+                <img src="yater/dugiSkrest3x3.jpg" alt="Дуги 3х3м" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p11_title">Дуги на павук (3м х 3м) з хрестовиною</h3>
                 <p class="specs" data-i18n="p11_specs">Матеріал: пластик | Товщина: 10 мм | Макс. міцність</p>
                 <p class="price">850 грн</p>
@@ -1409,7 +1252,7 @@
 
             <!-- Раколовка гармошка -->
             <div class="product-card" data-category="yaters" data-material="thread" data-price="420" data-title="Раколовка гармошка прямокутна (25см х 30см, довжина 3.5м) Раколовка гармошка книжка" data-id="27">
-                <img src="yater/rakolovkagarm25x30d3,5m.jpg" alt="Раколовка гармошка 3.5m" onclick="openImageZoom(this.src)">
+                <img src="yater/rakolovkaGarm25x30d3,5m.jpg" alt="Раколовка гармошка 3.5m" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p27_title">Раколовка-гармошка (25х30см, 3.5м)</h3>
                 <p class="specs" data-i18n="p27_specs">Розмір каркаса: 25х30 см | Довжина: 3.5 м</p>
                 <p class="price">420 грн</p>
@@ -1421,7 +1264,7 @@
 
             <!-- Раколовка зонтик 6 входов -->
             <div class="product-card" data-category="yaters" data-material="thread" data-price="220" data-title="Раколовка парасолька на 6 входів Раколовка зонтик" data-id="23">
-                <img src="yater/rakolovkazont6vhod.jpg" alt="Раколовка зонтик 6 входов" onclick="openImageZoom(this.src)">
+                <img src="yater/rakolovkaZont6vhod.jpg" alt="Раколовка зонтик 6 входов" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p23_title">Раколовка-парасолька (6 входів)</h3>
                 <p class="specs" data-i18n="p23_specs">Тип: зонтик | Входів: 6</p>
                 <p class="price">220 грн</p>
@@ -1433,7 +1276,7 @@
 
             <!-- Раколовка зонтик 8 входов -->
             <div class="product-card" data-category="yaters" data-material="thread" data-price="240" data-title="Раколовка парасолька на 8 входів Раколовка зонтик" data-id="24">
-                <img src="yater/rakolovkazont8vhod.jpg" alt="Раколовка зонтик 8 входов" onclick="openImageZoom(this.src)">
+                <img src="yater/rakolovkaZont8vhod.jpg" alt="Раколовка зонтик 8 входов" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p24_title">Раколовка-парасолька (8 входів)</h3>
                 <p class="specs" data-i18n="p24_specs">Тип: зонтик | Входів: 8</p>
                 <p class="price">240 грн</p>
@@ -1445,7 +1288,7 @@
 
             <!-- Раколовка зонтик 10 входов -->
             <div class="product-card" data-category="yaters" data-material="thread" data-price="260" data-title="Раколовка парасолька на 10 входів Раколовка зонтик" data-id="25">
-                <img src="yater/rakolovkazont10vhod.jpg" alt="Раколовка зонтик 10 входов" onclick="openImageZoom(this.src)">
+                <img src="yater/rakolovkaZont10vhod.jpg" alt="Раколовка зонтик 10 входов" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p25_title">Раколовка-парасолька (10 входів)</h3>
                 <p class="specs" data-i18n="p25_specs">Тип: зонтик | Входів: 10</p>
                 <p class="price">260 грн</p>
@@ -1465,7 +1308,7 @@
 
             <!-- Груз сетевой зажимной 16g -->
             <div class="product-card" data-category="accessories" data-material="metal" data-price="3" data-title="Груз сетевой зажимной свинец 16г Грузило для сеток свинцовое зажимное" data-id="26">
-                <img src="yater/gruzsetevzajim16g.jpg" alt="Груз сетевой зажимной 16г" onclick="openImageZoom(this.src)">
+                <img src="yater/GruzSetevZajim16g.jpg" alt="Груз сетевой зажимной 16г" onclick="openImageZoom(this.src)">
                 <h3 data-i18n="p26_title">Груз мережевий затискний (16г)</h3>
                 <p class="specs" data-i18n="p26_specs">Матеріал: свинець | Вага: 16 г | Тип: затискний</p>
                 <p class="price">3 грн</p>
@@ -1516,7 +1359,7 @@
             Ласкаво просимо до нашого інтернет-магазину SNASTI-MARKET! Якщо ви шукаєте де купити якісні риболовні снасті від виробника за доступною ціною в Україні — ви потрапили за адресою. Ми вже понад 10 років займаємося виготовленням, ручною збіркою та оснащенням надійних снастей для успішної риболовлі у будь-яку пору року.
         </p>
         <p data-i18n="about_p2" style="line-height: 1.6; color: #444; font-size: 15px;">
-            У нашому великому каталозі представлено широкий асортимент: риболовні екрани (телевізори), трикутні косинки, уловисті сітки-доріжки з гумкою та карабінами, одностінні сітки (в тому числі популярні одностенки 100м на 1.8м та 3м), тристінні сітки фінського типу, накидні кастингові сітки «Парашут», підлідні торпеди для протяжки сіток взимку, риболовні резинки-амортизатори 100м, затискні свинцеві мережеві грузики, риболовні павуки (з волосіні та капронової нитки), склопластикові дуги з хрестовинами, а також класичні ятері та сучасні складані раколовки (парасольки на 6, 8, 10 входів та прямокутні гармошки 3.5м).
+            У нашому великому каталозі представлено широкий асортимент: риболовні екрани (телевізори), трикутні косинки, уловисті сітки-доріжки з гумкою та карабінами, одностінні сітки (в тому числі одностенки 100м на 1.8м та 3м), тристінні сітки фінського типу, накидні кастингові сітки «Парашут», підлідні торпеди для протяжки сіток взимку, риболовні резинки-амортизатори 100м, затискні свинцеві мережеві грузики, риболовні павуки (з волосіні та капронової нитки), склопластикові дуги з хрестовинами, а також класичні ятері та сучасні складані раколовки (парасольки на 6, 8, 10 входів та прямокутні гармошки 3.5м).
         </p>
         <p data-i18n="about_p3" style="line-height: 1.6; color: #444; font-size: 15px;">
             Купуючи снасті в SNASTI-MARKET, ви отримуєте перевірену продукцію напряму від майстра Альберта (тел: +380500430596). Ми гарантуємо міцність вузлів, високу якість волосіні та нитки, а також оперативно відправляємо замовлення Новою Поштою та Укрпоштою по всій Україні. Мінімальна сума замовлення — всього 500 грн.
@@ -1616,8 +1459,7 @@
     </div>
 </div>
 
-<!-- МОДАЛЬНЫЕ ОКНА ПОДРОБНОСТЕЙ О ТОВАРАХ (С ПОЛНЫМ ДВУЯЗЫЧНЫМ ПЕРЕВОДОМ) -->
-
+<!-- МОДАЛЬНЫЕ ОКНА ПОДРОБНОСТЕЙ О ТОВАРАХ -->
 <div id="details-modal-1" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-1')">&times;</span>
@@ -1870,7 +1712,6 @@
     </div>
 </div>
 
-<!-- ДЕТАЛИ НОВОЙ ПОЗИЦИИ: Сеть одностенка 100м на 1,8м -->
 <div id="details-modal-32" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-32')">&times;</span>
@@ -2003,7 +1844,6 @@
     </div>
 </div>
 
-<!-- ДЕТАЛИ НОВОЙ ПОЗИЦИИ: Резинка 100м -->
 <div id="details-modal-33" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-33')">&times;</span>
@@ -2850,3 +2690,6 @@
         if (e.target.classList.contains('modal')) e.target.style.display = 'none';
     }
 </script>
+
+</body>
+</html>
