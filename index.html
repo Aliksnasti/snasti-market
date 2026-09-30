@@ -58,7 +58,15 @@
         },
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
           "opens": "08:00",
           "closes": "20:00"
         }
@@ -168,7 +176,6 @@
             padding: 0 10px;
         }
 
-        /* Хлібні крихти Breadcrumbs */
         .breadcrumbs {
             font-size: 13px;
             padding: 10px 15px;
@@ -188,7 +195,6 @@
             text-decoration: underline;
         }
 
-        /* Шапка */
         .header {
             background-color: rgba(44, 62, 80, 0.98);
             color: #fff;
@@ -408,7 +414,6 @@
             font-size: 20px;
         }
 
-        /* FAQ accordion styles */
         .faq-section {
             background-color: rgba(255, 255, 255, 0.96);
             padding: 20px 15px;
@@ -449,6 +454,7 @@
             font-size: 14.5px;
             color: #444;
             line-height: 1.5;
+            display: none;
         }
 
         .why-us-grid {
@@ -524,14 +530,12 @@
             border-radius: 8px;
         }
 
-        /* СТРОГАЯ МОБИЛЬНАЯ СЕТКА 2 НА 2 ДЛЯ ВСЕХ ТЕЛЕФОНОВ И ПЛАНШЕТОВ */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr) !important;
             gap: 8px;
         }
 
-        /* Для ПК экранов (ширина более 850px) делаем 4 колонки */
         @media (min-width: 850px) {
             .products-grid {
                 grid-template-columns: repeat(4, 1fr) !important;
@@ -928,7 +932,6 @@
 </head>
 <body>
 
-<!-- Шапка сайта -->
 <header class="header">
     <div class="container header-flex">
         <div class="logo" onclick="location.reload();">
@@ -974,7 +977,6 @@
     </div>
 </section>
 
-<!-- Поиск и товары -->
 <main class="container">
 
     <!-- Фильтр-поиск -->
@@ -1270,7 +1272,6 @@
         </div>
     </section>
 
-    <!-- КАТЕГОРИЯ 2: Дуги и Пауки -->
     <section class="category-section" id="cat-spiders">
         <h2 class="category-title" data-i18n="cat2_title">🕸️ Риболовні Павуки та Дуги</h2>
         <div class="products-grid">
@@ -1386,7 +1387,6 @@
         </div>
     </section>
 
-    <!-- КАТЕГОРИЯ 3: Ятери и Раколовки -->
     <section class="category-section" id="cat-yaters">
         <h2 class="category-title" data-i18n="cat3_title">🦞 Ятері та Раколовки</h2>
         <div class="products-grid">
@@ -1466,9 +1466,8 @@
         </div>
     </section>
 
-    <!-- КАТЕГОРИЯ 4: Аксессуары и Обладнання -->
     <section class="category-section" id="cat-accessories">
-        <h2 class="category-title" data-i18n="cat4_title">⚙️ Аксесуари та Обладнання</h2>
+        <h2 class="category-title" data-i18n="cat4_title">⚙ Аксесуари та Обладнання</h2>
         <div class="products-grid">
 
             <!-- Груз сетевой зажимной 16g -->
@@ -1498,7 +1497,6 @@
         </div>
     </section>
 
-    <!-- БЛОК "ЧОМУ ОБИРАЮТЬ НАС" -->
     <section class="info-block">
         <h2 data-i18n="why_title">Чому обирають наші риболовні снасті від виробника?</h2>
         <div class="why-us-grid">
@@ -1517,7 +1515,6 @@
         </div>
     </section>
 
-    <!-- РАЗДЕЛ "ПРО НАС" / LSI & E-E-A-T TEXT -->
     <section class="info-block" id="about-us">
         <h2 data-i18n="about_title">Про наше виробництво | SNASTI-MARKET</h2>
         <p data-i18n="about_p1" style="line-height: 1.6; color: #444; font-size: 15px;">
@@ -1531,7 +1528,6 @@
         </p>
     </section>
 
-    <!-- БЛОК FAQ (Часті запитання покупців) -->
     <section class="faq-section" id="faq">
         <h2 data-i18n="faq_title">❓ Часті запитання покупців (FAQ)</h2>
         
@@ -1576,36 +1572,36 @@
         </div>
     </section>
 
-    <!-- SEO Блок городов -->
+    <!-- SEO Блок міст та регіональних сторінок -->
     <section class="seo-cities-block">
         <h3 data-i18n="seo_title">Швидка доставка по регіонах:</h3>
         <p style="font-size: 14px; color: #666;" data-i18n="seo_sub">Відправляємо риболовні екрани, косинки, доріжки, сітки одностенки, тристінки, павуки, ятері, раколовки, торпеди та кастингові парашути Новою Поштою та Укрпоштою в міста:</p>
         <div class="city-links">
-            <a href="?city=mykolaiv" data-i18n="c_myk">Миколаїв</a>
-            <a href="?city=odessa" data-i18n="c_ode">Одеса</a>
-            <a href="?city=kherson" data-i18n="c_khe">Херсон</a>
-            <a href="?city=dnipro" data-i18n="c_dni">Дніпро</a>
-            <a href="?city=zaporizhzhia" data-i18n="c_zap">Запоріжжя</a>
-            <a href="?city=kharkiv" data-i18n="c_kha">Харків</a>
-            <a href="?city=kyiv" data-i18n="c_kyi">Київ</a>
-            <a href="?city=khmelnytskyi" data-i18n="c_khm">Хмельницький</a>
-            <a href="?city=poltava" data-i18n="c_pol">Полтава</a>
-            <a href="?city=lviv">Львів</a>
-            <a href="?city=vinnytsia">Вінниця</a>
-            <a href="?city=cherkasy">Черкаси</a>
-            <a href="?city=zhytomyr">Житомир</a>
-            <a href="?city=sumy">Суми</a>
-            <a href="?city=rivne">Рівне</a>
-            <a href="?city=chernivtsi">Чернівці</a>
+            <a href="mykolaiv.html" data-i18n="c_myk">Миколаїв</a>
+            <a href="odessa.html" data-i18n="c_ode">Одеса</a>
+            <a href="kherson.html" data-i18n="c_khe">Херсон</a>
+            <a href="dnipro.html" data-i18n="c_dni">Дніпро</a>
+            <a href="zaporizhzhia.html" data-i18n="c_zap">Запоріжжя</a>
+            <a href="kharkiv.html" data-i18n="c_kha">Харків</a>
+            <a href="kyiv.html" data-i18n="c_kyi">Київ</a>
+            <a href="khmelnytskyi.html" data-i18n="c_khm">Хмельницький</a>
+            <a href="poltava.html" data-i18n="c_pol">Полтава</a>
+            <a href="lviv.html">Львів</a>
+            <a href="vinnytsia.html">Вінниця</a>
+            <a href="cherkasy.html">Черкаси</a>
+            <a href="zhytomyr.html">Житомир</a>
+            <a href="sumy.html">Суми</a>
+            <a href="rivne.html">Рівне</a>
+            <a href="chernivtsi.html">Чернівці</a>
         </div>
     </section>
 
 </main>
 
-<!-- Кнопка прокрутки наверх -->
 <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 
-<!-- Модальное окно СВЯЗИ -->
+
+<!-- Modal Contact Options -->
 <div id="contact-modal" class="modal">
     <div class="modal-content" style="max-width: 450px; text-align: center;">
         <span class="close" onclick="closeModal('contact-modal')">&times;</span>
@@ -1626,7 +1622,7 @@
     </div>
 </div>
 
-<!-- Модальное окно ФИЛЬТРОВ -->
+<!-- Modal Filter -->
 <div id="filter-modal" class="modal">
     <div class="modal-content" style="max-width: 500px;">
         <span class="close" onclick="closeModal('filter-modal')">&times;</span>
@@ -1669,12 +1665,13 @@
     </div>
 </div>
 
-<!-- МОДАЛЬНЫЕ ОКНА ПОДРОБНОСТЕЙ О ТОВАРАХ (1 - 33) -->
+
+<!-- Modal 1 -->
 <div id="details-modal-1" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-1')">&times;</span>
         <h2 data-i18n="m1_h2">Ятерь-раколовка (40 см х 80 см) з капронової нитки — висока міцність та надійність</h2>
-        <p data-i18n="m1_p1">Компактний та високоефективний ятерь (раколовка) розміром 40х80 см призначений для лову раків, живця та прибережної риби. Полотно снасті повністю виготовлено з високоякісної зносостійкої капронової нитки, що робить її стійкою до розривів, клешень раків, зачепів за каміння чи коряги. Конструкція розроблена за принципом пастки: здобич легко заходить всередину через спеціальні конусоподібні входи, але не може вибратися назад.</p>
+        <p data-i18n="m1_p1">Компактний та високоефективний ятерь (раколовка) розміром 40х80 см призначений для лову раків, живця та прибережної риби. Полотно снасті повністю виготовлено з високоякісної зносостійкої капронової нитки, що робить її стійкою до розривів, клешень раків, зачепів за каміння чи коряги.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 280 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-1'); addToCart(1);" data-i18n="btn_buy">У кошик</button>
@@ -1682,11 +1679,12 @@
     </div>
 </div>
 
+<!-- Modal 2 -->
 <div id="details-modal-2" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-2')">&times;</span>
         <h2 data-i18n="m2_h2">Ятерь-раколовка великий (50 см х 100 см) з капронової нитки</h2>
-        <p data-i18n="m2_p1">Збільшена модель ятеря розміром 50х100 см розрахована на солідні об'єми улову. Завдяки розширеному діаметру 50 см та довжині в 1 метр, цей ятерь здатен вмістити значно більше здобичі. Полотно виконане виключно з посиленої капронової нитки.</p>
+        <p data-i18n="m2_p1">Збільшена модель ятеря розміром 50х100 см розрахована на солідні об'єми улову. Завдяки розширеному діаметру 50 см та довжині в 1 метр, цей ятерь здатен вмістити значно більше здобичі.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 420 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-2'); addToCart(2);" data-i18n="btn_buy">У кошик</button>
@@ -1694,11 +1692,12 @@
     </div>
 </div>
 
+<!-- Modal 3 -->
 <div id="details-modal-3" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-3')">&times;</span>
         <h2 data-i18n="m3_h2">Риболовний екран (1х1 м) — Купити экраны рыболовные</h2>
-        <p data-i18n="m3_p1">Наш риболовний екран розміром 1х1 метр — це класика, перевірена часом, яка забезпечує стабільний результат при лові різної риби. Полотно з якісної прозорої волосіні завтовшки 0.18 мм. Екран повністю оснащений, має надійну нижню планку-вантаж та верхній плавучий елемент. Доступні розміри вічка від 14 мм до 50 мм під будь-яку рибу.</p>
+        <p data-i18n="m3_p1">Наш риболовний екран розміром 1х1 метр — це класика, перевірена часом, яка забезпечує стабільний результат при лові різної риби. Полотно з якісної прозорої волосіні завтовшки 0.18 мм.</p>
         <p><strong data-i18n="m_retail_lbl">Роздрібна ціна:</strong> 130 грн. <br><strong data-i18n="m_opt_lbl">Оптова ціна:</strong> 90 грн (від 20 шт).</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-3'); addToCart(3);" data-i18n="btn_buy">У кошик</button>
@@ -1706,11 +1705,12 @@
     </div>
 </div>
 
+<!-- Modal 4 -->
 <div id="details-modal-4" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-4')">&times;</span>
         <h2 data-i18n="m4_h2">Риболовна сітка-доріжка (7 м х 1.6 м)</h2>
-        <p data-i18n="m4_p1">Класична риболовна сітка-доріжка завдовжки 7 метрів та висотою 1.6 метра. Поєднує високу уловистість та мобільність. Виготовлена з якісної волосіні завтовшки 0.15 мм. Чудово підходить для точкового лову в очеретах та біля берега.</p>
+        <p data-i18n="m4_p1">Класична риболовна сітка-доріжка завдовжки 7 метрів та висотою 1.6 метра. Поєднує високу уловистість та мобільність.</p>
         <p><strong data-i18n="m_retail_lbl">Роздрібна ціна:</strong> 80 грн. <br><strong data-i18n="m_opt_lbl">Оптова ціна:</strong> 50 грн (від 20 шт).</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-4'); addToCart(4);" data-i18n="btn_buy">У кошик</button>
@@ -1718,11 +1718,12 @@
     </div>
 </div>
 
+<!-- Modal 5 -->
 <div id="details-modal-5" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-5')">&times;</span>
         <h2 data-i18n="m5_h2">Риболовна сітка-доріжка «Профі» (7 м х 1.6 м)</h2>
-        <p data-i18n="m5_p1">Розширений готовий комплект сітки-доріжки «Профі». У набір входить якісне полотно з волосіні 7х1.6м, спеціальна мічна гумка завдовжки 5 метрів, 30 метрів основної волосіні та 2 надійних карабіни з вертлюгами для запобігання скручуванню.</p>
+        <p data-i18n="m5_p1">Розширений готовий комплект сітки-доріжки «Профі». У набір входить якісне полотно з волосіні 7х1.6м, спеціальна мічна гумка завдовжки 5 метрів, 30 метрів основної волосіні та 2 надійних карабіни.</p>
         <p><strong data-i18n="m_retail_lbl">Роздрібна ціна:</strong> 140 грн. <br><strong data-i18n="m_opt_lbl">Оптова ціна:</strong> 90 грн (від 20 шт).</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-5'); addToCart(5);" data-i18n="btn_buy">У кошик</button>
@@ -1730,11 +1731,12 @@
     </div>
 </div>
 
+<!-- Modal 6 -->
 <div id="details-modal-6" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-6')">&times;</span>
         <h2 data-i18n="m6_h2">Комплект дуг для риболовного павука (1.5 м x 1.5 м)</h2>
-        <p data-i18n="m6_p1">Надійні пружні дуги завтовшки 8 мм з високоякісного композитного пластику. Не піддаються корозії, чудово пружинять та тримають форму павука навіть при великому навантаженні уловом.</p>
+        <p data-i18n="m6_p1">Надійні пружні дуги завтовшки 8 мм з високоякісного композитного пластику. Не піддаються корозії, чудово пружинять та тримають форму павука.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 600 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-6'); addToCart(6);" data-i18n="btn_buy">У кошик</button>
@@ -1742,11 +1744,12 @@
     </div>
 </div>
 
+<!-- Modal 7 -->
 <div id="details-modal-7" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-7')">&times;</span>
         <h2 data-i18n="m7_h2">Косинка риболовна (1 м х 1 м)</h2>
-        <p data-i18n="m7_p1">Зручна трикутна косинка для точкового лову риби у складних умовах (в очеретах, кущах, вікнах водоростей). Якісна волосінь та надійне завантаження забезпечують швидке занурення та чудову уловистість.</p>
+        <p data-i18n="m7_p1">Зручна трикутна косинка для точкового лову риби у складних умовах (в очеретах, кущах, вікнах водоростей).</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 80 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-7'); addToCart(7);" data-i18n="btn_buy">У кошик</button>
@@ -1754,11 +1757,12 @@
     </div>
 </div>
 
+<!-- Modal 8 -->
 <div id="details-modal-8" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-8')">&times;</span>
         <h2 data-i18n="m8_h2">Снасть донна «Гумка» комплект</h2>
-        <p data-i18n="m8_p1">Готовий до використання комплект донної снасті з амортизатором: 30 м міцної основної волосіні, 5 м якісної риболовної гуми, 5 гострих гачків на повідцях та важкий груз вагою 150 грамів.</p>
+        <p data-i18n="m8_p1">Готовий до використання комплект донної снасті з амортизатором: 30 м міцної основної волосіні, 5 м якісної риболовної гуми, 5 гострих гачків та вантаж 150г.</p>
         <p><strong data-i18n="m_retail_lbl">Роздрібна ціна:</strong> 110 грн. <br><strong data-i18n="m_opt_lbl">Оптова ціна:</strong> 80 грн (від 20 шт).</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-8'); addToCart(8);" data-i18n="btn_buy">У кошик</button>
@@ -1766,11 +1770,12 @@
     </div>
 </div>
 
+<!-- Modal 9 -->
 <div id="details-modal-9" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-9')">&times;</span>
-        <h2 data-i18n="m9_h2">Дуги на павук (2 м х 2 м) з хрестовиною</h2>
-        <p data-i18n="m9_p1">Повний комплект дуг 8 мм для створення та встановлення риболовного павука розміром 2х2 метри. Комплектується міцною металевою хрестовиною для швидкої збірки.</p>
+        <h2 data-i18n="m9_h2">Дуги на павук (2м х 2м) з хрестовиною</h2>
+        <p data-i18n="m9_p1">Міцні склопластикові дуги 8мм з металевою хрестовиною. Ідеально тримають полотно павука 2х2 метри.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 650 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-9'); addToCart(9);" data-i18n="btn_buy">У кошик</button>
@@ -1778,11 +1783,12 @@
     </div>
 </div>
 
+<!-- Modal 10 -->
 <div id="details-modal-10" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-10')">&times;</span>
-        <h2 data-i18n="m10_h2">Дуги на павук посилені (2.5 м х 2.5 м) з хрестовиною</h2>
-        <p data-i18n="m10_p1">Посилений комплект дуг збільшеної товщини (10 мм) під полотно павука 2.5х2.5 м. У комплект входить товстостінна металева хрестовина.</p>
+        <h2 data-i18n="m10_h2">Дуги на павук (2.5м х 2.5м) з хрестовиною</h2>
+        <p data-i18n="m10_p1">Посилений комплект дуг завтовшки 10 мм для павуків середнього та великого розміру. Поставляється з надійною хрестовиною.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 800 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-10'); addToCart(10);" data-i18n="btn_buy">У кошик</button>
@@ -1790,11 +1796,12 @@
     </div>
 </div>
 
+<!-- Modal 11 -->
 <div id="details-modal-11" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-11')">&times;</span>
-        <h2 data-i18n="m11_h2">Дуги на павук максимальні (3 м х 3 м) з хрестовиною</h2>
-        <p data-i18n="m11_p1">Потужний комплект дуг завтовшки 10 мм для найбільших павуків 3х3 метри. Забезпечують максимальний розмах та стійкість каркаса. Хрестовина у комплекті.</p>
+        <h2 data-i18n="m11_h2">Дуги на павук (3м х 3м) з хрестовиною</h2>
+        <p data-i18n="m11_p1">Максимально міцні дуги товщиною 10 мм для великогабаритного павука 3х3 метри. Забезпечують надійне підняття улову.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 850 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-11'); addToCart(11);" data-i18n="btn_buy">У кошик</button>
@@ -1802,11 +1809,12 @@
     </div>
 </div>
 
+<!-- Modal 12 -->
 <div id="details-modal-12" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-12')">&times;</span>
-        <h2 data-i18n="m12_h2">Павук риболовний (2 м х 2 м) — Волосінь</h2>
-        <p data-i18n="m12_p1">Якісне сіткове полотно павука з прозорої міцної волосіні. Невидиме у воді, ідеально підходить для лову обережної риби на мілководді та середній глибині.</p>
+        <h2 data-i18n="m12_h2">Павук риболовний (2м х 2м) Волосінь</h2>
+        <p data-i18n="m12_p1">Полотно павука з якісної прозорої волосіні. Невидиме у воді, швидко занурюється та має високу уловистість.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 180 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-12'); addToCart(12);" data-i18n="btn_buy">У кошик</button>
@@ -1814,11 +1822,12 @@
     </div>
 </div>
 
+<!-- Modal 13 -->
 <div id="details-modal-13" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-13')">&times;</span>
-        <h2 data-i18n="m13_h2">Павук риболовний (2.5 м х 2.5 м) — Волосінь</h2>
-        <p data-i18n="m13_p1">Сіткове полотно павука збільшеного розміру 2.5х2.5 м з волосіні. Забезпечує охоплення більшої площі водойми.</p>
+        <h2 data-i18n="m13_h2">Павук риболовний (2.5м х 2.5м) Волосінь</h2>
+        <p data-i18n="m13_p1">Збільшене полотно з волосіні для облову більшої площі водойми. Легке, міцне та непомітне для риби.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 320 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-13'); addToCart(13);" data-i18n="btn_buy">У кошик</button>
@@ -1826,11 +1835,12 @@
     </div>
 </div>
 
+<!-- Modal 14 -->
 <div id="details-modal-14" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-14')">&times;</span>
-        <h2 data-i18n="m14_h2">Павук риболовний (3 м х 3 м) — Волосінь</h2>
-        <p data-i18n="m14_p1">Велике сіткове полотно для павука 3х3 метри з міцної волосіні. Розраховано на лов із високих мостів, обривів та крутих берегів.</p>
+        <h2 data-i18n="m14_h2">Павук риболовний (3м х 3м) Волосінь</h2>
+        <p data-i18n="m14_p1">Велике полотно 3х3м з міцної волосіні. Підходить для лову риби на річках та великих водоймах.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 360 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-14'); addToCart(14);" data-i18n="btn_buy">У кошик</button>
@@ -1838,11 +1848,12 @@
     </div>
 </div>
 
+<!-- Modal 15 -->
 <div id="details-modal-15" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-15')">&times;</span>
-        <h2 data-i18n="m15_h2">Павук риболовний (2 м х 2 м) — Капронова нитка</h2>
-        <p data-i18n="m15_p1">Дуже міцне полотно з плетеної капронової нитки. Витримує зачепи за коряги, стійке до зносу та лову у водоймах із рослинністю.</p>
+        <h2 data-i18n="m15_h2">Павук риболовний (2м х 2м) Нитка</h2>
+        <p data-i18n="m15_p1">Надійний павук з капронової нитки, що витримує високі навантаження та велику рибу без ризику розриву полотна.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 180 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-15'); addToCart(15);" data-i18n="btn_buy">У кошик</button>
@@ -1850,11 +1861,12 @@
     </div>
 </div>
 
+<!-- Modal 16 -->
 <div id="details-modal-16" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-16')">&times;</span>
-        <h2 data-i18n="m16_h2">Павук риболовний (3 м х 3 м) — Капронова нитка</h2>
-        <p data-i18n="m16_p1">Максимально міцне полотно павука 3х3м з товстої капронової нитки. Призначене для підйому великої риби та активної експлуатації.</p>
+        <h2 data-i18n="m16_h2">Павук риболовний (3м х 3м) Нитка</h2>
+        <p data-i18n="m16_p1">Посилений павук великого розміру з капронової нитки. Розрахований на ловля крупної риби та зачепи за коряги.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 360 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-16'); addToCart(16);" data-i18n="btn_buy">У кошик</button>
@@ -1862,11 +1874,12 @@
     </div>
 </div>
 
+<!-- Modal 17 -->
 <div id="details-modal-17" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-17')">&times;</span>
         <h2 data-i18n="m17_h2">Полотно на екран (1м х 1м)</h2>
-        <p data-i18n="m17_p1">Запасне сіткове полотно 1х1 метр з якісної волосіні для ремонту або самостійного виготовлення екранчиків.</p>
+        <p data-i18n="m17_p1">Змінне мережеве полотно для риболовного екрана. Дозволяє швидко замінити пошкоджене полотно на вашій снасті.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 50 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-17'); addToCart(17);" data-i18n="btn_buy">У кошик</button>
@@ -1874,11 +1887,12 @@
     </div>
 </div>
 
+<!-- Modal 18 -->
 <div id="details-modal-18" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-18')">&times;</span>
-        <h2 data-i18n="m18_h2">Сітка тристінна (50м х 1.5м) — Сетка трехстенка купить</h2>
-        <p data-i18n="m18_p1">Уловиста тристінна сітка (путанка) з ряжою. При потраплянні риба створює сітковий мішок, що гарантує надійне утримання улову.</p>
+        <h2 data-i18n="m18_h2">Сітка тристінна (50м х 1.5м)</h2>
+        <p data-i18n="m18_p1">Тристінна уловиста сітка з посиленими боковими стінками (поряжами) та високою ефективністю затримання риби.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 360 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-18'); addToCart(18);" data-i18n="btn_buy">У кошик</button>
@@ -1886,11 +1900,12 @@
     </div>
 </div>
 
+<!-- Modal 19 -->
 <div id="details-modal-19" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-19')">&times;</span>
-        <h2 data-i18n="m19_h2">Сітка тристінна (100м х 1.8м) — Сетка трехстенка купить</h2>
-        <p data-i18n="m19_p1">Повнорозмірна тристінна сітка довжиною 100 метрів. Дозволяє перекривати великі ділянки річок та озер.</p>
+        <h2 data-i18n="m19_h2">Сітка тристінна (100м х 1.8м)</h2>
+        <p data-i18n="m19_p1">Повнорозмірна тристінка завдовжки 100 метрів. Забезпечує максимальний улов на відкритих водоймах.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 820 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-19'); addToCart(19);" data-i18n="btn_buy">У кошик</button>
@@ -1898,11 +1913,12 @@
     </div>
 </div>
 
+<!-- Modal 20 -->
 <div id="details-modal-20" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-20')">&times;</span>
-        <h2 data-i18n="m20_h2">Сітка тристінна (100м х 3.0м) — Сетка трехстенка купить</h2>
-        <p data-i18n="m20_p1">Висока тристінна сітка заввишки 3 метри для глибоких водойм, затоплених русел та руслових ям.</p>
+        <h2 data-i18n="m20_h2">Сітка тристінна (100м х 3м)</h2>
+        <p data-i18n="m20_p1">Высока тристінна сітка заввишки 3 метри для г глубоких водойм, водосховищ та річок.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 1040 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-20'); addToCart(20);" data-i18n="btn_buy">У кошик</button>
@@ -1910,11 +1926,12 @@
     </div>
 </div>
 
+<!-- Modal 21 -->
 <div id="details-modal-21" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-21')">&times;</span>
-        <h2 data-i18n="m21_h2">Сітка одностінна (100м х 3.0м)</h2>
-        <p data-i18n="m21_p1">Класична зяброва одностінна сітка 100м х 3м з міцної прозорої волосіні. Легка у постановці та зборі.</p>
+        <h2 data-i18n="m21_h2">Сітка одностінна (100м х 3м)</h2>
+        <p data-i18n="m21_p1">Одностінна сітка заввишки 3.0 м та довжиною 100 м. Легка в установці та очищенні від здобичі.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 620 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-21'); addToCart(21);" data-i18n="btn_buy">У кошик</button>
@@ -1922,18 +1939,7 @@
     </div>
 </div>
 
-<div id="details-modal-32" class="modal">
-    <div class="modal-content text-left">
-        <span class="close" onclick="closeModal('details-modal-32')">&times;</span>
-        <h2 data-i18n="m32_h2">Сітка одностінна (100м х 1.8м) — Купити сітку одностенку</h2>
-        <p data-i18n="m32_p1">Популярна риболовна одностінна сітка довжиною 100 метрів та висотою 1.8 метра. Виготовлена з якісної міцної волосіні, яка забезпечує відмінну уловистість і тривалий термін служби. Ідеально підходить для промислового та аматорського лову різноманітної риби у водоймах України.</p>
-        <p><strong data-i18n="m_price_lbl">Ціна:</strong> 510 грн.</p>
-        <div style="text-align: center; margin-top: 20px;">
-            <button class="btn" onclick="closeModal('details-modal-32'); addToCart(32);" data-i18n="btn_buy">У кошик</button>
-        </div>
-    </div>
-</div>
-
+<!-- Modal 22 -->
 <div id="details-modal-22" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-22')">&times;</span>
@@ -1946,11 +1952,12 @@
     </div>
 </div>
 
+<!-- Modal 23 -->
 <div id="details-modal-23" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-23')">&times;</span>
         <h2 data-i18n="m23_h2">Раколовка-парасолька (6 входів)</h2>
-        <p data-i18n="m23_p1">Складана автоматична раколовка зонтик. Легко розкривається і складається за секунди. Має 6 конусних входів.</p>
+        <p data-i18n="m23_p1">Зручна складана раколовка з 6 входами. Легко розкладається одним рухом за принципом парасольки.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 220 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-23'); addToCart(23);" data-i18n="btn_buy">У кошик</button>
@@ -1958,11 +1965,12 @@
     </div>
 </div>
 
+<!-- Modal 24 -->
 <div id="details-modal-24" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-24')">&times;</span>
         <h2 data-i18n="m24_h2">Раколовка-парасолька (8 входів)</h2>
-        <p data-i18n="m24_p1">Автоматична раколовка зонтик з 8 заходами для ефективного заманювання раків з усіх боків.</p>
+        <p data-i18n="m24_p1">Модель раколовки з 8 входми для швидкого заманювання раків з усіх напрямків.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 240 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-24'); addToCart(24);" data-i18n="btn_buy">У кошик</button>
@@ -1970,11 +1978,12 @@
     </div>
 </div>
 
+<!-- Modal 25 -->
 <div id="details-modal-25" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-25')">&times;</span>
         <h2 data-i18n="m25_h2">Раколовка-парасолька (10 входів)</h2>
-        <p data-i18n="m25_p1">Найбільша раколовка зонтик на 10 входів для максимальної уловистості.</p>
+        <p data-i18n="m25_p1">Найбільша раколовка-зонтик на 10 входів. Максимально ефективна при рясній наявності раків.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 260 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-25'); addToCart(25);" data-i18n="btn_buy">У кошик</button>
@@ -1982,23 +1991,25 @@
     </div>
 </div>
 
+<!-- Modal 26 -->
 <div id="details-modal-26" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-26')">&times;</span>
-        <h2 data-i18n="m26_h2">Груз мережевий затискний свинцевий (16г)</h2>
-        <p data-i18n="m26_p1">Свинцеве затискне грузило вагою 16 грамів для оснащення нижнього шнура риболовних сіток, доріжок та екранів. Легко обтискається на мотузці або волосіні за допомогою плоскогубців, міцно тримається та не ковзає.</p>
-        <p><strong data-i18n="m_price_lbl">Ціна:</strong> 3 грн / шт.</p>
+        <h2 data-i18n="m26_h2">Груз мережевий затискний (16г)</h2>
+        <p data-i18n="m26_p1">Свинцевий затискний грузик для швидкого та надійного обважнення нижнього шнура сітки чи екрана.</p>
+        <p><strong data-i18n="m_price_lbl">Ціна:</strong> 3 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-26'); addToCart(26);" data-i18n="btn_buy">У кошик</button>
         </div>
     </div>
 </div>
 
+<!-- Modal 27 -->
 <div id="details-modal-27" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-27')">&times;</span>
-        <h2 data-i18n="m27_h2">Раколовка-гармошка прямокутна (25см х 30см, довжина 3.5м)</h2>
-        <p data-i18n="m27_p1">Багатосекційна раколовка типу «гармошка» (книжка) завдовжки 3.5 метри. Міцний прямокутний каркас розміром 25х30 см обтягнутий зносостійкою капроновою сіткою. Має численні входи по всій довжині, що дозволяє ловити раків у великій кількості за один запуск.</p>
+        <h2 data-i18n="m27_h2">Раколовка-гармошка (25х30см, 3.5м)</h2>
+        <p data-i18n="m27_p1">Довга прямокутна раколовка-гармошка 3.5 метри. Дозволяє перекривати великі ділянки дна.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 420 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-27'); addToCart(27);" data-i18n="btn_buy">У кошик</button>
@@ -2006,11 +2017,12 @@
     </div>
 </div>
 
+<!-- Modal 28 -->
 <div id="details-modal-28" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-28')">&times;</span>
-        <h2 data-i18n="m28_h2">Торпеда для протяжки сіток під кригою (підлідна)</h2>
-        <p data-i18n="m28_p1">Спеціальний пристрій (акумуляторна підлідна торпеда) для швидкої протяжки мотузки під кригою при зимовому лові сітками. Оснащена двома зубчастими колесами, які надійно чіпляються за лід знизу, та яскравими світлодіодними сигналізаторами для відстеження її руху крізь товщу криги.</p>
+        <h2 data-i18n="m28_h2">Торпеда для протяжки сіток під кригою</h2>
+        <p data-i18n="m28_p1">Акумуляторний пристрій для зручної та швидкої протяжки риболовних сіток під льодом під час зимового лову.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 1450 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-28'); addToCart(28);" data-i18n="btn_buy">У кошик</button>
@@ -2018,11 +2030,12 @@
     </div>
 </div>
 
+<!-- Modal 29 -->
 <div id="details-modal-29" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-29')">&times;</span>
-        <h2 data-i18n="m29_h2">Сітка-парашут кастингова (Діаметр 3.6м, волосінь 0.35мм)</h2>
-        <p data-i18n="m29_p1">Кастингова накидна сітка «Парашут» діаметром 3.6 м. Виготовлена з товстої міцної волосіні 0.35 мм з вічком 15 мм. По периметру оснащена вшитими грузилами для швидкого занурення на дно. Забезпечує легкий та уловистий кидок.</p>
+        <h2 data-i18n="m29_h2">Сітка-парашут (Діаметр 3.6м)</h2>
+        <p data-i18n="m29_p1">Кастингова накидна сітка з волосіні 0.35мм діаметром 3.6 метра. Швидко розкривається та занурюється.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 1200 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-29'); addToCart(29);" data-i18n="btn_buy">У кошик</button>
@@ -2030,11 +2043,12 @@
     </div>
 </div>
 
+<!-- Modal 30 -->
 <div id="details-modal-30" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-30')">&times;</span>
-        <h2 data-i18n="m30_h2">Сітка-парашут кастингова (Діаметр 4.2м, волосінь 0.35мм)</h2>
-        <p data-i18n="m30_p1">Кастингова накидна сітка «Парашут» збільшеного діаметра 4.2 м. Мічна волосінь 0.35 мм, вічко 15 мм. Дозволяє накривати великі зграї риби за один кидок.</p>
+        <h2 data-i18n="m30_h2">Сітка-парашут (Діаметр 4.2м)</h2>
+        <p data-i18n="m30_p1">Кастингова сітка-парашут діаметром 4.2 м для швидкого накриття зграї риби.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 1400 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-30'); addToCart(30);" data-i18n="btn_buy">У кошик</button>
@@ -2042,11 +2056,12 @@
     </div>
 </div>
 
+<!-- Modal 31 -->
 <div id="details-modal-31" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-31')">&times;</span>
-        <h2 data-i18n="m31_h2">Сітка-парашут кастингова (Діаметр 5.0м, волосінь 0.35мм)</h2>
-        <p data-i18n="m31_p1">Професійна велика кастингова сітка «Парашут» діаметром 5 метрів. Волосінь 0.35 мм, вічко 15 мм. Розрахована на досвідчених рибалок для максимального охоплення площі води.</p>
+        <h2 data-i18n="m31_h2">Сітка-парашут (Діаметр 5.0м)</h2>
+        <p data-i18n="m31_p1">Велика кастингова сітка діаметром 5.0 метрів з міцної волосіні 0.35 мм. Максимальне покриття площі.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 1600 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-31'); addToCart(31);" data-i18n="btn_buy">У кошик</button>
@@ -2054,11 +2069,25 @@
     </div>
 </div>
 
+<!-- Modal 32 -->
+<div id="details-modal-32" class="modal">
+    <div class="modal-content text-left">
+        <span class="close" onclick="closeModal('details-modal-32')">&times;</span>
+        <h2 data-i18n="m32_h2">Сітка одностінна (100м х 1.8м)</h2>
+        <p data-i18n="m32_p1">Одностінна сітка заввишки 1.8м з якісної волосіні, стандартної довжини 100 метрів.</p>
+        <p><strong data-i18n="m_price_lbl">Ціна:</strong> 510 грн.</p>
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="btn" onclick="closeModal('details-modal-32'); addToCart(32);" data-i18n="btn_buy">У кошик</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 33 -->
 <div id="details-modal-33" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-33')">&times;</span>
-        <h2 data-i18n="m33_h2">Резинка риболовна амортизатор (100м)</h2>
-        <p data-i18n="m33_p1">Високоякісна риболовна гума (амортизатор) довжиною 100 метрів. Використовується для оснащення донних снастей, доріжок та інших знарядь лову. Володіє високою еластичністю, міцністю на розрив і стійкістю до солоної та прісної води.</p>
+        <h2 data-i18n="m33_h2">Резинка риболовна (амортизатор 100м)</h2>
+        <p data-i18n="m33_p1">Спеціальна високоякісна еластична риболовна резинка 100 метрів для оснащення донних снастей.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 180 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-33'); addToCart(33);" data-i18n="btn_buy">У кошик</button>
@@ -2066,7 +2095,7 @@
     </div>
 </div>
 
-<!-- Модальное окно КОРЗИНЫ -->
+<!-- Modal Cart window -->
 <div id="cart-modal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="toggleCart()">&times;</span>
@@ -2090,7 +2119,7 @@
     </div>
 </div>
 
-<!-- Модальное окно ZOOМ ИЗОБРАЖЕНИЯ -->
+<!-- Modal Image Zoom -->
 <div id="image-zoom-modal" class="modal">
     <span class="close zoom-close" onclick="closeImageZoom()">&times;</span>
     <div class="zoom-modal-content">
@@ -2098,7 +2127,7 @@
     </div>
 </div>
 
-<!-- Футер -->
+<!-- Footer -->
 <footer class="footer" id="contacts">
     <div class="container">
         <h2 data-i18n="f_contacts">Контакти для зв'язку</h2>
@@ -2106,7 +2135,6 @@
         <p>Телефон / Viber / Telegram: <strong><a href="tel:+380500430596">+38 (050) 043-05-96</a> (Альберт)</strong></p>
         <p data-i18n="f_delivery_info">Доставка: Нова Пошта, Укрпошта (післяплата або передплата)</p>
         
-        <!-- Блок партнерів -->
         <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.15);">
             <p style="font-size: 14px; color: #bdc3c7; margin-bottom: 6px;" data-i18n="partner_label">Наші партнери та друзі:</p>
             <a href="https://technoplankton-sk.com.ua/" target="_blank" style="color: #f1c40f; text-decoration: underline; font-weight: bold; font-size: 15px;">
@@ -2194,148 +2222,85 @@
             m_opt_lbl: "Оптова ціна:",
 
             m1_h2: "Ятерь-раколовка (40 см х 80 см) з капронової нитки — висока міцність та надійність",
-            m1_p1: "Компактний та високоефективний ятерь (раколовка) розміром 40х80 см призначений для лову раків, живця та прибережної риби. Полотно снасті повністю виготовлено з високоякісної зносостійкої капронової нитки, що робить її стійкою до розривів, клешень раків, зачепів за каміння чи коряги. Конструкція розроблена за принципом пастки: здобич легко заходить всередину через спеціальні конусоподібні входи, але не може вибратися назад.",
+            m1_p1: "Компактний та високоефективний ятерь (раколовка) розміром 40х80 см призначений для лову раків, живця та прибережної риби. Полотно снасті повністю виготовлено з високоякісної зносостійкої капронової нитки.",
             m2_h2: "Ятерь-раколовка великий (50 см х 100 см) з капронової нитки",
-            m2_p1: "Збільшена модель ятеря розміром 50х100 см розрахована на солідні об'єми улову. Завдяки розширеному діаметру 50 см та довжині в 1 метр, цей ятерь здатен вмістити значно більше здобичі. Полотно виконане виключно з посиленої капронової нитки.",
-            m3_h2: "Риболовний екран (1х1 м) — Купити экраны рыболовные",
-            m3_p1: "Наш риболовний екран розміром 1х1 метр — це класика, перевірена часом, яка забезпечує стабільний результат при лові різної риби. Полотно з якісної прозорої волосіні завтовшки 0.18 мм. Екран повністю оснащений, має надійну нижню планку-вантаж та верхній плавучий елемент. Доступні розміри вічка від 14 мм до 50 мм під будь-яку рибу.",
+            m2_p1: "Збільшена модель ятеря розміром 50х100 см розрахована на солідні об'єми улову.",
+            m3_h2: "Риболовний екран (1х1 м)",
+            m3_p1: "Полотно з якісної прозорої волосіні завтовшки 0.18 мм.",
             m4_h2: "Риболовна сітка-доріжка (7 м х 1.6 м)",
-            m4_p1: "Класична риболовна сітка-доріжка завдовжки 7 метрів та висотою 1.6 метра. Поєднує високу уловистість та мобільність. Виготовлена з якісної волосіні завтовшки 0.15 мм. Чудово підходить для точкового лову в очеретах та біля берега.",
-            m5_h2: "Риболовна сітка-доріжка «Профі» (7 м х 1.6 м)",
-            m5_p1: "Розширений готовий комплект сітки-доріжки «Профі». У набір входить якісне полотно з волосіні 7х1.6м, спеціальна мічна гумка завдовжки 5 метрів, 30 метрів основної волосіні та 2 надійних карабіни з вертлюгами для запобігання скручуванню.",
-            m6_h2: "Комплект дуг для риболовного павука (1.5 м x 1.5 м)",
-            m6_p1: "Надійні пружні дуги завтовшки 8 мм з високоякісного композитного пластику. Не піддаються корозії, чудово пружинять та тримають форму павука навіть при великому навантаженні уловом.",
+            m4_p1: "Класична риболовна сітка-доріжка завдовжки 7 метрів та висотою 1.6 метра.",
+            m5_h2: "Сітка-доріжка «Профі» (7 м х 1.6 м)",
+            m5_p1: "Готовий комплект з волосіні, гумки 5м, 30м волосіні та карабінів.",
+            m6_h2: "Дуги на павук (1.5 м x 1.5 м)",
+            m6_p1: "Надійні пружні дуги завтовшки 8 мм з композитного пластику.",
             m7_h2: "Косинка риболовна (1 м х 1 м)",
-            m7_p1: "Зручна трикутна косинка для точкового лову риби у складних умовах (в очеретах, кущах, вікнах водоростей). Якісна волосінь та надійне завантаження забезпечують швидке занурення та чудову уловистість.",
+            m7_p1: "Трикутна косинка для точкового лову у складних умовах.",
             m8_h2: "Снасть донна «Гумка» комплект",
-            m8_p1: "Готовий до використання комплект донної снасті з амортизатором: 30 м міцної основної волосіні, 5 м якісної риболовної гуми, 5 гострих гачків на повідцях та важкий груз вагою 150 грамів.",
-            m9_h2: "Дуги на павук (2 м х 2 м) з хрестовиною",
-            m9_p1: "Польний комплект дуг 8 мм для створення та встановлення риболовного павука розміром 2х2 метри. Комплектується міцною металевою хрестовиною для швидкої збірки.",
-            m10_h2: "Дуги на павук посилені (2.5 м х 2.5 м) з хрестовиною",
-            m10_p1: "Посилений комплект дуг збільшеної товщини (10 мм) під полотно павука 2.5х2.5 м. У комплект входить товстостінна металева хрестовина.",
-            m11_h2: "Дуги на павук максимальні (3 м х 3 м) з хрестовиною",
-            m11_p1: "Потужний комплект дуг завтовшки 10 мм для найбільших павуків 3х3 метри. Забезпечують максимальний розмах та стійкість каркаса. Хрестовина у комплекті.",
-            m12_h2: "Павук риболовний (2 м х 2 м) — Волосінь",
-            m12_p1: "Якісне сіткове полотно павука з прозорої міцної волосіні. Невидиме у воді, ідеально підходить для лову обережної риби на мілководді та середній глибині.",
-            m13_h2: "Павук риболовний (2.5 м х 2.5 м) — Волосінь",
-            m13_p1: "Сіткове полотно павука збільшеного розміру 2.5х2.5 м з волосіні. Забезпечує охоплення більшої площі водойми.",
-            m14_h2: "Павук риболовний (3 м х 3 м) — Волосінь",
-            m14_p1: "Велике сіткове полотно для павука 3х3 метри з міцної волосіні. Розраховано на лов із високих мостів, обривів та крутих берегів.",
-            m15_h2: "Павук риболовний (2 м х 2 м) — Капронова нитка",
-            m15_p1: "Дуже міцне полотно з плетеної капронової нитки. Витримує зачепи за коряги, стійке до зносу та лову у водоймах із рослинністю.",
-            m16_h2: "Павук риболовний (3 м х 3 м) — Капронова нитка",
-            m16_p1: "Максимально міцне полотно павука 3х3м з товстої капронової нитки. Призначене для підйому великої риби та активної експлуатації.",
+            m8_p1: "Готовий комплект донної снасті з амортизатором.",
+            m9_h2: "Дуги на павук (2м х 2м) з хрестовиною",
+            m9_p1: "Міцні склопластикові дуги 8мм з металевою хрестовиною.",
+            m10_h2: "Дуги на павук (2.5м х 2.5м) з хрестовиною",
+            m10_p1: "Посилений комплект дуг завтовшки 10 мм.",
+            m11_h2: "Дуги на павук (3м х 3м) з хрестовиною",
+            m11_p1: "Максимально міцні дуги товщиною 10 мм.",
+            m12_h2: "Павук (2м х 2м) Волосінь",
+            m12_p1: "Полотно з прозорої волосіні, невидиме у воді.",
+            m13_h2: "Павук (2.5м х 2.5м) Волосінь",
+            m13_p1: "Збільшене полотно з волосіні для облову більшої площі.",
+            m14_h2: "Павук (3м х 3м) Волосінь",
+            m14_p1: "Велике полотно 3х3м з міцної волосіні.",
+            m15_h2: "Павук (2м х 2м) Нитка",
+            m15_p1: "Павук з капронової нитки, що витримує великі навантаження.",
+            m16_h2: "Павук (3м х 3м) Нитка",
+            m16_p1: "Посилений павук великого розміру з капронової нитки.",
             m17_h2: "Полотно на екран (1м х 1м)",
-            m17_p1: "Запасне сіткове полотно 1х1 метр з якісної волосіні для ремонту або самостійного виготовлення екранчиків.",
-            m18_h2: "Сітка тристінна (50м х 1.5м) — Сетка трехстенка купить",
-            m18_p1: "Уловиста тристінна сітка (путанка) з ряжою. При потраплянні риба створює сітковий мішок, що гарантує надійне утримання улову.",
-            m19_h2: "Сітка тристінна (100м х 1.8м) — Сетка трехстенка купить",
-            m19_p1: "Повнорозмірна тристінна сітка довжиною 100 метрів. Дозволяє перекривати великі ділянки річок та озер.",
-            m20_h2: "Сітка тристінна (100м х 3.0м) — Сетка трехстенка купить",
-            m20_p1: "Висока тристінна сітка заввишки 3 метри для глибоких водойм, затоплених русел та руслових ям.",
-            m21_h2: "Сітка одностінна (100м х 3.0м)",
-            m21_p1: "Класична зяброва одностінна сітка 100м х 3м з міцної прозорої волосіні. Легка у постановці та зборі.",
-            m32_h2: "Сітка одностінна (100м х 1.8м) — Купити сітку одностенку",
-            m32_p1: "Популярна риболовна одностінна сітка довжиною 100 метрів та висотою 1.8 метра. Виготовлена з якісної міцної волосіні, яка забезпечує відмінну уловистість і тривалий термін служби. Ідеально підходить для промислового та аматорського лову різноманітної риби у водоймах України.",
+            m17_p1: "Змінне мережеве полотно для риболовного екрана.",
+            m18_h2: "Сітка тристінна (50м х 1.5м)",
+            m18_p1: "Тристінна уловиста сітка з посиленими поряжами.",
+            m19_h2: "Сітка тристінна (100м х 1.8м)",
+            m19_p1: "Повнорозмірна тристінка завдовжки 100 метрів.",
+            m20_h2: "Сітка тристінна (100м х 3м)",
+            m20_p1: "Висока тристінна сітка заввишки 3 метри.",
+            m21_h2: "Сітка одностінна (100м х 3м)",
+            m21_p1: "Одностінна сітка заввишки 3.0 м та довжиною 100 м.",
             m22_h2: "Сітка «Фінка» одностінна (30м х 1.8м)",
-            m22_p1: "Особлива сітка фінського типу з вшитими вантажними та плавучими шнурами, які запобігають заплутуванню сітки при запуску.",
+            m22_p1: "Сітка фінського типу з вшитими вантажними шнурами.",
             m23_h2: "Раколовка-парасолька (6 входів)",
-            m23_p1: "Складана автоматична раколовка зонтик. Легко розкривається і складається за секунди. Має 6 конусних входів.",
+            m23_p1: "Складана раколовка з 6 входами.",
             m24_h2: "Раколовка-парасолька (8 входів)",
-            m24_p1: "Автоматична раколовка зонтик з 8 заходами для ефективного заманювання раків з усіх боків.",
+            m24_p1: "Раколовка з 8 входами за принципом зонтика.",
             m25_h2: "Раколовка-парасолька (10 входів)",
-            m25_p1: "Найбільша раколовка зонтик на 10 входів для максимальної уловистості.",
-            m26_h2: "Груз мережевий затискний свинцевий (16г)",
-            m26_p1: "Свинцеве затискне грузило вагою 16 грамів для оснащення нижнього шнура риболовних сіток, доріжок та екранів. Легко обтискається на мотузці або волосіні за допомогою плоскогубців, міцно тримається та не ковзає.",
-            m27_h2: "Раколовка-гармошка прямокутна (25см х 30см, довжина 3.5м)",
-            m27_p1: "Багатосекційна раколовка типу «гармошка» (книжка) завдовжки 3.5 метри. Міцний прямокутний каркас розміром 25х30 см обтягнутий зносостійкою капроновою сіткою. Має численні входи по всій довжині, що дозволяє ловити раків у великій кількості за один запуск.",
-            m28_h2: "Торпеда для протяжки сіток під кригою (підлідна)",
-            m28_p1: "Спеціальний пристрій (акумуляторна підлідна торпеда) для швидкої протяжки мотузки під кригою при зимовому лові сітками. Оснащена двома зубчастими колесами, які надійно чіпляються за лід знизу, та яскравими світлодіодними сигналізаторами для відстеження її руху крізь товщу криги.",
-            m29_h2: "Сітка-парашут кастингова (Діаметр 3.6м, волосінь 0.35мм)",
-            m29_p1: "Кастингова накидна сітка «Парашут» діаметром 3.6 м. Виготовлена з товстої міцної волосіні 0.35 мм з вічком 15 мм. По периметру оснащена вшитими грузилами для швидкого занурення на дно. Забезпечує легкий та уловистий кидок.",
-            m30_h2: "Сітка-парашут кастингова (Діаметр 4.2м, волосінь 0.35мм)",
-            m30_p1: "Кастингова накидна сітка «Парашут» збільшеного діаметра 4.2 м. Мічна волосінь 0.35 мм, вічко 15 мм. Дозволяє накривати великі зграї риби за один кидок.",
-            m31_h2: "Сітка-парашут кастингова (Діаметр 5.0м, волосінь 0.35мм)",
-            m31_p1: "Професійна велика кастингова сітка «Парашут» діаметром 5 метрів. Волосінь 0.35 мм, вічко 15 мм. Розрахована на досвідчених рибалок для максимального охоплення площі води.",
-            m33_h2: "Резинка риболовна амортизатор (100м)",
-            m33_p1: "Високоякісна риболовна гума (амортизатор) довжиною 100 метрів. Використовується для оснащення донних снастей, доріжок та інших знарядь лову. Володіє високою еластичністю, міцністю на розрив і стійкістю до солоної та прісної води.",
-
-            p1_title: "Ятерь раколовка (40см х 80см)",
-            p1_specs: "Матеріал: мічна нитка | Діаметр: 40 см | Довжина: 80 см",
-            p2_title: "Ятерь раколовка (50см х 100см)",
-            p2_specs: "Матеріал: мічна нитка | Діаметр: 50 см | Довжина: 100 см",
-            p3_title: "Екран риболовний (1м х 1м)",
-            p3_specs: "Волосінь: 0.18 мм | Вічка: 14 мм - 50 мм",
-            p3_opt: "(опт: 90 грн від 20шт)",
-            p4_title: "Сітка доріжка (7м х 1.6м)",
-            p4_specs: "Волосінь: 0.15 мм | Висота: 1.6 м | Довжина: 7 м",
-            p4_opt: "(опт: 50 грн від 20шт)",
-            p5_title: "Сітка доріжка «Профі» (7м х 1.6м)",
-            p5_specs: "Волосінь 30м | Гумка 5м | 2 карабіни з вертлюгом",
-            p5_opt: "(опт: 90 грн від 20шт)",
-            p6_title: "Дуги на павук (1.5м х 1.5м)",
-            p6_specs: "Матеріал: пластик | Товщина: 8 мм",
-            p7_title: "Косинка риболовна (1м х 1м)",
-            p7_specs: "Форма: трикутна | Якісна волосінь",
-            p8_title: "Снасть донна «Гумка» комплект",
-            p8_specs: "Волосінь 30м | Гумка 5м | 5 гачків | Груз 150г",
-            p8_opt: "(опт: 80 грн від 20шт)",
-            p9_title: "Дуги на павук (2м х 2м) з хрестовиною",
-            p9_specs: "Матеріал: пластик | Товщина: 8 мм | З хрестовиною",
-            p10_title: "Дуги на павук (2.5м х 2.5м) з хрестовиною",
-            p10_specs: "Матеріал: пластик | Товщина: 10 мм | Посилені",
-            p11_title: "Дуги на павук (3м х 3м) з хрестовиною",
-            p11_specs: "Матеріал: пластик | Товщина: 10 мм | Макс. міцність",
-            p12_title: "Павук риболовний (2м х 2м) Волосінь",
-            p12_specs: "Матеріал: волосінь | Розмір: 2х2 м",
-            p13_title: "Павук риболовний (2.5м х 2.5м) Волосінь",
-            p13_specs: "Матеріал: волосінь | Розмір: 2.5х2.5 м",
-            p14_title: "Павук риболовний (3м х 3м) Волосінь",
-            p14_specs: "Матеріал: волосінь | Розмір: 3х3 м",
-            p15_title: "Павук риболовний (2м х 2м) Нитка",
-            p15_specs: "Матеріал: капронова нитка | Підвищена міцність",
-            p16_title: "Павук риболовний (3м х 3м) Нитка",
-            p16_specs: "Матеріал: капронова нитка | Для великої риби",
-            p17_title: "Полотно на екран (1м х 1м)",
-            p17_specs: "Розмір: 1м х 1м | Вічка: 14 мм - 45 мм",
-            p18_title: "Сітка тристінна (50м х 1.5м)",
-            p18_specs: "Довжина: 50 м | Висота: 1.5 м",
-            p19_title: "Сітка тристінна (100м х 1.8м)",
-            p19_specs: "Довжина: 100 м | Висота: 1.8 м",
-            p20_title: "Сітка тристінна (100м х 3м)",
-            p20_specs: "Довжина: 100 м | Висота: 3.0 м",
-            p21_title: "Сітка одностінна (100м х 3м)",
-            p21_specs: "Довжина: 100 м | Висота: 3.0 м",
-            p32_title: "Сітка одностінна (100м х 1.8м)",
-            p32_specs: "Довжина: 100 м | Висота: 1.8 м | Волосінь",
-            p22_title: "Сітка «Фінка» одностінна (30м х 1.8м)",
-            p22_specs: "Довжина: 30 м | Висота: 1.8 м",
-            p23_title: "Раколовка-парасолька (6 входів)",
-            p23_specs: "Тип: зонтик | Входів: 6",
-            p24_title: "Раколовка-парасолька (8 входів)",
-            p24_specs: "Тип: зонтик | Входів: 8",
-            p25_title: "Раколовка-парасолька (10 входів)",
-            p25_specs: "Тип: зонтик | Входів: 10",
-            p26_title: "Груз мережевий затискний (16г)",
-            p26_specs: "Матеріал: свинець | Вага: 16 г | Тип: затискний",
-            p27_title: "Раколовка-гармошка (25х30см, 3.5м)",
-            p27_specs: "Розмір каркаса: 25х30 см | Довжина: 3.5 м",
-            p28_title: "Торпеда для протяжки сіток під кригою",
-            p28_specs: "Для підлідного лову | Колеса із зацепами | Світлодіодний сигналізатор",
-            p29_title: "Сітка-парашут (Діаметр 3.6м)",
-            p29_specs: "Діаметр: 3.6 м | Волосінь: 0.35 мм | Вічко: 15 мм",
-            p30_title: "Сітка-парашут (Діаметр 4.2м)",
-            p30_specs: "Діаметр: 4.2 м | Волосінь: 0.35 мм | Вічко: 15 мм",
-            p31_title: "Сітка-парашут (Діаметр 5.0м)",
-            p31_specs: "Діаметр: 5.0 м | Волосінь: 0.35 мм | Вічко: 15 мм",
-            p33_title: "Резинка риболовна (амортизатор 100м)",
-            p33_specs: "Довжина: 100 м | Висока еластичність",
+            m25_p1: "Найбільша раколовка-зонтик на 10 входів.",
+            m26_h2: "Груз мережевий затискний (16г)",
+            m26_p1: "Свинцевий затискний грузик для сіток.",
+            m27_h2: "Раколовка-гармошка (25х30см, 3.5м)",
+            m27_p1: "Прямокутна раколовка-гармошка 3.5 метри.",
+            m28_h2: "Торпеда для протяжки сіток під кригою",
+            m28_p1: "Акумуляторний пристрій для підлідного лову.",
+            m29_h2: "Сітка-парашут (Діаметр 3.6м)",
+            m29_p1: "Кастингова сітка з волосіні 0.35мм.",
+            m30_h2: "Сітка-парашут (Діаметр 4.2м)",
+            m30_p1: "Кастингова сітка-парашут діаметром 4.2 м.",
+            m31_h2: "Сітка-парашут (Діаметр 5.0м)",
+            m31_p1: "Велика кастингова сітка діаметром 5.0 метрів.",
+            m32_h2: "Сітка одностінна (100м х 1.8м)",
+            m32_p1: "Одностінна сітка заввишки 1.8м з якісної волосіні.",
+            m33_h2: "Резинка риболовна (амортизатор 100м)",
+            m33_p1: "Еластична риболовна резинка 100 метрів.",
 
             seo_title: "Швидка доставка по регіонах:",
             seo_sub: "Відправляємо риболовні екрани, косинки, доріжки, сітки одностенки, тристінки, павуки, ятері, раколовки, торпеди та кастингові парашути Новою Поштою та Укрпоштою в міста:",
-            c_myk: "Миколаїв", c_ode: "Одеса", c_khe: "Херсон", c_dni: "Дніпро", c_zap: "Запоріжжя", c_kha: "Харків", c_kyi: "Київ", c_khm: "Хмельницький", c_pol: "Полтава",
+            c_myk: "Миколаїв",
+            c_ode: "Одеса",
+            c_khe: "Херсон",
+            c_dni: "Дніпро",
+            c_zap: "Запоріжжя",
+            c_kha: "Харків",
+            c_kyi: "Київ",
+            c_khm: "Хмельницький",
+            c_pol: "Полтава",
             cart_title: "Ваше замовлення",
-            min_order_notice: "ℹ️️ Мінімальна сума замовлення — 500 грн",
+            min_order_notice: "ℹ️ Мінімальна сума замовлення — 500 грн",
             cart_empty: "Кошик поки порожній",
             cart_total: "Разом:",
             f_name: "Ваше Ім'я",
@@ -2359,7 +2324,7 @@
             hero_title: "Купить рыболовные снасти от производителя в Украине | SNASTI-MARKET",
             hero_sub: "Отправка в день заказа по всей Украине. Выбирайте качество от мастера Альберта!",
             hero_btn: "Перейти к покупкам",
-            btn_filter_open: "⚙️ ПОИСК ПО ФИЛЬТРАМ",
+            btn_filter_open: "⚙ ПОИСК ПО ФИЛЬТРАМ",
             
             cat1_title: "🎣 Экраны, Косынки, Дорожки, Сети и Парашюты",
             cat2_title: "🕸️ Рыболовные Пауки и Дуги",
@@ -2389,7 +2354,7 @@
             fltr_reset: "Сбросить",
             fltr_apply: "Применить",
 
-            why_title: "Почему выбирают наши снасти от производителя?",
+            why_title: "Почему выбирают наши рыболовные снасти от производителя?",
             why_1_h3: "🏷️ Цены от производителя",
             why_1_p: "Вы покупаете снасти напрямую у мастера Альберта без посредников, торговых наценок и переплат.",
             why_2_h3: "🔍 Контроль качества",
@@ -2416,146 +2381,83 @@
             m_opt_lbl: "Оптовая цена:",
 
             m1_h2: "Ятерь-раколовка (40 см х 80 см) из капроновой нити — высокая прочность и надежность",
-            m1_p1: "Компактный и высокоэффективный ятерь (раколовка) размером 40х80 см предназначен для ловли раков, живца и прибрежной рыбы. Полотно снасти полностью изготовлено из высококачественной износостойкой капроновой нити, что делает ее устойчивой к разрывам, клешням раков, зацепам за камни или коряги. Конструкция разработана по принципу ловушки: добыча легко заходит внутрь через специальные конусообразные входы, но не может выбраться назад.",
+            m1_p1: "Компактный и высокоэффективный ятерь (раколовка) размером 40х80 см предназначен для ловли раков, живца и прибрежной рыбы.",
             m2_h2: "Ятерь-раколовка большой (50 см х 100 см) из капроновой нити",
-            m2_p1: "Увеличенная модель ятеря размером 50х100 см рассчитана на солидные объемы улова. Благодаря расширенному диаметру 50 см и длине в 1 метр, этот ятерь способен вместить значительно больше добычи. Полотно выполнено исключительно из усиленной капроновой нити.",
-            m3_h2: "Рыболовный экран (1х1 м) — Купить экраны рыболовные",
-            m3_p1: "Наш рыболовный экран размером 1х1 метр — это классика, проверенная временем, которая обеспечивает стабильный результат при ловле разной рыбы. Полотно из качественной прозрачной лески толщиной 0.18 мм. Экран полностью оснащен, имеет надежную нижнюю планку-груз и верхний плавучий элемент. Доступны размеры ячейки от 14 мм до 50 мм под любую рыбу.",
+            m2_p1: "Увеличенная модель ятеря размером 50х100 см рассчитана на солидные объемы улова.",
+            m3_h2: "Рыболовный экран (1х1 м)",
+            m3_p1: "Полотно из качественной прозрачной лески толщиной 0.18 мм.",
             m4_h2: "Рыболовная сеть-дорожка (7 м х 1.6 м)",
-            m4_p1: "Классическая рыболовная сеть-дорожка длиной 7 метров и высотой 1.6 метра. Сочетает высокую уловистость и мобильность. Изготовлена из качественной лески толщиной 0.15 мм. Прекрасно подходит для точечного лова в камышах и у берега.",
-            m5_h2: "Рыболовная сеть-дорожка «Профи» (7 м х 1.6 м)",
-            m5_p1: "Расширенный готовый комплект сети-дорожки «Профи». В набор входит качественное полотно из лески 7х1.6м, специальная прочная резинка длиной 5 метров, 30 метров основной лески и 2 надежных карабина с вертлюгами для предотвращения скручивания.",
-            m6_h2: "Комплект дуг для рыболовного паука (1.5 м x 1.5 м)",
-            m6_p1: "Надежные упругие дуги толщиной 8 мм из высококачественного композитного пластика. Не поддаются коррозии, прекрасно пружинят и держат форму паука даже при большой нагрузке уловом.",
+            m4_p1: "Классическая рыболовная сеть-дорожка длиной 7 метров и высотой 1.6 метра.",
+            m5_h2: "Сеть-дорожка «Профи» (7 м х 1.6 м)",
+            m5_p1: "Готовый комплект из лески, резинки 5м, 30м лески и карабинов.",
+            m6_h2: "Дуги на паук (1.5 м x 1.5 м)",
+            m6_p1: "Надежные упругие дуги толщиной 8 мм из композитного пластика.",
             m7_h2: "Косынка рыболовная (1 м х 1 м)",
-            m7_p1: "Удобная треугольная косынка для точечного лова рыбы в сложных условиях (в камышах, кустах, окнах водорослей). Качественная леска и надежная огрузка обеспечивают быстрое погружение и превосходную уловистость.",
+            m7_p1: "Треугольная косынка для точечной ловли в сложных условиях.",
             m8_h2: "Снасть донная «Резинка» комплект",
-            m8_p1: "Готовый к использованию комплект донной снасти с амортизатором: 30 м прочной основной лески, 5 м качественной рыболовной резины, 5 острых крючков на поводках и тяжелый груз весом 150 граммов.",
-            m9_h2: "Дуги на паук (2 м х 2 м) с крестовиной",
-            m9_p1: "Полный комплект дуг 8 мм для создания и установки рыболовного паука размером 2х2 метра. Комплектуется прочной металлической крестовиной для быстрой сборки.",
-            m10_h2: "Дуги на паук усиленные (2.5 м х 2.5 м) с крестовиной",
-            m10_p1: "Усиленный комплект дуг увеличенной толщины (10 мм) под полотно паука 2.5х2.5 м. В комплект входит толстостенная металлическая крестовина.",
-            m11_h2: "Дуги на паук максимальные (3 м х 3 м) с крестовиной",
-            m11_p1: "Мощный комплект дуг толщиной 10 мм для самых больших пауков 3х3 метра. Обеспечивают максимальный размах и устойчивость каркаса. Крестовина в комплекте.",
-            m12_h2: "Паук рыболовный (2 м х 2 м) — Леска",
-            m12_p1: "Качественное сетевое полотно паука из прозрачной прочной лески. Невидимо в воде, идеально подходит для ловли осторожной рыбы на мелководье и средней глубине.",
-            m13_h2: "Паук рыболовный (2.5 м х 2.5 м) — Леска",
-            m13_p1: "Сетевое полотно паука увеличенного размера 2.5х2.5 м из лески. Обеспечивает охват большей площади водоема.",
-            m14_h2: "Паук рыболовный (3 м х 3 м) — Леска",
-            m14_p1: "Большое сетевое полотно для паука 3х3 метра из прочной лески. Рассчитано на ловлю с высоких мостов, обрывов и крутых берегов.",
-            m15_h2: "Паук рыболовный (2 м х 2 м) — Капроновая нить",
-            m15_p1: "Очень прочное полотно из плетеной капроновой нити. Выдерживает зацепы за коряги, устойчиво к износу и ловле в водоемах с растительностью.",
-            m16_h2: "Паук рыболовный (3 м х 3 м) — Капроновая нить",
-            m16_p1: "Максимально прочное полотно паука 3х3м из толстой капроновой нити. Предназначено для подъема крупной рыбы и активной эксплуатации.",
+            m8_p1: "Готовый комплект донной снасти с амортизатором.",
+            m9_h2: "Дуги на паук (2м х 2м) с крестовиной",
+            m9_p1: "Прочные стеклопластиковые дуги 8мм с металлической крестовиной.",
+            m10_h2: "Дуги на паук (2.5м х 2.5м) с крестовиной",
+            m10_p1: "Усиленный комплект дуг толщиной 10 мм.",
+            m11_h2: "Дуги на паук (3м х 3м) с крестовиной",
+            m11_p1: "Максимально прочные дуги толщиной 10 мм.",
+            m12_h2: "Паук (2м х 2м) Леска",
+            m12_p1: "Полотно из прозрачной лески, невидимое в воде.",
+            m13_h2: "Паук (2.5м х 2.5м) Леска",
+            m13_p1: "Увеличенное полотно из лески для облова большей площади.",
+            m14_h2: "Паук (3м х 3м) Леска",
+            m14_p1: "Большое полотно 3х3м из прочной лески.",
+            m15_h2: "Паук (2м х 2м) Нить",
+            m15_p1: "Паук из капроновой нити, выдерживающий большие нагрузки.",
+            m16_h2: "Паук (3м х 3м) Нить",
+            m16_p1: "Усиленный паук большого размера из капроновой нити.",
             m17_h2: "Полотно на экран (1м х 1м)",
-            m17_p1: "Запасное сетевое полотно 1х1 метр из качественной лески для ремонта или самостоятельного изготовления экранчиков.",
-            m18_h2: "Сеть трехстенка (50м х 1.5м) — Сетка трехстенка купить",
-            m18_p1: "Уловистая трехстенная сеть (путанка) с ряжью. При попадании рыба создает сетевой мешок, что гарантирует надежное удержание улова.",
-            m19_h2: "Сеть трехстенка (100м х 1.8м) — Сетка трехстенка купить",
-            m19_p1: "Полноразмерная трехстенная сеть длиной 100 метров. Позволяет перекрывать большие участки рек и озер.",
-            m20_h2: "Сеть трехстенка (100м х 3.0м) — Сетка трехстенка купить",
-            m20_p1: "Высокая трехстенная сеть высотой 3 метра для глубоких водоемов, затопленных русел и русловых ям.",
-            m21_h2: "Сеть одностенка (100м х 3.0м)",
-            m21_p1: "Классическая жаберная одностенная сеть 100м х 3м из прочной прозрачной лески. Легка в установке и сборе.",
-            m32_h2: "Сеть одностенка (100м х 1.8м) — Купить сеть одностенку",
-            m32_p1: "Популярная рыболовная одностенная сеть длиной 100 метров и высотой 1.8 метра. Изготовлена из качественной прочной лески, которая обеспечивает отличную уловистость и длительный срок службы. Идеально подходит для промышленного и любительского лова разнообразной рыбы в водоемах Украины.",
-            m22_h2: "Сеть «Финка» одностенка (30м х 1.8м)",
-            m22_p1: "Особая сеть финского типа с вшитыми грузовыми и плавучими шнурами, которые предотвращают запутывание сети при забросе.",
+            m17_p1: "Сменное сетевое полотно для рыболовного экрана.",
+            m18_h2: "Сеть трехстенная (50м х 1.5м)",
+            m18_p1: "Трехстенная уловистая сеть с усиленными поряжами.",
+            m19_h2: "Сеть трехстенная (100м х 1.8м)",
+            m19_p1: "Полноразмерная трехстенка длиной 100 метров.",
+            m20_h2: "Сеть трехстенная (100м х 3м)",
+            m20_p1: "Высокая трехстенная сеть высотой 3 метра.",
+            m21_h2: "Сеть одностенная (100м х 3м)",
+            m21_p1: "Одностенная сеть высотой 3.0 м и длиной 100 м.",
+            m22_h2: "Сеть «Финка» одностенная (30м х 1.8м)",
+            m22_p1: "Сеть финского типа с вшитыми грузовыми шнурами.",
             m23_h2: "Раколовка-зонтик (6 входов)",
-            m23_p1: "Складная автоматическая раколовка зонтик. Легко раскрывается и складывается за секунды. Имеет 6 конусных входов.",
+            m23_p1: "Складная раколовка с 6 входами.",
             m24_h2: "Раколовка-зонтик (8 входов)",
-            m24_p1: "Автоматическая раколовка зонтик с 8 заходами для эффективного заманивания раков со всех сторон.",
+            m24_p1: "Раколовка с 8 входами по принципу зонтика.",
             m25_h2: "Раколовка-зонтик (10 входов)",
-            m25_p1: "Самая большая раколовка зонтик на 10 входов для максимальной уловистости.",
-            m26_h2: "Груз сетевой зажимной свинцовый (16г)",
-            m26_p1: "Свинцовое зажимное грузило весом 16 граммов для оснащения нижнего шнура рыболовных сетей, дорожек и экранов. Легко обжимается на веревке или леске с помощью плоскогубцев, прочно держится и не скользит.",
-            m27_h2: "Раколовка-гармошка прямоугольная (25см х 30см, длина 3.5м)",
-            m27_p1: "Многосекционная раколовка типа «гармошка» (книжка) длиной 3.5 метра. Прочный прямоугольный каркас размером 25х30 см обтянут износостойкой капроновой сеткой. Имеет многочисленные входы по всей длине, что позволяет ловить раков в большом количестве за один запуск.",
-            m28_h2: "Торпеда для протяжки сетей подо льдом (подледная)",
-            m28_p1: "Специальное устройство (аккумуляторная подледная торпеда) для быстрой протяжки веревки подо льдом при зимнем лове сетями. Оснащена двумя зубчатыми колесами, которые надежно цепляются за лед снизу, и яркими светодиодными сигнализаторами для отслеживания ее движения сквозь толщу льда.",
-            m29_h2: "Сеть-парашют кастинговая (Диаметр 3.6м, леска 0.35мм)",
-            m29_p1: "Кастинговая накидная сеть «Парашют» диаметром 3.6 м. Изготовлена из толстой прочной лески 0.35 мм с ячейкой 15 мм. По периметру оснащена вшитими грузилами для быстрого погружения на дно. Обеспечивает легкий и уловистый бросок.",
-            m30_h2: "Сеть-парашют кастинговая (Диаметр 4.2м, леска 0.35мм)",
-            m30_p1: "Кастинговая накидная сеть «Парашют» увеличенного диаметра 4.2 м. Прочная леска 0.35 мм, ячейка 15 мм. Позволяет накрывать большие стаи рыбы за один бросок.",
-            m31_h2: "Сеть-парашют кастинговая (Диаметр 5.0м, леска 0.35мм)",
-            m31_p1: "Профессиональная большая кастинговая сеть «Парашют» диаметром 5 метров. Леска 0.35 мм, ячейка 15 мм. Рассчитана на опытных рыбаков для максимального охвата площади воды.",
-            m33_h2: "Резинка рыболовная амортизатор (100м)",
-            m33_p1: "Высококачественная рыболовная резина (амортизатор) длиной 100 метров. Используется для оснащения донных снастей, дорожек и других орудий лова. Обладает высокой эластичностью, прочностью на разрыв и устойчивостью к соленой и пресной воде.",
-
-            p1_title: "Ятерь раколовка (40см х 80см)",
-            p1_specs: "Материал: прочная нить | Диаметр: 40 см | Длина: 80 см",
-            p2_title: "Ятерь раколовка (50см х 100см)",
-            p2_specs: "Материал: прочная нить | Диаметр: 50 см | Длина: 100 см",
-            p3_title: "Экран рыболовный (1м х 1м)",
-            p3_specs: "Леска: 0.18 мм | Ячейки: 14 мм - 50 мм",
-            p3_opt: "(опт: 90 грн от 20шт)",
-            p4_title: "Сеть дорожка (7м х 1.6м)",
-            p4_specs: "Леска: 0.15 мм | Высота: 1.6 м | Длина: 7 м",
-            p4_opt: "(опт: 50 грн от 20шт)",
-            p5_title: "Сеть дорожка «Профи» (7м х 1.6м)",
-            p5_specs: "Леска 30м | Резинка 5м | 2 карабина с вертлюгом",
-            p5_opt: "(опт: 90 грн от 20шт)",
-            p6_title: "Дуги на паук (1.5м х 1.5м)",
-            p6_specs: "Материал: пластик | Толщина: 8 мм",
-            p7_title: "Косынка рыболовная (1м х 1м)",
-            p7_specs: "Форма: треугольная | Качественная леска",
-            p8_title: "Снасть донная «Резинка» комплект",
-            p8_specs: "Леска 30м | Резинка 5м | 5 крючков | Груз 150г",
-            p8_opt: "(опт: 80 грн от 20шт)",
-            p9_title: "Дуги на паук (2м х 2м) с крестовиной",
-            p9_specs: "Материал: пластик | Толщина: 8 мм | С крестовиной",
-            p10_title: "Дуги на паук (2.5м х 2.5м) с крестовиной",
-            p10_specs: "Материал: пластик | Толщина: 10 мм | Усиленные",
-            p11_title: "Дуги на паук (3м х 3м) с крестовиной",
-            p11_specs: "Материал: пластик | Толщина: 10 мм | Макс. прочность",
-            p12_title: "Паук рыболовный (2м х 2м) Леска",
-            p12_specs: "Материал: леска | Размер: 2х2 м",
-            p13_title: "Паук рыболовный (2.5м х 2.5м) Леска",
-            p13_specs: "Материал: леска | Размер: 2.5х2.5 м",
-            p14_title: "Паук рыболовный (3м х 3м) Леска",
-            p14_specs: "Материал: леска | Размер: 3х3 м",
-            p15_title: "Паук рыболовный (2м х 2м) Нитка",
-            p15_specs: "Материал: капроновая нить | Повышенная прочность",
-            p16_title: "Паук рыболовный (3м х 3м) Нитка",
-            p16_specs: "Материал: капроновая нить | Для крупной рыбы",
-            p17_title: "Полотно на экран (1м х 1м)",
-            p17_specs: "Размер: 1м х 1м | Ячейки: 14 мм - 45 мм",
-            p18_title: "Сеть трехстенка (50м х 1.5м)",
-            p18_specs: "Длина: 50 м | Высота: 1.5 м",
-            p19_title: "Сеть трехстенка (100м х 1.8м)",
-            p19_specs: "Длина: 100 м | Высота: 1.8 м",
-            p20_title: "Сеть трехстенка (100м х 3м)",
-            p20_specs: "Длина: 100 м | Высота: 3.0 м",
-            p21_title: "Сеть одностенка (100м х 3м)",
-            p21_specs: "Длина: 100 м | Высота: 3.0 м",
-            p32_title: "Сеть одностенка (100м х 1.8м)",
-            p32_specs: "Длина: 100 м | Высота: 1.8 м | Леска",
-            p22_title: "Сеть «Финка» одностенка (30м х 1.8м)",
-            p22_specs: "Длина: 30 м | Высота: 1.8 м",
-            p23_title: "Раколовка-зонтик (6 входов)",
-            p23_specs: "Тип: зонтик | Входов: 6",
-            p24_title: "Раколовка-зонтик (8 входов)",
-            p24_specs: "Тип: зонтик | Входов: 8",
-            p25_title: "Раколовка-зонтик (10 входов)",
-            p25_specs: "Тип: зонтик | Входов: 10",
-            p26_title: "Груз сетевой зажимной (16г)",
-            p26_specs: "Материал: свинец | Вес: 16 г | Тип: зажимной",
-            p27_title: "Раколовка-гармошка (25х30см, 3.5м)",
-            p27_specs: "Размер каркаса: 25х30 см | Длина: 3.5 м",
-            p28_title: "Торпеда для протяжки сетей подо льдом",
-            p28_specs: "Для подледного лова | Колеса с зацепами | Светодиодный сигнализатор",
-            p29_title: "Сеть-парашют (Диаметр 3.6м)",
-            p29_specs: "Диаметр: 3.6 м | Леска: 0.35 мм | Ячейка: 15 мм",
-            p30_title: "Сеть-парашют (Диаметр 4.2м)",
-            p30_specs: "Диаметр: 4.2 м | Леска: 0.35 мм | Ячейка: 15 мм",
-            p31_title: "Сеть-парашют (Диаметр 5.0м)",
-            p31_specs: "Диаметр: 5.0 м | Леска: 0.35 мм | Ячейка: 15 мм",
-            p33_title: "Резинка рыболовная (амортизатор 100м)",
-            p33_specs: "Длина: 100 м | Высокая эластичность",
+            m25_p1: "Самая большая раколовка-зонтик на 10 входов.",
+            m26_h2: "Груз сетевой зажимной (16г)",
+            m26_p1: "Свинцовый зажимной грузик для сетей.",
+            m27_h2: "Раколовка-гармошка (25х30см, 3.5м)",
+            m27_p1: "Прямоугольная раколовка-гармошка 3.5 метра.",
+            m28_h2: "Торпеда для протяжки сетей под льдом",
+            m28_p1: "Аккумуляторное устройство для подледного лова.",
+            m29_h2: "Сеть-парашют (Диаметр 3.6м)",
+            m29_p1: "Кастинговая сеть из лески 0.35мм.",
+            m30_h2: "Сеть-парашют (Диаметр 4.2м)",
+            m30_p1: "Кастинговая сеть-парашют диаметром 4.2 м.",
+            m31_h2: "Сеть-парашют (Диаметр 5.0м)",
+            m31_p1: "Большая кастинговая сеть диаметром 5.0 метров.",
+            m32_h2: "Сеть одностенная (100м х 1.8м)",
+            m32_p1: "Одностенная сеть высотой 1.8м из качественной лески.",
+            m33_h2: "Резинка рыболовная (амортизатор 100м)",
+            m33_p1: "Эластичная рыболовная резинка 100 метров.",
 
             seo_title: "Быстрая доставка по регионам:",
-            seo_sub: "Отправляем рыболовные экраны, косынки, дорожки, сети одностенки, трехстенки, пауки, ятери, раколовки, торпеды и кастинговые парашюты Новой Почтой и Укрпочтой в города:",
-            c_myk: "Николаев", c_ode: "Одесса", c_khe: "Херсон", c_dni: "Днепр", c_zap: "Запорожье", c_kha: "Харьков", c_kyi: "Киев", c_khm: "Хмельницкий", c_pol: "Полтава",
+            seo_sub: "Отправляем рыболовные экраны, косынки, дорожки, сети одностенки, трехстенки, пауки, ятери, раколовки, торпеды и кастинговые парашуты Новой Почтой и Укрпочтой в города:",
+            c_myk: "Николаев",
+            c_ode: "Одесса",
+            c_khe: "Херсон",
+            c_dni: "Днепр",
+            c_zap: "Запорожье",
+            c_kha: "Харьков",
+            c_kyi: "Киев",
+            c_khm: "Хмельницкий",
+            c_pol: "Полтава",
             cart_title: "Ваш заказ",
             min_order_notice: "ℹ️ Минимальная сумма заказа — 500 грн",
             cart_empty: "Корзина пока пуста",
@@ -2565,7 +2467,7 @@
             f_delivery: "Город и № отделения Почты",
             f_btn: "Оформить заказ",
             f_contacts: "Контакты для связи",
-            f_delivery_info: "Доставка: Новая Почта, Укрпоччта (наложенный платеж или предоплата)",
+            f_delivery_info: "Доставка: Новая Почта, Укрпочта (наложенный платеж или предоплата)",
             partner_label: "Наши партнеры и друзья:"
         }
     };
@@ -2583,62 +2485,50 @@
 
     function switchLang(lang) {
         currentLang = lang;
-        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
         document.getElementById(`btn-${lang}`).classList.add('active');
 
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
-            if (translations[lang][key]) {
+            if (translations[lang] && translations[lang][key]) {
                 el.innerHTML = translations[lang][key];
             }
         });
 
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
             const key = el.getAttribute('data-i18n-placeholder');
-            if (translations[lang][key]) {
+            if (translations[lang] && translations[lang][key]) {
                 el.placeholder = translations[lang][key];
+            }
+        });
+
+        document.querySelectorAll('.city-links a').forEach(a => {
+            const baseUrl = a.getAttribute('href').split('?')[0];
+            if (lang === 'ru') {
+                a.setAttribute('href', `${baseUrl}?lang=ru`);
+            } else {
+                a.setAttribute('href', baseUrl);
             }
         });
     }
 
-    function getSearchStem(word) {
-        word = word.toLowerCase().trim();
-        if (word.length < 3) return word;
-
-        if (word.startsWith("дуг")) return "дуг";
-        if (word.startsWith("паук") || word.startsWith("павук")) return "па";
-        if (word.startsWith("сетк") || word.startsWith("сітк") || word.startsWith("сет")) return "сіт";
-        if (word.startsWith("одностенк") || word.startsWith("одностін")) return "одно";
-        if (word.startsWith("екран") || word.startsWith("экран")) return "кран";
-        if (word.startsWith("косынк") || word.startsWith("косинк")) return "кос";
-        if (word.startsWith("раколов") || word.startsWith("рак")) return "рак";
-        if (word.startsWith("ятер") || word.startsWith("ятыр")) return "ятер";
-        if (word.startsWith("параш") || word.startsWith("кастинг")) return "параш";
-        if (word.startsWith("торпед")) return "торпед";
-        if (word.startsWith("груз")) return "груз";
-        if (word.startsWith("резинк") || word.startsWith("гумк")) return "рез";
-        if (word.startsWith("дорож") || word.startsWith("доріж")) return "дор";
-
-        return word.replace(/(ами|ами|ями|ом|ем|ам|ям|а|и|ы|е|у|о|я|є|і|ів|ей)$/i, '');
-    }
+    window.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('lang') === 'ru') {
+            switchLang('ru');
+        }
+    });
 
     function filterProducts() {
-        const rawQuery = document.getElementById('search-input').value.trim();
+        const query = document.getElementById('search-input').value.toLowerCase().trim();
         const cards = document.querySelectorAll('.product-card');
-        
-        if (!rawQuery) {
-            applyModalFilters();
-            return;
-        }
-
-        const queryWords = rawQuery.toLowerCase().split(/\s+/).map(getSearchStem);
         let visibleCount = 0;
 
         cards.forEach(card => {
-            const titleData = card.getAttribute('data-title').toLowerCase();
-            const isMatch = queryWords.every(stem => titleData.includes(stem));
-
-            if (isMatch) {
+            const title = (card.getAttribute('data-title') || '').toLowerCase();
+            if (title.includes(query)) {
                 card.style.display = 'flex';
                 visibleCount++;
             } else {
@@ -2647,7 +2537,11 @@
         });
 
         const noResults = document.getElementById('no-results');
-        noResults.style.display = (visibleCount === 0) ? 'block' : 'none';
+        if (visibleCount === 0) {
+            noResults.style.display = 'block';
+        } else {
+            noResults.style.display = 'none';
+        }
     }
 
     function applyModalFilters() {
@@ -2677,8 +2571,11 @@
         });
 
         const noResults = document.getElementById('no-results');
-        noResults.style.display = (visibleCount === 0) ? 'block' : 'none';
-
+        if (visibleCount === 0) {
+            noResults.style.display = 'block';
+        } else {
+            noResults.style.display = 'none';
+        }
         closeModal('filter-modal');
     }
 
@@ -2689,10 +2586,10 @@
         document.getElementById('filter-price-max').value = '';
         document.getElementById('search-input').value = '';
         
-        const cards = document.querySelectorAll('.product-card');
-        cards.forEach(card => card.style.display = 'flex');
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.style.display = 'flex';
+        });
         document.getElementById('no-results').style.display = 'none';
-
         closeModal('filter-modal');
     }
 
@@ -2736,19 +2633,30 @@
 
     function toggleCart() {
         const modal = document.getElementById('cart-modal');
-        modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
-        if (modal.style.display === 'block') updateCartUI();
+        if (modal.style.display === 'block') {
+            modal.style.display = 'none';
+        } else {
+            modal.style.display = 'block';
+            updateCartUI();
+        }
     }
 
-    function openModal(id) { document.getElementById(id).style.display = 'block'; }
-    function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+    function openModal(id) { 
+        document.getElementById(id).style.display = 'block'; 
+    }
+    
+    function closeModal(id) { 
+        document.getElementById(id).style.display = 'none'; 
+    }
 
     function openImageZoom(src) {
         document.getElementById('image-zoom-modal').style.display = 'block';
         document.getElementById('zoomed-img').src = src;
     }
 
-    function closeImageZoom() { document.getElementById('image-zoom-modal').style.display = 'none'; }
+    function closeImageZoom() { 
+        document.getElementById('image-zoom-modal').style.display = 'none'; 
+    }
 
     function addToCart(productId) {
         const product = productsData[productId];
@@ -2767,11 +2675,17 @@
         if (existingItem) {
             existingItem.quantity += 1;
         } else {
-            cart.push({ id: productId, name: product.name, price: product.price, mesh: selectedMesh, quantity: 1 });
+            cart.push({
+                id: productId,
+                name: product.name,
+                price: product.price,
+                mesh: selectedMesh,
+                quantity: 1
+            });
         }
 
         updateCartCount();
-        alert((currentLang === 'uk' ? 'Товар додано в кошик!' : 'Товар добавлен в корзину!'));
+        alert(currentLang === 'uk' ? 'Товар додано в кошик!' : 'Товар добавлен в корзину!');
     }
 
     function changeQuantity(index, delta) {
@@ -2925,8 +2839,10 @@
     }
 
     window.onclick = function(e) {
-        if (e.target.classList.contains('modal')) e.target.style.display = 'none';
-    }
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+        }
+    };
 </script>
 
 </body>
