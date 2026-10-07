@@ -38,7 +38,7 @@
     <meta name="twitter:description" content="Купити снасті від виробника за вигідною ціною: екрани, косинки, сітки, павуки, ятері, раколовки, торпеди.">
     <meta name="twitter:image" content="https://snasti-market.com.ua/favicon.png">
 
-    <!-- Schema.org Розширена Микроразметка (JSON-LD) -->
+    <!-- Schema.org Розширена Мікророзмітка (JSON-LD) -->
     <script type="application/ld+json">
     [
       {
@@ -297,8 +297,12 @@
             white-space: nowrap;
         }
 
-        .nav a:hover {
+        .nav a:hover, .nav a.guide-link-highlight {
             color: #2ecc71;
+        }
+
+        .nav a.guide-link-highlight {
+            font-weight: bold;
         }
 
         .lang-switch {
@@ -381,6 +385,48 @@
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
+        }
+
+        .guide-banner-card {
+            background: linear-gradient(135deg, #16a085 0%, #2980b9 100%);
+            color: #fff;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .guide-banner-text {
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .guide-banner-text strong {
+            font-size: 17px;
+            color: #f1c40f;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .btn-guide-action {
+            background-color: #e67e22;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+        }
+
+        .btn-guide-action:hover {
+            background-color: #d35400;
         }
 
         .btn-filter-trigger {
@@ -945,6 +991,7 @@
         <div class="header-right">
             <nav class="nav">
                 <a href="#cat-screens" data-i18n="nav_catalog">Каталог</a>
+                <a href="guide.html" class="guide-link-highlight" data-i18n="nav_guide">💡 Поради рибалкам</a>
                 <a href="#about-us" data-i18n="nav_about">Про нас</a>
                 <a href="#faq" data-i18n="nav_faq">FAQ</a>
                 <a href="#contacts" data-i18n="nav_contacts">Контакти</a>
@@ -967,7 +1014,6 @@
     </div>
 </div>
 
-<!-- Главный баннер -->
 <section class="hero">
     <div class="container">
         <div class="manufacturer-badge" data-i18n="hero_badge">Власне виробництво риболовних снастей — ціни без посередників</div>
@@ -979,7 +1025,15 @@
 
 <main class="container">
 
-    <!-- Фильтр-поиск -->
+    <!-- Баннер на Поради від Альберта -->
+    <div class="guide-banner-card">
+        <div class="guide-banner-text">
+            <strong data-i18n="guide_banner_title">💡 Не знаєте, як правильно встановити снасть?</strong>
+            <span data-i18n="guide_banner_sub">Читайте практичний посібник від майстра Альберта: секрети лову на екрани, сітки, ятері, раколовки та підлідні торпеди!</span>
+        </div>
+        <a href="guide.html" class="btn-guide-action" data-i18n="guide_banner_btn">Читати поради →</a>
+    </div>
+
     <div class="search-container">
         <input type="text" id="search-input" class="search-input" placeholder="Пошук снастей (наприклад: екран, косинка, ятерь, павук, дуги, парашут...)" oninput="filterProducts()" data-i18n-placeholder="search_ph">
         <button class="btn-filter-trigger" onclick="openModal('filter-modal')" data-i18n="btn_filter_open">⚙️ ПОШУК ПО ФІЛЬТРАХ</button>
@@ -1600,7 +1654,6 @@
 
 <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 
-
 <!-- Modal Contact Options -->
 <div id="contact-modal" class="modal">
     <div class="modal-content" style="max-width: 450px; text-align: center;">
@@ -1665,8 +1718,7 @@
     </div>
 </div>
 
-
-<!-- Modal 1 -->
+<!-- Modal Details 1-33 -->
 <div id="details-modal-1" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-1')">&times;</span>
@@ -1679,7 +1731,6 @@
     </div>
 </div>
 
-<!-- Modal 2 -->
 <div id="details-modal-2" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-2')">&times;</span>
@@ -1692,7 +1743,6 @@
     </div>
 </div>
 
-<!-- Modal 3 -->
 <div id="details-modal-3" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-3')">&times;</span>
@@ -1705,7 +1755,6 @@
     </div>
 </div>
 
-<!-- Modal 4 -->
 <div id="details-modal-4" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-4')">&times;</span>
@@ -1718,7 +1767,6 @@
     </div>
 </div>
 
-<!-- Modal 5 -->
 <div id="details-modal-5" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-5')">&times;</span>
@@ -1731,7 +1779,6 @@
     </div>
 </div>
 
-<!-- Modal 6 -->
 <div id="details-modal-6" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-6')">&times;</span>
@@ -1744,7 +1791,6 @@
     </div>
 </div>
 
-<!-- Modal 7 -->
 <div id="details-modal-7" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-7')">&times;</span>
@@ -1757,7 +1803,6 @@
     </div>
 </div>
 
-<!-- Modal 8 -->
 <div id="details-modal-8" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-8')">&times;</span>
@@ -1770,7 +1815,6 @@
     </div>
 </div>
 
-<!-- Modal 9 -->
 <div id="details-modal-9" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-9')">&times;</span>
@@ -1783,7 +1827,6 @@
     </div>
 </div>
 
-<!-- Modal 10 -->
 <div id="details-modal-10" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-10')">&times;</span>
@@ -1796,7 +1839,6 @@
     </div>
 </div>
 
-<!-- Modal 11 -->
 <div id="details-modal-11" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-11')">&times;</span>
@@ -1809,7 +1851,6 @@
     </div>
 </div>
 
-<!-- Modal 12 -->
 <div id="details-modal-12" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-12')">&times;</span>
@@ -1822,7 +1863,6 @@
     </div>
 </div>
 
-<!-- Modal 13 -->
 <div id="details-modal-13" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-13')">&times;</span>
@@ -1835,7 +1875,6 @@
     </div>
 </div>
 
-<!-- Modal 14 -->
 <div id="details-modal-14" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-14')">&times;</span>
@@ -1848,7 +1887,6 @@
     </div>
 </div>
 
-<!-- Modal 15 -->
 <div id="details-modal-15" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-15')">&times;</span>
@@ -1861,7 +1899,6 @@
     </div>
 </div>
 
-<!-- Modal 16 -->
 <div id="details-modal-16" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-16')">&times;</span>
@@ -1874,7 +1911,6 @@
     </div>
 </div>
 
-<!-- Modal 17 -->
 <div id="details-modal-17" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-17')">&times;</span>
@@ -1887,7 +1923,6 @@
     </div>
 </div>
 
-<!-- Modal 18 -->
 <div id="details-modal-18" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-18')">&times;</span>
@@ -1900,12 +1935,11 @@
     </div>
 </div>
 
-<!-- Modal 19 -->
 <div id="details-modal-19" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-19')">&times;</span>
         <h2 data-i18n="m19_h2">Сітка тристінна (100м х 1.8м)</h2>
-        <p data-i18n="m19_p1">Повнорозмірна тристінка завдовжки 100 метрів. Забезпечує максимальний улов на відкритих водоймах.</p>
+        <p data-i18n="m19_p1">Полнорозмірна тристінка завдовжки 100 метрів. Забезпечує максимальний улов на відкритих водоймах.</p>
         <p><strong data-i18n="m_price_lbl">Ціна:</strong> 820 грн.</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-19'); addToCart(19);" data-i18n="btn_buy">У кошик</button>
@@ -1913,7 +1947,6 @@
     </div>
 </div>
 
-<!-- Modal 20 -->
 <div id="details-modal-20" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-20')">&times;</span>
@@ -1926,7 +1959,6 @@
     </div>
 </div>
 
-<!-- Modal 21 -->
 <div id="details-modal-21" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-21')">&times;</span>
@@ -1939,7 +1971,6 @@
     </div>
 </div>
 
-<!-- Modal 22 -->
 <div id="details-modal-22" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-22')">&times;</span>
@@ -1952,7 +1983,6 @@
     </div>
 </div>
 
-<!-- Modal 23 -->
 <div id="details-modal-23" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-23')">&times;</span>
@@ -1965,7 +1995,6 @@
     </div>
 </div>
 
-<!-- Modal 24 -->
 <div id="details-modal-24" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-24')">&times;</span>
@@ -1978,7 +2007,6 @@
     </div>
 </div>
 
-<!-- Modal 25 -->
 <div id="details-modal-25" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-25')">&times;</span>
@@ -1991,7 +2019,6 @@
     </div>
 </div>
 
-<!-- Modal 26 -->
 <div id="details-modal-26" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-26')">&times;</span>
@@ -2004,7 +2031,6 @@
     </div>
 </div>
 
-<!-- Modal 27 -->
 <div id="details-modal-27" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-27')">&times;</span>
@@ -2017,7 +2043,6 @@
     </div>
 </div>
 
-<!-- Modal 28 -->
 <div id="details-modal-28" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-28')">&times;</span>
@@ -2030,7 +2055,6 @@
     </div>
 </div>
 
-<!-- Modal 29 -->
 <div id="details-modal-29" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-29')">&times;</span>
@@ -2043,7 +2067,6 @@
     </div>
 </div>
 
-<!-- Modal 30 -->
 <div id="details-modal-30" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-30')">&times;</span>
@@ -2056,7 +2079,6 @@
     </div>
 </div>
 
-<!-- Modal 31 -->
 <div id="details-modal-31" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-31')">&times;</span>
@@ -2069,7 +2091,6 @@
     </div>
 </div>
 
-<!-- Modal 32 -->
 <div id="details-modal-32" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-32')">&times;</span>
@@ -2082,7 +2103,6 @@
     </div>
 </div>
 
-<!-- Modal 33 -->
 <div id="details-modal-33" class="modal">
     <div class="modal-content text-left">
         <span class="close" onclick="closeModal('details-modal-33')">&times;</span>
@@ -2155,6 +2175,7 @@
         uk: {
             logo: "SNASTI-MARKET (Риболовні Снасті)",
             nav_catalog: "Каталог",
+            nav_guide: "💡 Поради рибалкам",
             nav_about: "Про нас",
             nav_faq: "FAQ",
             nav_contacts: "Контакти",
@@ -2165,6 +2186,9 @@
             hero_title: "Купити риболовні снасті від виробника в Україні | SNASTI-MARKET",
             hero_sub: "Відправка в день замовлення по всій Україні. Обирайте якість від майстра Альберта!",
             hero_btn: "Перейти до покупок",
+            guide_banner_title: "💡 Не знаєте, як правильно встановити снасть?",
+            guide_banner_sub: "Читайте практичний посібник від майстра Альберта: секрети лову на екрани, сітки, ятері, раколовки та підлідні торпеди!",
+            guide_banner_btn: "Читати поради →",
             btn_filter_open: "⚙️ ПОШУК ПО ФІЛЬТРАХ",
             
             cat1_title: "🎣 Екрани, Косинки, Доріжки, Сітки та Парашути",
@@ -2258,7 +2282,7 @@
             m18_h2: "Сітка тристінна (50м х 1.5м)",
             m18_p1: "Тристінна уловиста сітка з посиленими поряжами.",
             m19_h2: "Сітка тристінна (100м х 1.8м)",
-            m19_p1: "Повнорозмірна тристінка завдовжки 100 метрів.",
+            m19_p1: "Полнорозмірна тристінка завдовжки 100 метрів.",
             m20_h2: "Сітка тристінна (100м х 3м)",
             m20_p1: "Висока тристінна сітка заввишки 3 метри.",
             m21_h2: "Сітка одностінна (100м х 3м)",
@@ -2314,6 +2338,7 @@
         ru: {
             logo: "SNASTI-MARKET (Рыболовные Снасти)",
             nav_catalog: "Каталог",
+            nav_guide: "💡 Советы рыбакам",
             nav_about: "О нас",
             nav_faq: "FAQ",
             nav_contacts: "Контакты",
@@ -2324,6 +2349,9 @@
             hero_title: "Купить рыболовные снасти от производителя в Украине | SNASTI-MARKET",
             hero_sub: "Отправка в день заказа по всей Украине. Выбирайте качество от мастера Альберта!",
             hero_btn: "Перейти к покупкам",
+            guide_banner_title: "💡 Не знаете, как правильно установить снасть?",
+            guide_banner_sub: "Читайте практическое руководство от мастера Альберта: секреты ловли на экраны, сети, ятери, раколовки и подледные торпеды!",
+            guide_banner_btn: "Читать советы →",
             btn_filter_open: "⚙ ПОИСК ПО ФИЛЬТРАМ",
             
             cat1_title: "🎣 Экраны, Косынки, Дорожки, Сети и Парашюты",
