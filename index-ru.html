@@ -996,37 +996,82 @@
             text-decoration: none;
         }
 
-        /* Custom Toast Notification replacement for alert() */
-        #custom-toast {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 14px 22px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            border-left: 5px solid #2ecc71;
-            z-index: 1000;
-            display: none;
-            font-size: 14px;
+        /* Центрированное модальное окно для уведомлений (Alert Modal) */
+        .alert-modal-content {
+            background-color: #fff;
+            margin: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 24px 20px;
+            border-radius: 14px;
+            width: 90%;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+            animation: alertPopIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid #2ecc71;
+        }
+
+        .alert-modal-content.error {
+            border-color: #e74c3c;
+        }
+
+        .alert-icon {
+            font-size: 42px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .alert-title {
+            font-size: 20px;
             font-weight: bold;
-            max-width: 350px;
-            animation: fadeIn 0.3s ease;
+            color: #2c3e50;
+            margin: 0 0 10px 0;
         }
-        #custom-toast.error {
-            border-left-color: #e74c3c;
+
+        .alert-message {
+            font-size: 16px;
+            color: #333;
+            margin: 0 0 20px 0;
+            line-height: 1.4;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+
+        .btn-alert-ok {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: #fff;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+            transition: transform 0.1s ease;
+        }
+
+        .btn-alert-ok:active {
+            transform: scale(0.98);
+        }
+
+        @keyframes alertPopIn {
+            from { opacity: 0; transform: translateY(-50%) scale(0.85); }
+            to { opacity: 1; transform: translateY(-50%) scale(1); }
         }
     </style>
 </head>
 <body>
 
-<!-- Custom Toast Message Popup -->
-<div id="custom-toast"></div>
+<!-- Центрированное всплывающее окно для уведомлений -->
+<div id="alert-modal" class="modal" style="z-index: 10000;">
+    <div class="alert-modal-content" id="alert-modal-box">
+        <span class="alert-icon" id="alert-icon">🛒</span>
+        <div class="alert-title" id="alert-title">Корзина</div>
+        <div class="alert-message" id="alert-message">Товар добавлен в корзину</div>
+        <button type="button" class="btn-alert-ok" onclick="closeAlertModal()">ОК</button>
+    </div>
+</div>
 
 <header class="header">
     <div class="container header-flex">
@@ -2259,19 +2304,25 @@
         emailjs.init("kz4P5B-tdzk1IKeJh");
     })();
 
-    /* Custom Toast notification handler */
-    function showToast(message, isError = false) {
-        const toast = document.getElementById('custom-toast');
-        toast.innerText = message;
+    /* Функция вызова центрированного модального сообщения с кнопкой ОК */
+    function showAlertModal(message, title = "Уведомление", icon = "✅", isError = false) {
+        const modal = document.getElementById('alert-modal');
+        const box = document.getElementById('alert-modal-box');
+        document.getElementById('alert-title').innerText = title;
+        document.getElementById('alert-message').innerText = message;
+        document.getElementById('alert-icon').innerText = icon;
+
         if (isError) {
-            toast.classList.add('error');
+            box.classList.add('error');
         } else {
-            toast.classList.remove('error');
+            box.classList.remove('error');
         }
-        toast.style.display = 'block';
-        setTimeout(() => {
-            toast.style.display = 'none';
-        }, 3200);
+
+        modal.style.display = 'block';
+    }
+
+    function closeAlertModal() {
+        document.getElementById('alert-modal').style.display = 'none';
     }
 
     function toggleFaq(element) {
@@ -2428,7 +2479,7 @@
         if (meshSelect) {
             selectedMesh = meshSelect.value;
             if (selectedMesh === "Не выбрана" || selectedMesh === "Выбрать размер..." || selectedMesh === "Обрати розмір...") {
-                showToast("Пожалуйста, выберите размер ячейки!", true);
+                showAlertModal("Пожалуйста, выберите размер ячейки!", "Внимание", "⚠️", true);
                 return;
             }
         }
@@ -2447,7 +2498,7 @@
         }
 
         updateCartCount();
-        showToast('Товар успешно добавлен в корзину!');
+        showAlertModal("Товар добавлен в корзину", "Корзина", "🛒");
     }
 
     function changeQuantity(index, delta) {
@@ -2531,7 +2582,7 @@
         const totalSumVal = getCartTotal();
         if (totalSumVal < 500) {
             const diff = 500 - totalSumVal;
-            showToast(`Минимальная сумма заказа составляет 500 грн. Добавьте товаров еще на ${diff} грн.`, true);
+            showAlertModal(`Минимальная сумма заказа составляет 500 грн. Добавьте товаров еще на ${diff} грн.`, "Минимальный заказ", "⚠️", true);
             return;
         }
 
@@ -2566,13 +2617,13 @@
 
         emailjs.send('service_4tsjk8e', 'template_fka3fum', templateParams)
             .then(function(response) {
-                showToast("Спасибо за заказ! Заказ успешно отправлен на почту.");
                 cart = [];
                 updateCartCount();
                 toggleCart();
                 document.getElementById('order-form').reset();
+                showAlertModal("Заказ успешно оформлен! Мы свяжемся с вами в ближайшее время.", "Заказ принят", "🎉");
             }, function(error) {
-                showToast("Ошибка при отправке заказа. Попробуйте еще раз или позвоните нам.", true);
+                showAlertModal("Ошибка при отправке заказа. Попробуйте еще раз или позвоните нам по телефону +38 (050) 043-05-96.", "Ошибка", "❌", true);
                 console.error('EmailJS Error:', error);
             })
             .finally(function() {
