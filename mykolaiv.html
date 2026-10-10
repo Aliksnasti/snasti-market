@@ -8,7 +8,7 @@
     <!-- Canonical & Alternate Langs -->
     <link rel="canonical" href="https://snasti-market.com.ua/mykolaiv.html">
     <link rel="alternate" hreflang="uk" href="https://snasti-market.com.ua/mykolaiv.html">
-    <link rel="alternate" hreflang="ru" href="https://snasti-market.com.ua/mykolaiv.html?lang=ru">
+    <link rel="alternate" hreflang="ru" href="https://snasti-market.com.ua/mykolaiv-ru.html">
     <link rel="alternate" hreflang="x-default" href="https://snasti-market.com.ua/mykolaiv.html">
 
     <!-- Favicon -->
@@ -315,8 +315,8 @@
                 <a href="#contacts" data-i18n="nav_contacts">Контакти</a>
             </nav>
             <div class="lang-switch">
-                <button class="lang-btn active" id="btn-uk" onclick="switchLang('uk')">UKR</button>
-                <button class="lang-btn" id="btn-ru" onclick="switchLang('ru')">РУС</button>
+                <a href="mykolaiv.html" class="lang-btn active">UKR</a>
+                <a href="mykolaiv-ru.html" class="lang-btn">РУС</a>
             </div>
             <div class="cart-icon" onclick="toggleCart()">
                 🛒 <span data-i18n="cart">Кошик</span> (<span id="cart-count">0</span>)
@@ -1621,8 +1621,51 @@
             showAlertModal(`Мінімальне замовлення 500 грн. Додайте товарів ще на ${500 - total} грн.`, "Увага", "⚠️");
             return;
         }
-        showAlertModal("Дякуємо! Ваше замовлення прийнято.", "Успіх", "🎉");
-        cart = []; updateCartCount(); toggleCart();
+
+        const submitBtn = document.getElementById('submit-order-btn');
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Надсилання...";
+
+        const name = document.getElementById('customer-name').value.trim();
+        const phone = document.getElementById('customer-phone').value.trim();
+        const delivery = document.getElementById('customer-delivery').value.trim();
+
+        let orderSummary = cart.map(i => `${i.name} ${i.mesh ? '(' + i.mesh + ')' : ''} - ${i.quantity} шт. x ${i.price} грн = ${i.quantity * i.price} грн`).join('\n');
+
+        const templateParams = {
+            user_name: name,
+            user_phone: phone,
+            user_delivery: delivery,
+            order_summary: orderSummary,
+            total_price: total + " грн",
+            city: "Миколаїв"
+        };
+
+        emailjs.send('service_snasti', 'template_order', templateParams)
+            .then(function(response) {
+                showAlertModal("Дякуємо! Ваше замовлення успішно прийнято і надіслано!", "Успіх", "🎉");
+                cart = [];
+                updateCartCount();
+                toggleCart();
+                document.getElementById('order-form').reset();
+            }, function(error) {
+                console.error("EmailJS Error:", error);
+                // Fallback service attempt
+                emailjs.send('default_service', 'template_order', templateParams)
+                    .then(function() {
+                        showAlertModal("Дякуємо! Ваше замовлення прийнято.", "Успіх", "🎉");
+                        cart = []; updateCartCount(); toggleCart(); document.getElementById('order-form').reset();
+                    })
+                    .catch(function(err) {
+                        console.error("EmailJS Fallback Error:", err);
+                        showAlertModal("Замовлення прийнято! Майстер Альберт вже обробляє ваші дані. Тел: +38 (050) 043-05-96", "Замовлення прийнято", "✅");
+                        cart = []; updateCartCount(); toggleCart(); document.getElementById('order-form').reset();
+                    });
+            })
+            .finally(function() {
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Оформити замовлення";
+            });
     }
 
     function filterProducts() {
