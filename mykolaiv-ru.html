@@ -1588,23 +1588,16 @@
 
         emailjs.send('service_snasti', 'template_order', templateParams)
             .then(function(response) {
-                showAlertModal("Спасибо! Ваш заказ успешно принят и отправлен!", "Успех", "🎉");
+                showAlertModal("Спасибо! Ваш заказ успешно принят и отправлен на почту!", "Успех", "🎉");
                 cart = [];
                 updateCartCount();
                 toggleCart();
                 document.getElementById('order-form').reset();
-            }, function(error) {
-                console.error("EmailJS Error:", error);
-                emailjs.send('default_service', 'template_order', templateParams)
-                    .then(function() {
-                        showAlertModal("Спасибо! Ваш заказ принят.", "Успех", "🎉");
-                        cart = []; updateCartCount(); toggleCart(); document.getElementById('order-form').reset();
-                    })
-                    .catch(function(err) {
-                        console.error("EmailJS Fallback Error:", err);
-                        showAlertModal("Заказ принят! Мастер Альберт уже обрабатывает ваши данные. Тел: +38 (050) 043-05-96", "Заказ принят", "✅");
-                        cart = []; updateCartCount(); toggleCart(); document.getElementById('order-form').reset();
-                    });
+            })
+            .catch(function(error) {
+                console.error("EmailJS Error details:", error);
+                const errorText = (error && error.text) ? error.text : (error && error.status ? `Status: ${error.status}` : JSON.stringify(error));
+                showAlertModal(`Ошибка EmailJS: ${errorText}. Пожалуйста, позвоните или напишите в Viber/Telegram мастера Альберта: +38 (050) 043-05-96!`, "Ошибка отправки", "❌");
             })
             .finally(function() {
                 submitBtn.disabled = false;
