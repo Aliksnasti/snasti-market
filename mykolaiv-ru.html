@@ -1578,15 +1578,36 @@
         let orderSummary = cart.map(i => `${i.name} ${i.mesh ? '(' + i.mesh + ')' : ''} - ${i.quantity} шт. x ${i.price} грн = ${i.quantity * i.price} грн`).join('\n');
 
         const templateParams = {
+            name: name,
             user_name: name,
+            customer_name: name,
+            from_name: name,
+            
+            phone: phone,
             user_phone: phone,
+            customer_phone: phone,
+            
+            delivery: delivery,
             user_delivery: delivery,
+            customer_delivery: delivery,
+            address: delivery,
+            
             order_summary: orderSummary,
+            order_details: orderSummary,
+            message: orderSummary,
+            cart: orderSummary,
+            details: orderSummary,
+            items: orderSummary,
+            
             total_price: total + " грн",
-            city: "Николаев"
+            total: total + " грн",
+            price: total + " грн",
+            
+            city: "Николаев",
+            user_city: "Николаев"
         };
 
-        emailjs.send('service_snasti', 'template_order', templateParams)
+        emailjs.send('service_snasti', 'template_order', templateParams, 'kz4P5B-tdzk1IKeJh')
             .then(function(response) {
                 showAlertModal("Спасибо! Ваш заказ успешно принят и отправлен на почту!", "Успех", "🎉");
                 cart = [];
