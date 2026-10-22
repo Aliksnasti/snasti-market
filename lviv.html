@@ -123,6 +123,7 @@
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
+        "inLanguage": "uk",
         "mainEntity": [
           {
             "@type": "Question",
@@ -1820,37 +1821,38 @@
         <p style="font-size: 14px; color: #666;">Відправляємо риболовні екрани, косинки, доріжки, сітки одностінні, тристінні, павуки, ятері, раколовки, підводні торпеди та кастингові парашути Новою Поштою та Укрпоштою по всіх районах Львова (Центр, Сихів, Левандівка, Рясне, Залізничний, Франківський, Личаківський, Шевченківський) та населених пунктах області:</p>
         <div class="city-links">
             <a href="lviv.html">Львів</a>
-            <a href="#">Дрогобич</a>
-            <a href="#">Стрий</a>
-            <a href="#">Самбір</a>
-            <a href="#">Червоноград</a>
-            <a href="#">Борислав</a>
-            <a href="#">Трускавець</a>
-            <a href="#">Новий Розділ</a>
-            <a href="#">Яворів</a>
-            <a href="#">Золочів</a>
-            <a href="#">Броди</a>
-            <a href="#">Сокаль</a>
-            <a href="#">Городок</a>
-            <a href="#">Миколаїв</a>
-            <a href="#">Жовква</a>
-            <a href="#">Мостиська</a>
-            <a href="#">Кам'янка-Бузька</a>
-            <a href="#">Радехів</a>
-            <a href="#">Буськ</a>
-            <a href="#">Перемишляни</a>
-            <a href="#">Сколе</a>
-            <a href="#">Турка</a>
-            <a href="#">Жидачів</a>
-            <a href="#">Добромиль</a>
-            <a href="#">Старий Самбір</a>
-            <a href="#">Стебник</a>
+            <a href="drogobych.html">Дрогобич</a>
+            <a href="stryi.html">Стрий</a>
+            <a href="sambir.html">Самбір</a>
+            <a href="chervonograd.html">Червоноград</a>
+            <a href="boryslav.html">Борислав</a>
+            <a href="truskavets.html">Трускавець</a>
+            <a href="novyy-rozdil.html">Новий Розділ</a>
+            <a href="yavoriv.html">Яворів</a>
+            <a href="zolochiv.html">Золочів</a>
+            <a href="brody.html">Броди</a>
+            <a href="sokal.html">Сокаль</a>
+            <a href="gorodok.html">Городок</a>
+            <a href="mykolaiv.html">Миколаїв</a>
+            <a href="zhovkva.html">Жовква</a>
+            <a href="mostyska.html">Мостиська</a>
+            <a href="kamyanka-buzka.html">Кам'янка-Бузька</a>
+            <a href="radekhiv.html">Радехів</a>
+            <a href="busk.html">Буськ</a>
+            <a href="peremyshlyany.html">Перемишляни</a>
+            <a href="skole.html">Сколе</a>
+            <a href="turka.html">Турка</a>
+            <a href="zhydachiv.html">Жидачів</a>
+            <a href="dobromyl.html">Добромиль</a>
+            <a href="staryy-sambir.html">Старий Самбір</a>
+            <a href="stebnyk.html">Стебник</a>
         </div>
     </section>
 
 </main>
 
 <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
 <!-- Modal Contact Options -->
 <div id="contact-modal" class="modal">
     <div class="modal-content" style="max-width: 450px; text-align: center;">
@@ -1960,7 +1962,7 @@
         <span class="close" onclick="closeModal('details-modal-4')">&times;</span>
         <h2>Риболовна сітка-доріжка (7 м х 1.6 м)</h2>
         <p>Класична риболовна сітка-доріжка довжиною 7 метрів та висотою 1.6 метра. Поєднує високу уловистість та компактність. Ідеальна для установки з берега за допомогою гумового амортизатора.</p>
-        <p><strong>Характеристики:</strong> Міцна жилка 0.15 мм, рівномірно оснащені верхній та нижній шнури, широкий діапазон вічок (18–70 мм).</p>
+        <p><strong>Характеристики:</strong> Мічна жилка 0.15 мм, рівномірно оснащені верхній та нижній шнури, широкий діапазон вічок (18–70 мм).</p>
         <p><strong>Роздрібна ціна:</strong> 80 грн. <br><strong>Оптова ціна:</strong> 50 грн (при замовленні від 20 шт).</p>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn" onclick="closeModal('details-modal-4'); addToCart(4);">У кошик</button>
@@ -2338,7 +2340,7 @@
         
         <form id="order-form" onsubmit="sendOrder(event)">
             <input type="text" id="customer-name" placeholder="Ваше Ім'я" required>
-            <input type="tel" id="customer-phone" placeholder="Номер телефону (+380...)" required>
+            <input type="tel" id="customer-phone" placeholder="Номер телефону (+380...)" pattern="[+]?[0-9]{10,12}" title="Введіть правильний номер телефону" required>
             <input type="text" id="customer-delivery" placeholder="Львів / місто області та № відділення пошти" required>
             <button type="submit" id="submit-order-btn" class="btn">Оформити замовлення</button>
         </form>
