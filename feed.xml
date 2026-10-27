@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>SNASTI-MARKET — Риболовні Снасті</title>
+    <link>https://snasti-market.com.ua</link>
+    <description>Риболовні снасті від виробника майстра Альберта в Україні</description>
+
+    <!-- Товар ID 1 -->
+    <item>
+      <g:id>1</g:id>
+      <g:title>Ятір раколовка (40см х 80см)</g:title>
+      <g:description>Компактний та високоефективний ятір (раколовка) розміром 40х80 см з високоякісної зносостійкої капронової нитки. Жорсткий дротяний каркас з антикорозійним покриттям.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-yaters</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/yater40na80.jpg</g:image_link>
+      <g:price>280 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 2 -->
+    <item>
+      <g:id>2</g:id>
+      <g:title>Ятір раколовка (50см х 100см)</g:title>
+      <g:description>Збільшена модель ятеря розміром 50х100 см з капронової нитки для великих обсягів улову. Діаметр 50 см, довжина 100 см.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-yaters</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/yater50na100.jpg</g:image_link>
+      <g:price>420 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 3 -->
+    <item>
+      <g:id>3</g:id>
+      <g:title>Екран риболовний (1м х 1м)</g:title>
+      <g:description>Класичний риболовний екран 1х1 м з прозорої жилки 0.18 мм на жорсткому каркасі з грузилом. Вічка від 14 мм до 50 мм.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/ekran1.jpg</g:image_link>
+      <g:price>130 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 4 -->
+    <item>
+      <g:id>4</g:id>
+      <g:title>Сітка доріжка (7м х 1.6м)</g:title>
+      <g:description>Класична риболовна сітка-доріжка довжиною 7 м та висотою 1.6 м. Жилка 0.15 мм, вічка від 18 до 70 мм.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/setidorojka.jpg</g:image_link>
+      <g:price>80 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 5 -->
+    <item>
+      <g:id>5</g:id>
+      <g:title>Сітка доріжка «Профі» (7м х 1.6м)</g:title>
+      <g:description>Готовий комплект сітки-доріжки «Профі»: полотно з жилки 7х1.6м, гума 5м, 30м основної жилки та 2 карабіни з вертлюгами.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/setidorojkaKarabinRezinka.jpg</g:image_link>
+      <g:price>140 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 6 -->
+    <item>
+      <g:id>6</g:id>
+      <g:title>Дуги на павук (1.5м х 1.5м)</g:title>
+      <g:description>Пружні дуги товщиною 8 мм з композитного склопластику для риболовного павука 1.5х1.5м. Не піддаються корозії.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-spiders</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/dugi1i5.jpg</g:image_link>
+      <g:price>600 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 7 -->
+    <item>
+      <g:id>7</g:id>
+      <g:title>Косинка риболовна (1м х 1м)</g:title>
+      <g:description>Трикутна косинка для точкового лову риби у складних умовах (у очереті, вікнах водоростей та під кригою). Прозора жилка.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/kosinka1x1.jpg</g:image_link>
+      <g:price>80 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 8 -->
+    <item>
+      <g:id>8</g:id>
+      <g:title>Снасть донна «Гума» комплект</g:title>
+      <g:description>Готовий комплект донної снасті: 30 м основної жилки, 5 м гумового амортизатора, 5 гачків та груз 150г.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/snastDon30mLeska.jpg</g:image_link>
+      <g:price>110 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 9 -->
+    <item>
+      <g:id>9</g:id>
+      <g:title>Дуги на павук (2м х 2м) з хрестовиною</g:title>
+      <g:description>Склопластикові дуги 8мм з металевою хрестовиною для риболовного павука 2х2 метра.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-spiders</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/dugiSkrest2x2.jpg</g:image_link>
+      <g:price>650 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 10 -->
+    <item>
+      <g:id>10</g:id>
+      <g:title>Дуги на павук (2.5м х 2.5м) з хрестовиною</g:title>
+      <g:description>Посилені дуги товщиною 10 мм для павуків 2.5х2.5м. У комплекті хрестовина з товстостінної сталі.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-spiders</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/dugiSkrest1,5m.jpg</g:image_link>
+      <g:price>800 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 11 -->
+    <item>
+      <g:id>11</g:id>
+      <g:title>Дуги на павук (3м х 3м) з хрестовиною</g:title>
+      <g:description>Максимально міцні дуги 10 мм для павука 3х3 метра з посиленою металевою хрестовиною.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-spiders</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/dugiSkrest3x3.jpg</g:image_link>
+      <g:price>850 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 12 -->
+    <item>
+      <g:id>12</g:id>
+      <g:title>Павук риболовний (2м х 2м) Жилка</g:title>
+      <g:description>Сіткове полотно павука 2х2м з прозорої жилки. Невидиме у воді, швидко занурюється на дно.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-spiders</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/pauk2x2leska.jpg</g:image_link>
+      <g:price>180 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 13 -->
+    <item>
+      <g:id>13</g:id>
+      <g:title>Павук риболовний (2.5м х 2.5м) Жилка</g:title>
+      <g:description>Збільшене полотно павука 2.5х2.5м з монофільної жилки для охоплення великої площі водойми.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-spiders</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/pauk2,5x2,5leska.jpg</g:image_link>
+      <g:price>320 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 14 -->
+    <item>
+      <g:id>14</g:id>
+      <g:title>Павук риболовний (3м х 3м) Жилка</g:title>
+      <g:description>Велике сіткове полотно 3х3м з міцної монофільної жилки для лову риби на річках та водосховищах.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-spiders</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/pauk3x3leska.jpg</g:image_link>
+      <g:price>360 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 15 -->
+    <item>
+      <g:id>15</g:id>
+      <g:title>Павук риболовний (2м х 2м) Нитка</g:title>
+      <g:description>Павук 2х2м з крученої капронової нитки з підвищеною міцністю на розрив та стійкістю до зачепів.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-spiders</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/pauk2x2nitka.jpg</g:image_link>
+      <g:price>180 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 16 -->
+    <item>
+      <g:id>16</g:id>
+      <g:title>Павук риболовний (3м х 3м) Нитка</g:title>
+      <g:description>Посилений великий павук 3х3м з плетеної капронової нитки для лову сазана, товстолоба та щуки.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-spiders</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/pauk3x3nitka.jpg</g:image_link>
+      <g:price>360 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 17 -->
+    <item>
+      <g:id>17</g:id>
+      <g:title>Полотно на екран (1м х 1м)</g:title>
+      <g:description>Змінне сіткове полотно 1х1 м для риболовного екрана з тонкої уловистої жилки. Вічка від 14 мм до 45 мм.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/polotno1mNa1m.jpg</g:image_link>
+      <g:price>50 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 18 -->
+    <item>
+      <g:id>18</g:id>
+      <g:title>Сітка тристінна (50м х 1.5м)</g:title>
+      <g:description>Тристінна уловиста сітка путана довжиною 50 м та висотою 1.5 м з бічними поряжами та внутрішнім полотном.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/setTrehstenkaV1,5mD50m.jpg</g:image_link>
+      <g:price>360 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 19 -->
+    <item>
+      <g:id>19</g:id>
+      <g:title>Сітка тристінна (100м х 1.8м)</g:title>
+      <g:description>Повнорозмірна тристінна сітка путана довжиною 100 метрів та висотою 1.8 м для глибоководних акваторій.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/setTrehstenkaV1,8mD100m.jpg</g:image_link>
+      <g:price>820 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 20 -->
+    <item>
+      <g:id>20</g:id>
+      <g:title>Сітка тристінна (100м х 3м)</g:title>
+      <g:description>Висока тристінна сітка висотою 3 метри та довжиною 100 м для водосховищ та річок з сильною течією.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/setTrehstenkaV3mD100.jpg</g:image_link>
+      <g:price>1040 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 21 -->
+    <item>
+      <g:id>21</g:id>
+      <g:title>Сітка одностінна (100м х 3м)</g:title>
+      <g:description>Одностінна сітка з жилки висотою 3.0 м та довжиною 100 м. Проста у встановленні та очищенні.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/set1stenka3mD100m.jpg</g:image_link>
+      <g:price>620 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 22 -->
+    <item>
+      <g:id>22</g:id>
+      <g:title>Сітка «Фінка» одностінна (30м х 1.8м)</g:title>
+      <g:description>Одностінна сітка фінського типу 30х1.8м із вшитими вантажними та плавучими шнурами проти заплутування.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/setFinka1stenkaV1,8D30m.jpg</g:image_link>
+      <g:price>420 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 23 -->
+    <item>
+      <g:id>23</g:id>
+      <g:title>Раколовка-зонтик (6 входів)</g:title>
+      <g:description>Складна раколовка зонтик з 6 вхідними отворами та мішечком для принади. Легко розкладається одним рухом.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-yaters</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/rakolovkaZont6vhod.jpg</g:image_link>
+      <g:price>220 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 24 -->
+    <item>
+      <g:id>24</g:id>
+      <g:title>Раколовка-зонтик (8 входів)</g:title>
+      <g:description>Складна раколовка зонтик з 8 входами для заманювання раків з усіх боків. Зручна та компактна.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-yaters</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/rakolovkaZont8vhod.jpg</g:image_link>
+      <g:price>240 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 25 -->
+    <item>
+      <g:id>25</g:id>
+      <g:title>Раколовка-зонтик (10 входів)</g:title>
+      <g:description>Найбільша складна раколовка зонтик з 10 вхідними отворами для максимального улову рака.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-yaters</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/rakolovkaZont10vhod.jpg</g:image_link>
+      <g:price>260 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 26 -->
+    <item>
+      <g:id>26</g:id>
+      <g:title>Груз сітковий затискний (16г)</g:title>
+      <g:description>Свинцеве затискне грузило вагою 16 грамів для оснащення нижнього шнура сіток, доріжок та екранів.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-accessories</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/GruzSetevZajim16g.jpg</g:image_link>
+      <g:price>3 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 27 -->
+    <item>
+      <g:id>27</g:id>
+      <g:title>Раколовка-гармошка (25х30см, 3.5м)</g:title>
+      <g:description>Прямокутна раколовка-гармошка довжиною 3.5 метра та розміром каркаса 25х30 см для перекриття прибережної зони.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-yaters</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/rakolovkaGarm25x30d3,5m.jpg</g:image_link>
+      <g:price>420 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 28 -->
+    <item>
+      <g:id>28</g:id>
+      <g:title>Торпеда для протягування сіток під кригою</g:title>
+      <g:description>Автономний пристрій для протягування сіток під кригою. Зубчасті колеса та світлодіодний сигналізатор.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-accessories</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/torpeda.jpg</g:image_link>
+      <g:price>1450 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 29 -->
+    <item>
+      <g:id>29</g:id>
+      <g:title>Сітка-парашут (Діаметр 3.6м)</g:title>
+      <g:description>Кастингова накидна сітка з жилки 0.35мм діаметром 3.6 м з вічком 15 мм та свинцевими грузилами.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/setParashutD3,6m.jpg</g:image_link>
+      <g:price>1200 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 30 -->
+    <item>
+      <g:id>30</g:id>
+      <g:title>Сітка-парашут (Діаметр 4.2м)</g:title>
+      <g:description>Кастингова накидна сітка парашут діаметром 4.2 м з жилки 0.35 мм для швидкого покриття площі.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/setParashutD4,2m.jpg</g:image_link>
+      <g:price>1400 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 31 -->
+    <item>
+      <g:id>31</g:id>
+      <g:title>Сітка-парашут (Діаметр 5.0м)</g:title>
+      <g:description>Велика кастингова сітка діаметром 5.0 м з потовщеної жилки 0.35 мм. Максимальне покриття за один закид.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/setParashutD5m.jpg</g:image_link>
+      <g:price>1600 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 32 -->
+    <item>
+      <g:id>32</g:id>
+      <g:title>Сітка одностінна (100м х 1.8м)</g:title>
+      <g:description>Одностінна сітка з прозорої жилки висотою 1.8 м та стандартної довжини 100 метрів.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-screens</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/set1stenkaV1,8mD100m.jpg</g:image_link>
+      <g:price>400 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+    <!-- Товар ID 33 -->
+    <item>
+      <g:id>33</g:id>
+      <g:title>Гума риболовна (амортизатор 100м)</g:title>
+      <g:description>Високоеластична риболовна гума-амортизатор довжиною 100 м для оснащення донних снастей та сіток-доріжок.</g:description>
+      <g:link>https://snasti-market.com.ua/#cat-accessories</g:link>
+      <g:image_link>https://snasti-market.com.ua/yater/rezinka20mT2,5mm.jpg</g:image_link>
+      <g:price>180 UAH</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>SNASTI-MARKET</g:brand>
+    </item>
+
+  </channel>
+</rss>
